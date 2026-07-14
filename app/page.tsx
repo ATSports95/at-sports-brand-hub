@@ -2,6 +2,7 @@ import { SidebarNav } from '@/components/sidebar-nav'
 import { Hero } from '@/components/sections/hero'
 import { Welcome } from '@/components/sections/welcome'
 import { Foundation } from '@/components/sections/foundation'
+import { ProductKits } from '@/components/sections/product-kits'
 import { LogoIdentity } from '@/components/sections/logo-identity'
 import { ColorSystem } from '@/components/sections/color-system'
 import { Typography } from '@/components/sections/typography'
@@ -19,6 +20,7 @@ export default function Home() {
         <Hero />
         <Welcome />
         <Foundation />
+        <ProductKits />
         <LogoIdentity />
         <ColorSystem />
         <Typography />
