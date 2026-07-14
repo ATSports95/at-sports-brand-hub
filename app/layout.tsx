@@ -1,10 +1,29 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
+import { Expletus_Sans, Figtree } from 'next/font/google'
 import './globals.css'
 
+// Body / everyday font. The real brand font is Effra (commercial license).
+// Figtree is used here as a close Google Fonts stand-in.
+// TODO: replace with self-hosted Effra @font-face on production
+const figtree = Figtree({
+  subsets: ['latin'],
+  variable: '--font-figtree',
+  display: 'swap',
+})
+
+// Display / accent headings.
+const expletusSans = Expletus_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-expletus',
+  display: 'swap',
+})
+
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
+  title: 'AT Sports Brand Hub — Partner Edition',
+  description:
+    'Everything partners need to represent AT Sports and our product lines correctly — logos, colors, product names, co-branding rules, and ready-to-use assets.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -26,11 +45,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light dark',
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: 'white' },
-    { media: '(prefers-color-scheme: dark)', color: 'black' },
-  ],
+  colorScheme: 'light',
+  themeColor: '#233354',
 }
 
 export default function RootLayout({
@@ -39,8 +55,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html
+      lang="en"
+      className={`light bg-background ${figtree.variable} ${expletusSans.variable}`}
+    >
+      <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

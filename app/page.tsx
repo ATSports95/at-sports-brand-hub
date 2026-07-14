@@ -1,16 +1,33 @@
+import { SidebarNav } from '@/components/sidebar-nav'
+import { Hero } from '@/components/sections/hero'
+import { Welcome } from '@/components/sections/welcome'
+import { Foundation } from '@/components/sections/foundation'
+import { LogoIdentity } from '@/components/sections/logo-identity'
+import { ColorSystem } from '@/components/sections/color-system'
+import { Typography } from '@/components/sections/typography'
+import { CoBranding } from '@/components/sections/cobranding'
+import { Photography } from '@/components/sections/photography'
+import { AssetLibrary } from '@/components/sections/asset-library'
+import { Faq } from '@/components/sections/faq'
+import { SiteFooter } from '@/components/sections/site-footer'
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center font-sans">
-      <main className="flex w-full max-w-3xl flex-col items-center gap-8 px-6 py-16 text-center sm:items-start sm:text-left">
-        <div className="flex flex-col gap-4">
-          <h1 className="text-4xl font-bold tracking-tight">
-            AT Sports Brand Hub
-          </h1>
-          <p className="max-w-md text-lg text-muted-foreground">
-            To get started, send a prompt or modify this page directly.
-          </p>
-        </div>
+    <div className="flex min-h-screen w-full flex-col lg:flex-row">
+      <SidebarNav />
+      <main className="min-w-0 flex-1">
+        <Hero />
+        <Welcome />
+        <Foundation />
+        <LogoIdentity />
+        <ColorSystem />
+        <Typography />
+        <CoBranding />
+        <Photography />
+        <AssetLibrary />
+        <Faq />
+        <SiteFooter />
       </main>
     </div>
-  );
+  )
 }
