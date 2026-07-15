@@ -1,4 +1,4 @@
-import { Check, X, Star, Unlock, ShieldAlert } from 'lucide-react'
+import { Check, X, Unlock, ShieldAlert } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
 import { PRODUCT_NAMING } from '@/lib/brand'
 import { cn } from '@/lib/utils'
@@ -52,8 +52,7 @@ export function CoBranding() {
   return (
     <Section id="cobranding">
       <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red/10 px-3 py-1 text-xs font-semibold tracking-wide text-red uppercase">
-        <Star className="size-3.5" />
-        Most important for partners
+        Partner Standards
       </div>
       <SectionHeading
         eyebrow="Co-Branding & Partner Use"
