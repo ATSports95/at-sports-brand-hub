@@ -315,26 +315,26 @@ export const PRODUCT_KITS: ProductKit[] = [
     tagline: 'Professional pickleball\u2014wherever the game goes.',
     accentClass: 'bg-red',
     overview: [
-      "RollX gives facilities, event organizers, clubs, and contractors the flexibility to create professional-quality pickleball courts wherever the game is played.",
-      "Unlike permanent court construction, RollX provides a portable playing surface that installs quickly, delivers consistent ball response, and allows courts to be deployed when and where they're needed.",
-      "Manufactured by AT Sports, RollX expands the company's commitment to complete court solutions beyond permanent installations, helping partners create new opportunities for play without permanent infrastructure.",
+      "RollX is AT Sports' portable sports surfacing system, designed to create professional-quality playing surfaces wherever permanent court construction isn't practical or possible.",
+      'Whether supporting tournaments, special events, clubs, schools, or multi-purpose facilities, RollX transforms existing spaces into ready-to-play pickleball courts without permanent construction.',
+      'Manufactured by AT Sports, RollX combines dependable playability, rapid deployment, and customizable branding to help facilities expand programming, maximize space, and create new opportunities for play.',
     ],
     positioning: [
       {
-        title: 'Professional Play Anywhere',
-        body: 'Transforms existing spaces into tournament-quality pickleball courts.',
+        title: 'Portable Court System',
+        body: 'Transforms existing indoor or outdoor spaces into consistent sport surfaces without permanent construction.',
       },
       {
-        title: 'Portable Without Compromise',
-        body: 'Consistent ball response and dependable performance in a portable format.',
+        title: 'Rapid Deployment',
+        body: 'Designed for fast installation, removal, storage, and repeated use across multiple venues and events.',
       },
       {
         title: 'Flexible Facility Solutions',
-        body: 'Ideal for clubs, schools, recreation centers, and special events.',
+        body: 'Ideal for tournaments, clubs, schools, recreation centers, convention spaces, and multi-purpose facilities.',
       },
       {
-        title: 'Expand Court Capacity',
-        body: 'Create additional courts without permanent construction.',
+        title: 'Custom Branding',
+        body: 'Available with custom colors, logos, and graphics to support sponsors, venues, tournaments, and branded events.',
       },
       {
         title: 'Manufactured by AT Sports',
@@ -342,16 +342,16 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
     ],
     marketingCopy: [
-      "RollX is AT Sports' portable pickleball court system designed to create professional-quality playing surfaces wherever the game is played.",
-      'Whether for tournaments, events, clubs, or multi-purpose facilities, RollX delivers consistent playability while giving facilities unmatched flexibility.',
-      'RollX helps facilities maximize existing space by creating temporary courts that perform like permanent installations.',
-      'Manufactured by AT Sports, RollX expands the possibilities for pickleball by bringing professional court performance to virtually any venue.',
+      "RollX is AT Sports' portable court system designed to create professional-quality playing surfaces without permanent court construction. Ideal for events, schools, clubs, and multi-purpose facilities, RollX expands where sports can be played.",
+      'RollX helps facilities maximize existing space by creating temporary courts that can be installed, removed, and stored as programming needs change.',
+      'RollX provides event organizers and venue operators with a portable sports surface that delivers consistent playability while supporting rapid deployment and customized branding opportunities.',
+      'Manufactured by AT Sports, RollX combines dependable performance, portable deployment, and flexible venue solutions to help facilities create new opportunities for sports without permanent infrastructure.',
     ],
     systemsTitle: 'RollX Key Features',
     systems: [
       {
         label: 'Surface',
-        name: 'Reinforced Membrane Overlay',
+        name: 'Reinforced Membrane Surface',
         body: 'A ready-to-play prefabricated surface built from a proprietary reinforced membrane, engineered for exceptional durability and dependable ball response over concrete, asphalt, or any level surface.',
       },
       {
@@ -362,7 +362,7 @@ export const PRODUCT_KITS: ProductKit[] = [
       {
         label: 'Deploy',
         name: 'Roll-Out Install & Removal',
-        body: 'Easy roll-out installation and removal lets you set up a pro-grade court quickly and efficiently, indoors or outdoors, for temporary and repeat-use applications.',
+        body: 'Portable system designed for efficient installation, removal, transport, and storage across temporary and recurring events.',
       },
     ],
     logoGuidelines: [
