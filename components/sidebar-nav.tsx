@@ -84,14 +84,13 @@ export function SidebarNav() {
       {/* Desktop sidebar */}
       <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-border bg-sidebar lg:flex">
         <div className="border-b border-border px-6 py-6">
-          <LogoTile
-            file="at-sports-color.svg"
-            alt="AT Sports"
-            className="w-40 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
-          />
-          <p className="mt-3 text-xs font-medium tracking-wide text-slate uppercase">
-            Brand Hub
-          </p>
+          <div className="flex items-center justify-center">
+            <LogoTile
+              file="at-sports-color.svg"
+              alt="AT Sports"
+              className="w-40 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
+            />
+          </div>
         </div>
         <div className="px-3 pt-4">
           <SiteSearch />

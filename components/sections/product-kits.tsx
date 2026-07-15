@@ -231,14 +231,6 @@ export function ProductKits() {
               )}
             >
               <span className="text-sm font-semibold">{kit.name}</span>
-              <span
-                className={cn(
-                  'text-xs',
-                  isActive ? 'text-white/70' : 'text-slate',
-                )}
-              >
-                {kit.descriptor}
-              </span>
             </button>
           )
         })}
@@ -255,10 +247,10 @@ export function ProductKits() {
           outside of the approved language above should be reviewed and approved
           by the AT Sports Marketing Department prior to publication.{' '}
           <a
-            href="mailto:marketing@atsports.com"
+            href="mailto:malory@atsports.com"
             className="font-medium text-sky underline underline-offset-2"
           >
-            marketing@atsports.com
+            malory@atsports.com
           </a>
         </p>
       </div>

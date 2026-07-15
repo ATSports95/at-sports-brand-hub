@@ -26,14 +26,14 @@ const CARDS: {
   },
   {
     key: 'productLineAssets',
-    title: 'Product Line Assets',
+    title: 'Visual Assets',
     description:
       'Acrytech, CushionX, Faultline, RollX logos/marks, with and without the "Division of AT Sports" tag.',
     icon: Boxes,
   },
   {
     key: 'colorSwatches',
-    title: 'Color Swatches',
+    title: 'Color Codes',
     description: 'Adobe .ase swatch file for consistent color across tools.',
     icon: Palette,
   },

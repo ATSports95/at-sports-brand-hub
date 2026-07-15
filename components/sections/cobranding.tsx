@@ -64,11 +64,11 @@ export function CoBranding() {
 
       <p className="max-w-2xl text-sm leading-relaxed text-ink/80">
         Use approved language only:{' '}
-        <strong className="text-navy">&ldquo;Authorized Installer,&rdquo;</strong>{' '}
-        <strong className="text-navy">&ldquo;Authorized Dealer,&rdquo;</strong>{' '}
+        <strong className="text-navy">&ldquo;Certified Installer,&rdquo;</strong>{' '}
+        <strong className="text-navy">&ldquo;Official Distributor,&rdquo;</strong>{' '}
         or{' '}
         <strong className="text-navy">
-          &ldquo;[Your Company] — Authorized AT Sports Partner.&rdquo;
+          &ldquo;[Your Company] — Power by AT Sports.&rdquo;
         </strong>{' '}
         Don&apos;t invent titles like &ldquo;Official Partner&rdquo; or
         &ldquo;Certified by AT Sports&rdquo; without sign-off.

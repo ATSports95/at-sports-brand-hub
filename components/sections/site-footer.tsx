@@ -16,8 +16,7 @@ export function SiteFooter() {
           className="w-44 [&>div]:aspect-auto [&>div]:h-14 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
         />
         <p className="max-w-xl text-sm leading-relaxed text-steel">
-          AT Sports Brand Hub — Partner Edition. Maintained by [team/contact]
-          and updated as the brand evolves — always work from the live version.
+          AT Sports Brand Hub — Partner Edition. Maintained by AT Sports Marketing Department and updated as the brand evolves — always work from the live version.
         </p>
         <p className="text-xs text-steel/70">
           © {year} AT Sports. All rights reserved.
