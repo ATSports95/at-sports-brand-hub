@@ -2,13 +2,19 @@ import { Check, X, Camera } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
 
 const DO = [
-  'High-res at intended size, sharp and true to the surface. Real contractors Installation process Finished courts Wide facility shots Close product details',
+  'High-res at intended size, sharp and true to the surface.',
+  'Real contractors.',
+  'Installation process.',
+  'Finished courts.',
+  'Wide facility shots.',
+  'Close product details.',
 ]
 const DONT = [
   'Low-res grabs or stretched images.',
   'Altering or filtering surface colors.',
   'Cropping out branding.',
-  'Pulling uncleared images from the website/social.Fake renders/AI-looking imagery',
+  'Pulling uncleared images from the website/social.',
+  'Fake renders/AI-looking imagery.',
 ]
 
 export function Photography() {
