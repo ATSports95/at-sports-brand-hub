@@ -61,20 +61,41 @@ export function Welcome() {
               Brand &amp; marketing contact
             </dt>
             <dd className="mt-1 text-sm text-ink">
-              [Name], [email@atsports.com]
+              Malory Bateman, Business Development Manager
+              <br />
+              <a
+                href="mailto:malory@atsports.com"
+                className="font-medium text-sky underline underline-offset-2"
+              >
+                malory@atsports.com
+              </a>
             </dd>
           </div>
           <div>
             <dt className="text-xs font-medium tracking-wide text-slate uppercase">
               Asset requests
             </dt>
-            <dd className="mt-1 text-sm text-ink">[email / form link]</dd>
+            <dd className="mt-1 text-sm text-ink">
+              <a
+                href="mailto:malory@atsports.com"
+                className="font-medium text-sky underline underline-offset-2"
+              >
+                malory@atsports.com
+              </a>
+            </dd>
           </div>
           <div>
             <dt className="text-xs font-medium tracking-wide text-slate uppercase">
               Co-branding approval
             </dt>
-            <dd className="mt-1 text-sm text-ink">[email]</dd>
+            <dd className="mt-1 text-sm text-ink">
+              <a
+                href="mailto:malory@atsports.com"
+                className="font-medium text-sky underline underline-offset-2"
+              >
+                malory@atsports.com
+              </a>
+            </dd>
           </div>
           <div>
             <dt className="text-xs font-medium tracking-wide text-slate uppercase">
