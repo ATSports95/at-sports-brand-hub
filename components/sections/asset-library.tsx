@@ -25,7 +25,7 @@ const CARDS: {
     key: 'productLineAssets',
     title: 'Marketing Media',
     description:
-      'Approved product photos, installation imagery, and branded videos to use across print and digital materials',
+      'Approved product photography, installation imagery, and branded videos for print, digital, presentations, and social media.',
     icon: Boxes,
   },
   {

@@ -139,7 +139,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     name: 'Acrytech',
     descriptor: 'The Coatings System',
     tagline: 'The complete acrylic surfacing system from one manufacturer.',
-    accentClass: 'bg-navy',
+    accentClass: 'bg-slate',
     overview: [
       'Acrytech is the foundation of the AT Sports product portfolio\u2014a complete acrylic sports surfacing system engineered for long-term performance, consistent installation, and dependable results.',
       'Manufactured by AT Sports, the Acrytech product line includes everything contractors need to prepare, resurface, repair, texture, and finish professional-quality courts. Every product is designed to work together as part of a complete system, helping contractors deliver consistent outcomes from the first coat to the final color.',
@@ -147,31 +147,31 @@ export const PRODUCT_KITS: ProductKit[] = [
     ],
     positioning: [
       {
-        title: 'Acrylic Surfacing System',
-        body: 'Manufactured by AT Sports, Acrytech provides everything needed to prepare, repair, resurface, texture, and finish professional sports surfaces.',
+        title: 'Complete Acrylic System',
+        body: 'Every stage of the surfacing process, from preparation and repair to texture and final color, is supported within one manufacturer-backed system.',
       },
       {
-        title: 'Designed for Professional Installation',
-        body: 'Formulated to support dependable mixing, application, texture, color, and finish quality across every stage of the surfacing process.',
+        title: 'Built for Professional Application',
+        body: 'Products are formulated to support consistent mixing, application, texture, and finish quality across a wide range of court projects.',
       },
       {
-        title: 'Engineered for Long-Term Durability',
-        body: 'Formulated to withstand heavy play, changing climates, and demanding environments while maintaining color and performance.',
+        title: 'Engineered for Court Performance',
+        body: 'Designed to deliver reliable traction, consistent ball response, and lasting surface performance when installed according to specification.',
       },
       {
-        title: 'Manufacturing You Can Trust',
-        body: 'Manufactured in-house with advanced acrylic technology for consistent quality and dependable product performance.',
+        title: 'Manufacturing Expertise',
+        body: 'Manufactured in-house using advanced acrylic technology, giving AT Sports greater control over product quality, consistency, and technical support.',
       },
       {
         title: 'Proven at the Professional Level',
-        body: 'As the Official Surface of the Professional Pickleball Association and Major League Pickleball., Acrytech delivers the consistency demanded by professional competition.',
+        body: 'As the Official Surface of the Professional Pickleball Association and Major League Pickleball, Acrytech delivers the consistency demanded by professional competition.',
       },
     ],
     marketingCopy: [
-      "Acrytech is AT Sports' complete acrylic sports surfacing system, engineered to help contractors build professional-quality courts with confidence. From surface preparation to the final color coat, every product is manufactured to work together for consistent installation, long-term durability, and dependable performance.",
-      'We install Acrytech sports surfacing systems because they provide reliable installation, consistent application, and professional-grade performance. Manufactured by AT Sports, Acrytech products are engineered to work together as one complete system.',
+      'Acrytech is the acrylic sports coating division of AT Sports. Designed for new construction and court resurfacing, the product line includes surface preparation, repair, texture, and color systems engineered to work together from start to finish.',
+      'We install Acrytech coatings because it provides a complete manufacturer-supported system, from preparation through final color, that helps us deliver consistent results on every project.',
       'Acrytech delivers professional sports surfaces designed for consistent playability, long-term durability, and dependable performance. Trusted by facilities around the world, every system is engineered to perform season after season.',
-      'Manufactured with advanced acrylic technology, Acrytech systems are engineered for adhesion, durability, color stability, and consistent application across tennis, pickleball, basketball, and multi-sport courts.',
+      'Manufactured with advanced acrylic technology, Acrytech systems are engineered for adhesion, durability, color stability, and consistent application across tennis, pickleball, basketball, and multi-sport surfaces.',
     ],
     logoGuidelines: [
       'Use only official Acrytech logos provided by AT Sports.',
@@ -185,56 +185,56 @@ export const PRODUCT_KITS: ProductKit[] = [
     name: 'CushionX',
     descriptor: 'The Cushion System',
     tagline: 'Engineered comfort. Designed for performance. Built to simplify installation.',
-    accentClass: 'bg-sky',
+    accentClass: 'bg-navy',
     overview: [
-      "CushionX is AT Sports' family of cushioned court systems engineered to improve player comfort while simplifying installation for contractors.",
-      'From traditional cushioned systems to innovative overlay solutions like CushionX Extreme, every system is designed to help facilities extend court life, reduce downtime, and deliver a premium playing experience.',
-      'Manufactured as part of the complete AT Sports surfacing ecosystem, CushionX integrates seamlessly with Acrytech coatings to create professional-grade courts built for long-term performance.',
+      "CushionX is AT Sports' family of cushioned court systems designed to improve player comfort while providing solutions for both new court construction and court renovation.",
+      'From squeefee applied cushioned systems to advanced multi-layer assemblies, CushionX gives contractors and facility owners flexible options to match performance requirements, project budgets, and levels of play.',
+      'Manufactured as part of the AT Sports sports surfacing portfolio, CushionX integrates with Acrytech coatings to create complete court systems engineered for consistent installation, dependable performance, and lasting player comfort.',
     ],
     positioning: [
       {
-        title: 'Engineered Player Comfort',
-        body: 'Designed to improve comfort while maintaining consistent playability.',
+        title: 'Player Comfort',
+        body: 'Designed to improve impact absorption while maintaining consistent ball response and playability.',
       },
       {
-        title: 'Faster Court Renovation',
-        body: 'Innovative overlay systems reduce demolition, downtime, and project disruption.',
+        title: 'Flexible System Options',
+        body: 'Multiple system configurations allow facilities to match cushion performance to project goals, budget, and expected court usage.',
       },
       {
-        title: 'Complete Cushion Solutions',
-        body: 'From traditional cushioned systems to CushionX Extreme overlays, every solution is engineered to integrate with AT Sports surfacing systems.',
+        title: 'Extend Court Life',
+        body: 'Engineered to support renovation strategies that help facilities maximize existing court infrastructure while reducing project disruption.',
       },
       {
-        title: 'Built for Modern Facilities',
-        body: 'Ideal for facilities seeking premium comfort while maximizing court life.',
+        title: 'Built for Every Level of Play',
+        body: 'Suitable for residential, commercial, club, municipal, educational, and tournament environments through multiple system configurations.',
       },
       {
-        title: 'Manufactured for Performance',
-        body: 'Every CushionX system is engineered to simplify installation without compromising quality.',
+        title: 'Integrated Court System',
+        body: 'Designed to work with Acrytech acrylic coatings as part of a complete AT Sports sports surfacing system.',
       },
     ],
     marketingCopy: [
-      "CushionX is AT Sports' family of cushioned court systems designed to improve player comfort while helping contractors simplify installation. Whether building new courts or renovating existing facilities, CushionX delivers premium performance with less disruption.",
-      "CushionX Extreme gives facilities a faster way to renovate damaged courts without full reconstruction. Engineered to reduce downtime while improving player comfort, it's an innovative solution built for today's courts.",
-      'Manufactured by AT Sports, CushionX systems integrate seamlessly with Acrytech coatings to create complete court systems engineered for comfort, durability, and long-term performance.',
-      'From premium cushioned systems to innovative overlays, CushionX helps contractors deliver exceptional playing experiences while reducing installation complexity.',
+      "CushionX is AT Sports' family of cushioned court systems designed to improve player comfort while providing flexible solutions for new construction and court renovation. Multiple system configurations allow facilities to select the composition level that best fits their project and expected court usage.",
+      'We install CushionX because it provides multiple cushioned system options that integrate with AT Sports surfacing products, allowing us to recommend the right solution for each facility and budget.',
+      'CushionX systems are designed to improve player comfort while supporting long-term court performance. Whether serving residential, club, educational, or tournament facilities, multiple cushion levels allow each project to be matched to its intended use.',
+      'CushionX systems are engineered to integrate with Acrytech acrylic coatings as part of a complete AT Sports sports surfacing system. Multiple system configurations provide varying levels of impact absorption and durability based on project requirements.',
     ],
     systemsTitle: 'CushionX Composition Levels',
     systems: [
       {
         label: 'Level 1',
         name: 'Residential Usage Only',
-        body: 'Ideal for homes and light-use courts, Level 1 includes a 4mm, 6mm, or 8mm cushion mat with three layers of flexible coatings offering durability and comfort for recreational play.',
+        body: 'Ideal for homes and light-use courts, Level 1 includes a 4mm, 6mm, or 8mm cushion mat offering durability and comfort for recreational play.',
       },
       {
         label: 'Level 2',
         name: 'Light & Moderate Commercial',
-        body: 'Crafted for superior resilience, Level 2 enhances the capabilities of Level 1 by incorporating an extra reinforced membrane layer to meet the demands of commercial environments.',
+        body: 'Level 2 improve durability and resilience of Level 1 by incorporating an extra reinforced membrane layer to meet the demands of commercial environments.',
       },
       {
         label: 'Level 3',
         name: 'High-Use Commercial & Tournament',
-        body: 'Designed for top-tier performance, Level 3 enhances Level 2 with three layers of urethane flex coatings. This construction withstands heavy use while offering exceptional impact absorption and comfort.',
+        body: 'Level 3 offers the maximum system configuration with adding three layers of urethane flex coatings for facilities requiring the highest levels of comfort, durability, and long-term performance.',
       },
     ],
     logoGuidelines: [
@@ -249,39 +249,39 @@ export const PRODUCT_KITS: ProductKit[] = [
     name: 'Faultline',
     descriptor: 'The Crack Repair System',
     tagline: 'Smarter crack repair. Faster installation. Better results.',
-    accentClass: 'bg-red',
+    accentClass: 'bg-sky',
     overview: [
-      "Faultline is AT Sports' engineered crack repair system designed to help contractors repair damaged courts faster, more efficiently, and with greater confidence.",
-      'Developed to reduce installation time while producing a lower-profile repair, Faultline simplifies one of the most challenging parts of court resurfacing. Every component is engineered to work within the complete AT Sports surfacing system, creating reliable repairs that support long-term court performance.',
-      'When repairs are required, Faultline helps contractors spend less time fighting cracks and more time delivering exceptional courts.',
+      "Faultline is AT Sports' complete crack repair product family, engineered to simplify one of the most challenging parts of court resurfacing while improving repair quality and installation efficiency.",
+      'From localized crack repair systems to flexible reinforcement products and full-court restoration solutions, Faultline gives contractors multiple options to address varying levels of surface movement and deterioration.',
+      'Designed to integrate with Acrytech surfacing systems, Faultline products help create smoother finished courts, reduce installation complexity, and support long-term resurfacing success.',
     ],
     positioning: [
       {
         title: 'Smarter Crack Repair',
-        body: 'Engineered to simplify one of the most challenging parts of court resurfacing.',
+        body: 'Purpose-built solutions designed to simplify crack repair while improving consistency and installation efficiency.',
       },
       {
-        title: 'Faster Installation',
-        body: 'Designed to reduce installation time while maintaining reliable repair performance.',
+        title: 'Consistent Ball Response',
+        body: 'Designed to maintain consistent ball bounce for pickleball and tennis across repaired\nareas without excessive surface buildup',
       },
       {
         title: 'Lower Profile Results',
-        body: 'Produces smoother repairs that blend more effectively beneath finished court systems.',
+        body: 'Designed to create smoother transitions that blend naturally beneath resurfacer and color coatings.',
       },
       {
-        title: 'Integrated System Design',
-        body: 'Engineered to work seamlessly within the complete AT Sports surfacing system.',
+        title: 'Flexible Repair Options',
+        body: 'From localized repairs to full-court restoration, Faultline offers solutions for a wide range of crack conditions and project requirements.',
       },
       {
-        title: 'Built for Contractors',
-        body: 'Developed to improve productivity without sacrificing long-term performance.',
+        title: 'System Integration',
+        body: 'Designed to work seamlessly with Acrytech surfacing systems as part of a complete AT Sports court solution.',
       },
     ],
     marketingCopy: [
-      "Faultline is AT Sports' engineered crack repair system designed to help contractors repair courts faster while producing smoother, longer-lasting results.",
-      'Built to simplify crack repair, Faultline reduces installation complexity while delivering dependable performance beneath professional sports surfaces.',
-      'Every Faultline repair system is engineered to integrate with AT Sports surfacing products, creating complete court systems built for long-term reliability.',
-      'From isolated repairs to full court renovations, Faultline helps contractors spend less time repairing cracks and more time completing successful projects.',
+      "Faultline is AT Sports' complete crack repair product family, providing contractors with engineered solutions for localized repairs, reinforcement, and full-court restoration. Every product is designed to integrate with Acrytech surfacing systems for consistent project results.",
+      'We use Faultline because it provides repair solutions for a wide range of crack conditions while helping reduce installation time and create smoother finished courts.',
+      'Faultline repair systems are designed to restore damaged courts while supporting long-term resurfacing performance. Multiple repair options allow contractors to recommend the right solution based on the condition of each court.',
+      'Faultline products are engineered to integrate with Acrytech surfacing systems, providing flexible repair solutions designed to reduce reflective cracking and improve finished surface consistency.',
     ],
     systemsTitle: 'The Faultline Product Line',
     systems: [
@@ -313,28 +313,28 @@ export const PRODUCT_KITS: ProductKit[] = [
     name: 'RollX',
     descriptor: 'The Portable Court System',
     tagline: 'Professional pickleball\u2014wherever the game goes.',
-    accentClass: 'bg-slate',
+    accentClass: 'bg-red',
     overview: [
-      "RollX gives facilities, event organizers, clubs, and contractors the flexibility to create professional-quality pickleball courts wherever the game is played.",
-      "Unlike permanent court construction, RollX provides a portable playing surface that installs quickly, delivers consistent ball response, and allows courts to be deployed when and where they're needed.",
-      "Manufactured by AT Sports, RollX expands the company's commitment to complete court solutions beyond permanent installations, helping partners create new opportunities for play without permanent infrastructure.",
+      "RollX is AT Sports' portable sports surfacing system, designed to create professional-quality playing surfaces wherever permanent court construction isn't practical or possible.",
+      'Whether supporting tournaments, special events, clubs, schools, or multi-purpose facilities, RollX transforms existing spaces into ready-to-play pickleball courts without permanent construction.',
+      'Manufactured by AT Sports, RollX combines dependable playability, rapid deployment, and customizable branding to help facilities expand programming, maximize space, and create new opportunities for play.',
     ],
     positioning: [
       {
-        title: 'Professional Play Anywhere',
-        body: 'Transforms existing spaces into tournament-quality pickleball courts.',
+        title: 'Portable Court System',
+        body: 'Transforms existing indoor or outdoor spaces into consistent sport surfaces without permanent construction.',
       },
       {
-        title: 'Portable Without Compromise',
-        body: 'Consistent ball response and dependable performance in a portable format.',
+        title: 'Rapid Deployment',
+        body: 'Designed for fast installation, removal, storage, and repeated use across multiple venues and events.',
       },
       {
         title: 'Flexible Facility Solutions',
-        body: 'Ideal for clubs, schools, recreation centers, and special events.',
+        body: 'Ideal for tournaments, clubs, schools, recreation centers, convention spaces, and multi-purpose facilities.',
       },
       {
-        title: 'Expand Court Capacity',
-        body: 'Create additional courts without permanent construction.',
+        title: 'Custom Branding',
+        body: 'Available with custom colors, logos, and graphics to support sponsors, venues, tournaments, and branded events.',
       },
       {
         title: 'Manufactured by AT Sports',
@@ -342,16 +342,16 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
     ],
     marketingCopy: [
-      "RollX is AT Sports' portable pickleball court system designed to create professional-quality playing surfaces wherever the game is played.",
-      'Whether for tournaments, events, clubs, or multi-purpose facilities, RollX delivers consistent playability while giving facilities unmatched flexibility.',
-      'RollX helps facilities maximize existing space by creating temporary courts that perform like permanent installations.',
-      'Manufactured by AT Sports, RollX expands the possibilities for pickleball by bringing professional court performance to virtually any venue.',
+      "RollX is AT Sports' portable court system designed to create professional-quality playing surfaces without permanent court construction. Ideal for events, schools, clubs, and multi-purpose facilities, RollX expands where sports can be played.",
+      'RollX helps facilities maximize existing space by creating temporary courts that can be installed, removed, and stored as programming needs change.',
+      'RollX provides event organizers and venue operators with a portable sports surface that delivers consistent playability while supporting rapid deployment and customized branding opportunities.',
+      'Manufactured by AT Sports, RollX combines dependable performance, portable deployment, and flexible venue solutions to help facilities create new opportunities for sports without permanent infrastructure.',
     ],
     systemsTitle: 'RollX Key Features',
     systems: [
       {
         label: 'Surface',
-        name: 'Reinforced Membrane Overlay',
+        name: 'Reinforced Membrane Surface',
         body: 'A ready-to-play prefabricated surface built from a proprietary reinforced membrane, engineered for exceptional durability and dependable ball response over concrete, asphalt, or any level surface.',
       },
       {
@@ -362,7 +362,7 @@ export const PRODUCT_KITS: ProductKit[] = [
       {
         label: 'Deploy',
         name: 'Roll-Out Install & Removal',
-        body: 'Easy roll-out installation and removal lets you set up a pro-grade court quickly and efficiently, indoors or outdoors, for temporary and repeat-use applications.',
+        body: 'Portable system designed for efficient installation, removal, transport, and storage across temporary and recurring events.',
       },
     ],
     logoGuidelines: [

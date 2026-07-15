@@ -164,7 +164,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
         <div className="flex items-center gap-2">
           <FileText className="size-5 text-sky" />
           <h3 className="text-xl font-semibold text-navy">
-            Approved Marketing Copy
+            Ready-to-Use Copy
           </h3>
         </div>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">

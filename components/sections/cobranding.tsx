@@ -150,9 +150,9 @@ export function CoBranding() {
           <table className="w-full min-w-[32rem] border-collapse text-left text-sm">
             <thead>
               <tr className="bg-navy text-white">
-                <th className="px-4 py-3 font-semibold">Correct</th>
-                <th className="px-4 py-3 font-semibold">Not</th>
-                <th className="px-4 py-3 font-semibold">Descriptor</th>
+                <th className="px-4 py-3 font-semibold">Approved Name</th>
+                <th className="px-4 py-3 font-semibold">Do Not Use</th>
+                <th className="px-4 py-3 font-semibold">Approved Descriptor</th>
               </tr>
             </thead>
             <tbody>
