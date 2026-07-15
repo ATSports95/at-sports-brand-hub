@@ -59,11 +59,20 @@ function KitPanel({ kit }: { kit: ProductKit }) {
       {/* Header band */}
       <div className="overflow-hidden rounded-lg border border-border bg-card">
         <div className="flex flex-col gap-4 border-b border-border bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex h-16 items-center">
+          <div
+            className={cn(
+              'flex h-16 items-center text-lg',
+              (kit.id === 'cushionx' || kit.id === 'faultline') && 'h-20',
+            )}
+          >
             <LogoTile
               file={`${kit.id}-color.svg`}
               alt={`${kit.name} logo`}
-              className="w-44 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
+              className={cn(
+                'w-44 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0',
+                (kit.id === 'cushionx' || kit.id === 'faultline') &&
+                  'w-52 [&>div]:h-20',
+              )}
             />
           </div>
           <div className="flex flex-col gap-1 sm:items-end">
@@ -74,9 +83,6 @@ function KitPanel({ kit }: { kit: ProductKit }) {
               )}
             >
               {kit.descriptor}
-            </span>
-            <span className="text-xs tracking-wide text-slate uppercase">
-              {kit.tagline}
             </span>
           </div>
         </div>

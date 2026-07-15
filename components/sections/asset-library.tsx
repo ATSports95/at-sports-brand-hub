@@ -2,9 +2,6 @@ import {
   Images,
   Boxes,
   Palette,
-  Type,
-  LayoutTemplate,
-  Presentation,
   FileText,
 } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
@@ -36,25 +33,6 @@ const CARDS: {
     title: 'Color Codes',
     description: 'Adobe .ase swatch file for consistent color across tools.',
     icon: Palette,
-  },
-  {
-    key: 'fontsGuide',
-    title: 'Fonts / Type Guidance',
-    description: 'Figtree, Expletus Sans, Flood usage + fallback guidance.',
-    icon: Type,
-  },
-  {
-    key: 'templates',
-    title: 'Templates',
-    description:
-      'Social frames, email signature, one-pager, proposal cover.',
-    icon: LayoutTemplate,
-  },
-  {
-    key: 'overviewDeck',
-    title: 'Company Overview Deck',
-    description: 'Partner-facing AT Sports overview.',
-    icon: Presentation,
   },
   {
     key: 'hubPdf',

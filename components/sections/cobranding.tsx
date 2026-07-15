@@ -59,7 +59,7 @@ export function CoBranding() {
         eyebrow="Co-Branding & Partner Use"
         title="Co-branding & partner use"
         emphasis
-        intro="Keep the marks separate and balanced — use a clear divider or generous space, never overlap or merge them. Respect AT Sports' clear space and match visual weight so neither mark overpowers the other."
+        intro="Co-branding should communicate partnership—not ownership. AT Sports and partner brands should appear together while maintaining independent visual identities."
       />
 
       <p className="max-w-2xl text-sm leading-relaxed text-ink/80">

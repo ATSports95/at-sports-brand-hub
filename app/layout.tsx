@@ -35,14 +35,23 @@ export default function RootLayout({
 }
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Figtree } from 'next/font/google'
+import { Figtree, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 
-// Figtree (Google Fonts) is the brand's single typeface — an Effra-like
+// Figtree (Google Fonts) is the brand's primary typeface — an Effra-like
 // geometric sans used for both headlines and body copy.
 const figtree = Figtree({
   subsets: ['latin'],
   variable: '--font-figtree',
+  display: 'swap',
+})
+
+// Space Grotesk (Google Fonts) is the secondary typeface, used at Medium and
+// Bold weights for high-impact accents.
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['500', '700'],
+  variable: '--font-space-grotesk',
   display: 'swap',
 })
 
@@ -83,7 +92,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`light bg-background ${figtree.variable}`}
+      className={`light bg-background ${figtree.variable} ${spaceGrotesk.variable}`}
     >
       <body className="font-sans antialiased">
         {children}

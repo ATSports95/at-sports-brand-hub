@@ -5,13 +5,15 @@ const FONTS = [
     name: 'Figtree',
     role: 'Primary typeface',
     weights: 'Light · Regular · Medium · SemiBold · Bold',
-    note: 'Clean geometric sans used for both headlines and body copy. Loaded from Google Fonts.',
+    note: 'open-source Google Font',
+    fontClass: 'font-display',
   },
   {
-    name: 'Flood',
-    role: 'High-impact accent font',
-    weights: 'Display use only',
-    note: 'Reserved for bold, high-impact accents.',
+    name: 'Space Grotesk',
+    role: 'Secondary Typeface ',
+    weights: 'Medium · Bold',
+    note: 'Open-Source Google Font',
+    fontClass: 'font-secondary',
   },
 ]
 
@@ -30,16 +32,20 @@ export function Typography() {
             key={font.name}
             className="flex flex-col gap-2 rounded-md border border-border bg-card p-6"
           >
-            <span className="font-display text-3xl font-bold text-navy">
+            <span className={`${font.fontClass} text-3xl font-bold text-navy`}>
               Aa
             </span>
-            <span className="mt-2 text-lg font-semibold text-navy">
+            <span
+              className={`${font.fontClass} mt-2 text-lg font-semibold text-navy`}
+            >
               {font.name}
             </span>
             <span className="text-xs font-medium tracking-wide text-sky uppercase">
               {font.role}
             </span>
-            <span className="text-sm text-slate">{font.weights}</span>
+            <span className={`${font.fontClass} text-sm text-slate`}>
+              {font.weights}
+            </span>
             <p className="mt-1 text-xs leading-relaxed text-slate">
               {font.note}
             </p>
@@ -65,17 +71,7 @@ export function Typography() {
         </p>
       </div>
 
-      <div className="mt-8 rounded-md border border-red/30 bg-red/5 p-6">
-        <h4 className="font-semibold text-navy">
-          For partners without the fonts
-        </h4>
-        <p className="mt-2 text-sm leading-relaxed text-ink/80">
-          Don&apos;t substitute look-alikes in AT Sports-branded materials. Use
-          a clean neutral sans (Arial/Helvetica) for your own documents, or
-          request a branded template. Don&apos;t recreate AT Sports headlines
-          or logos in a substitute font — request the asset.
-        </p>
-      </div>
+
     </Section>
   )
 }

@@ -10,13 +10,7 @@ export function Welcome() {
       />
 
       <p className="max-w-2xl text-pretty leading-relaxed text-ink/80">
-        This is your one place for everything you need to represent AT Sports
-        and our product lines correctly. Whether you&apos;re building a
-        proposal, posting to social, or putting our name on a sign, start here.
-        Everything here is current and cleared for partner use — bookmark this
-        page rather than saving copies. The one rule that covers most
-        situations: <strong className="text-navy">when in doubt, ask us
-        before you publish.</strong>
+        This Brand Hub is the single source of truth for the AT Sports brand. Every logo, product description, color, marketing asset, and positioning statement has been approved by the AT Sports Marketing Department to ensure a consistent experience across every market.
       </p>
 
       <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -37,10 +31,9 @@ export function Welcome() {
           </span>
           <h3 className="text-lg font-semibold text-navy">Brand at a glance</h3>
           <p className="text-sm leading-relaxed text-ink/80">
-            AT Sports is the umbrella manufacturer behind a complete system of
-            sports surfacing products — from crack repair, to coatings, to
-            cushioned and portable systems. One manufacturer for the full
-            surfacing system; each product line solves a specific job.
+            AT Sports designs and manufactures professional sports surfacing systems used on courts around the world.
+            <br /><br />
+            Rather than sourcing individual products from multiple suppliers, contractors can rely on one manufacturer for coatings, crack repair, cushioned systems, portable courts, equipment, and technical support - all engineered to work together as a complete system.
           </p>
         </div>
       </div>
