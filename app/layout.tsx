@@ -1,3 +1,38 @@
+import type { Metadata } from "next";
+import { Figtree, Space_Grotesk } from "next/font/google";
+import "./globals.css";
+
+const figtree = Figtree({
+  subsets: ["latin"],
+  variable: "--font-figtree",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "AT Sports Brand Hub",
+  description: "Official AT Sports brand guidelines and resources.",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${figtree.variable} ${spaceGrotesk.variable}`}
+    >
+      <body>{children}</body>
+    </html>
+  );
+}
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Figtree } from 'next/font/google'
