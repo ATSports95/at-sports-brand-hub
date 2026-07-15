@@ -49,9 +49,7 @@ export function LogoIdentity() {
       <div className="mb-14">
         <h3 className="text-xl font-semibold text-navy">The company logo</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/80">
-          Represents the company as a whole and its growing product line. Use
-          it whenever you&apos;re referring to AT Sports the company — not a
-          specific product.
+          The AT Sports logo represents the company as a whole. Product logos represent individual solutions within the AT Sports product portfolio.
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-3">
           <LogoTile

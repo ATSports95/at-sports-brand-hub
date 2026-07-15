@@ -72,21 +72,21 @@ export const PRODUCT_LINES: ProductLine[] = [
     name: 'Acrytech',
     descriptor: 'Sports Coatings',
     whatFor:
-      'Top-of-the-line sports surface coatings and surface materials.',
+      'Professional line of acrylic sports coatings and surfacing materials',
   },
   {
     id: 'cushionx',
     name: 'CushionX',
     descriptor: 'Cushion Sports Surfaces',
     whatFor:
-      'A lightweight, pliable premium cushion mat that\u2019s fast and easy to install.',
+      'A lightweight, pliable premium cushion overlay system that delivers a durable impact resistant surface.',
   },
   {
     id: 'faultline',
     name: 'Faultline',
     descriptor: 'Crack Repair',
     whatFor:
-      'A premium solution for repairing cracks on sports surfaces, for seamless play on tennis and pickleball courts.',
+      'Solutions for repairing cracks and maintaining the quality and performance of sports surfaces.',
   },
   {
     id: 'rollx',
@@ -143,7 +143,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     overview: [
       'Acrytech Sports Coatings deliver a complete, professional-grade sports surfacing solution engineered for performance, durability, and long-term reliability.',
       'Built to perform and engineered to last, Acrytech is trusted by court builders, contractors, sports facilities, and professional organizations seeking consistent, high-quality playing surfaces across a wide range of sports applications.',
-      'As the Official Surface of the Professional Pickleball Association (PPA), Acrytech represents professional-level performance, proven consistency, and long-term surface reliability.',
+      'As the Official Surface of the Professional Pickleball Association (PPA) and Major League Pickleball (MLP), Acrytech represents professional-level performance, proven consistency, and long-term surface reliability.',
     ],
     positioning: [
       {

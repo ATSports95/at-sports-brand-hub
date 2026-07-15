@@ -4,8 +4,8 @@ import { LogoTile } from '@/components/logo-tile'
 import { PRODUCT_LINES } from '@/lib/brand'
 
 const WE_SAY = [
-  '"Engineered for high-performance play."',
-  '"A premium solution designed to [do the job]."',
+  '"Manufactured with 100% self-crosslinking acrylic technology."',
+  '"Engineered to withstand heavy play and changing climates."',
   '"Fast and easy to install."',
   'Specific, provable claims.',
 ]
@@ -22,14 +22,13 @@ export function Foundation() {
       <SectionHeading
         eyebrow="Brand Foundation"
         title="Mission & positioning"
-        intro="AT Sports manufactures the surfaces athletes play on — engineered, tested, and built to perform. We give facility owners, contractors, and municipalities a single trusted source for the full surfacing system, backed by a product line that keeps growing."
+        intro="AT Sports exists to help contractors, distributors, and facility owners build courts that perform better, last longer, and represent their businesses with confidence.&#10;Through continuous product development and in-house manufacturing, we engineer complete sports surfacing systems trusted from local community courts to professional competition."
       />
 
       {/* Pull-quote */}
       <blockquote className="relative my-8 rounded-md border-l-4 border-red bg-muted px-6 py-6">
         <p className="text-balance font-display text-xl font-semibold text-navy md:text-2xl">
-          &ldquo;The complete sports surfacing system, from one
-          manufacturer.&rdquo;
+          &ldquo;Surfaces That Perform. Solutions That Go Further.&rdquo;
         </p>
       </blockquote>
 
@@ -49,7 +48,7 @@ export function Foundation() {
             <span className="flex size-6 items-center justify-center rounded-full bg-sky text-white">
               <Check className="size-3.5" />
             </span>
-            <h4 className="font-semibold text-navy">We say</h4>
+            <h4 className="font-semibold text-navy">We lead with facts</h4>
           </div>
           <ul className="flex flex-col gap-3">
             {WE_SAY.map((item) => (

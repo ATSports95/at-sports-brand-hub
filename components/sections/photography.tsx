@@ -2,13 +2,13 @@ import { Check, X, Camera } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
 
 const DO = [
-  'High-res at intended size, sharp and true to the surface.',
+  'High-res at intended size, sharp and true to the surface. Real contractors Installation process Finished courts Wide facility shots Close product details',
 ]
 const DONT = [
   'Low-res grabs or stretched images.',
   'Altering or filtering surface colors.',
   'Cropping out branding.',
-  'Pulling uncleared images from the website/social.',
+  'Pulling uncleared images from the website/social.Fake renders/AI-looking imagery',
 ]
 
 export function Photography() {
@@ -30,7 +30,7 @@ export function Photography() {
             <span className="flex size-6 items-center justify-center rounded-full bg-sky text-white">
               <Check className="size-3.5" />
             </span>
-            Do
+            Do Show
           </h4>
           <ul className="flex flex-col gap-3">
             {DO.map((d) => (
