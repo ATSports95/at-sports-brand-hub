@@ -5,14 +5,14 @@ const FONTS = [
     name: 'Figtree',
     role: 'Primary typeface',
     weights: 'Light · Regular · Medium · SemiBold · Bold',
-    note: 'Clean geometric sans used for both headlines and body copy. Loaded from Google Fonts.',
+    note: 'open-source Google Font',
     fontClass: 'font-display',
   },
   {
     name: 'Space Grotesk',
-    role: 'Secondary Typeface - Medium & Bold',
+    role: 'Secondary Typeface ',
     weights: 'Medium · Bold',
-    note: 'Reserved for bold, high-impact accents. Loaded from Google Fonts.',
+    note: 'Open-Source Google Font',
     fontClass: 'font-secondary',
   },
 ]
@@ -67,17 +67,7 @@ export function Typography() {
         </p>
       </div>
 
-      <div className="mt-8 rounded-md border border-red/30 bg-red/5 p-6">
-        <h4 className="font-semibold text-navy">
-          For partners without the fonts
-        </h4>
-        <p className="mt-2 text-sm leading-relaxed text-ink/80">
-          Don&apos;t substitute look-alikes in AT Sports-branded materials. Use
-          a clean neutral sans (Arial/Helvetica) for your own documents, or
-          request a branded template. Don&apos;t recreate AT Sports headlines
-          or logos in a substitute font — request the asset.
-        </p>
-      </div>
+
     </Section>
   )
 }
