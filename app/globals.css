@@ -49,9 +49,11 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  /* Brand font — Figtree for both body and display */
+  /* Brand fonts — Figtree (primary) for body/display, Space Grotesk (secondary) for accents */
   --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  --font-secondary: var(--font-space-grotesk), ui-sans-serif, system-ui,
+    sans-serif;
 
   /* AT Sports brand palette */
   --color-navy: var(--navy);

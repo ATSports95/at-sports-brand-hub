@@ -6,12 +6,14 @@ const FONTS = [
     role: 'Primary typeface',
     weights: 'Light · Regular · Medium · SemiBold · Bold',
     note: 'Clean geometric sans used for both headlines and body copy. Loaded from Google Fonts.',
+    fontClass: 'font-display',
   },
   {
-    name: 'Flood',
-    role: 'High-impact accent font',
-    weights: 'Display use only',
-    note: 'Reserved for bold, high-impact accents.',
+    name: 'Space Grotesk',
+    role: 'Secondary Typeface - Medium & Bold',
+    weights: 'Medium · Bold',
+    note: 'Reserved for bold, high-impact accents. Loaded from Google Fonts.',
+    fontClass: 'font-secondary',
   },
 ]
 
@@ -30,7 +32,7 @@ export function Typography() {
             key={font.name}
             className="flex flex-col gap-2 rounded-md border border-border bg-card p-6"
           >
-            <span className="font-display text-3xl font-bold text-navy">
+            <span className={`${font.fontClass} text-3xl font-bold text-navy`}>
               Aa
             </span>
             <span className="mt-2 text-lg font-semibold text-navy">
