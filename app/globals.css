@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Brand fonts (both Google Fonts): Figtree for everyday body text, Expletus
- * Sans for display/headlines.
+ * Brand font: Figtree (Google Fonts) — an Effra-like geometric sans used for
+ * both headlines and body copy. Hierarchy comes from weight and size.
  */
 
 @theme inline {
@@ -49,9 +49,9 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  /* Brand fonts — Figtree for body, Expletus Sans for display */
+  /* Brand font — Figtree for both body and display */
   --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-expletus), ui-serif, Georgia, serif;
+  --font-display: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
 
   /* AT Sports brand palette */
   --color-navy: var(--navy);

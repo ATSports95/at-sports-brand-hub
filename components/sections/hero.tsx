@@ -12,8 +12,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="diagonal-bottom relative isolate scroll-mt-20 overflow-hidden bg-navy pb-24 lg:scroll-mt-0"
-      style={{ filter: 'drop-shadow(0 14px 24px rgba(12,18,33,0.30))' }}
+      className="relative isolate scroll-mt-20 overflow-hidden bg-navy pb-44 lg:scroll-mt-0"
     >
       {/* Layer 2 — subtle sky-tinted radial glow behind the headline */}
       <div
@@ -72,6 +71,17 @@ export function Hero() {
       <div
         className="halftone pointer-events-none absolute inset-0 text-white/[0.055]"
         aria-hidden
+      />
+
+      {/* Slanted gradient blend — fades the navy into the section below along a
+          gentle diagonal so the transition reads soft instead of a hard edge */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-40"
+        style={{
+          background:
+            'linear-gradient(6deg, var(--background) 0%, var(--background) 20%, rgba(255,255,255,0) 68%)',
+        }}
       />
 
       {/* Content */}
