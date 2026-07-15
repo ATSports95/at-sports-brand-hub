@@ -62,7 +62,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
           <div
             className={cn(
               'flex h-16 items-center text-lg',
-              kit.id === 'cushionx' && 'h-20',
+              (kit.id === 'cushionx' || kit.id === 'faultline') && 'h-20',
             )}
           >
             <LogoTile
@@ -70,7 +70,8 @@ function KitPanel({ kit }: { kit: ProductKit }) {
               alt={`${kit.name} logo`}
               className={cn(
                 'w-44 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0',
-                kit.id === 'cushionx' && 'w-52 [&>div]:h-20',
+                (kit.id === 'cushionx' || kit.id === 'faultline') &&
+                  'w-52 [&>div]:h-20',
               )}
             />
           </div>
