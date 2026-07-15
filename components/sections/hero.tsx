@@ -101,7 +101,7 @@ export function Hero() {
             <Fragment key={p.base}>
               {i > 0 && (
                 <span className="text-white/20" aria-hidden>
-                  /
+                  &bull;
                 </span>
               )}
               <a
