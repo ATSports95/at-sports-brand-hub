@@ -2,7 +2,6 @@ import {
   Images,
   Boxes,
   Palette,
-  Type,
   FileText,
 } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
@@ -34,12 +33,6 @@ const CARDS: {
     title: 'Color Codes',
     description: 'Adobe .ase swatch file for consistent color across tools.',
     icon: Palette,
-  },
-  {
-    key: 'fontsGuide',
-    title: 'Fonts / Type Guidance',
-    description: 'Figtree, Expletus Sans, Flood usage + fallback guidance.',
-    icon: Type,
   },
   {
     key: 'hubPdf',
