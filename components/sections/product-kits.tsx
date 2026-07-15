@@ -59,7 +59,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
       {/* Header band */}
       <div className="overflow-hidden rounded-lg border border-border bg-card">
         <div className="flex flex-col gap-4 border-b border-border bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex h-16 items-center">
+          <div className="flex h-16 items-center text-lg">
             <LogoTile
               file={`${kit.id}-color.svg`}
               alt={`${kit.name} logo`}
@@ -73,7 +73,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
                 kit.accentClass,
               )}
             >
-              {kit.id === 'acrytech' ? 'The Coatings System' : kit.descriptor}
+              {kit.id === 'acrytech' ? 'The Coatings System' : kit.id === 'cushionx' ? 'The Cushion System' : kit.descriptor}
             </span>
           </div>
         </div>
