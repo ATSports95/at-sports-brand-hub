@@ -147,12 +147,12 @@ export const PRODUCT_KITS: ProductKit[] = [
     ],
     positioning: [
       {
-        title: 'Complete Acrylic Surfacing System',
-        body: 'Manufactured by AT Sports, Acrytech provides everything needed to prepare, repair, resurface, texture, and finish professional sports courts.',
+        title: 'Acrylic Surfacing System',
+        body: 'Manufactured by AT Sports, Acrytech provides everything needed to prepare, repair, resurface, texture, and finish professional sports surfaces.',
       },
       {
-        title: 'Contractor-Focused Performance',
-        body: 'Designed to simplify installation while delivering consistent results across every stage of the surfacing process.',
+        title: 'Designed for Professional Installation',
+        body: 'Formulated to support dependable mixing, application, texture, color, and finish quality across every stage of the surfacing process.',
       },
       {
         title: 'Engineered for Long-Term Durability',
@@ -164,7 +164,7 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
       {
         title: 'Proven at the Professional Level',
-        body: 'As the Official Surface of the PPA and MLP, Acrytech delivers the consistency demanded by professional competition.',
+        body: 'As the Official Surface of the Professional Pickleball Association and Major League Pickleball., Acrytech delivers the consistency demanded by professional competition.',
       },
     ],
     marketingCopy: [
