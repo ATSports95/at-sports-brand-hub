@@ -1,12 +1,4 @@
-import {
-  ArrowUpRight,
-  Boxes,
-  Handshake,
-  Library,
-  Palette,
-  Shapes,
-  Type,
-} from 'lucide-react'
+import { ArrowUpRight, Library, Palette, Shapes, Zap } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const CARDS = [
@@ -25,48 +17,47 @@ const CARDS = [
     tint: 'bg-sky/15 text-sky',
   },
   {
-    title: 'Product brand kits',
-    desc: 'Approved overviews, positioning, and marketing copy.',
-    id: 'kits',
-    icon: Boxes,
-    tint: 'bg-slate/15 text-slate',
-  },
-  {
     title: 'Asset library',
     desc: 'Download logo packs, templates, and guides.',
     id: 'assets',
     icon: Library,
-    tint: 'bg-navy/10 text-navy',
-  },
-  {
-    title: 'Co-branding',
-    desc: 'How to present your brand alongside AT Sports.',
-    id: 'cobranding',
-    icon: Handshake,
     tint: 'bg-red/10 text-red',
-  },
-  {
-    title: 'Typography',
-    desc: 'The brand fonts and how to use them.',
-    id: 'typography',
-    icon: Type,
-    tint: 'bg-sky/15 text-sky',
   },
 ]
 
 export function QuickAccess() {
   return (
     <section
-      aria-label="Quick access to key resources"
-      className="relative z-20 -mt-24 px-6 md:-mt-28 md:px-12"
+      aria-labelledby="quick-access-heading"
+      className="border-b border-border bg-muted/40 px-6 py-14 md:px-12 md:py-16"
     >
-      <div className="mx-auto w-full max-w-5xl">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto w-full max-w-4xl">
+        <div className="mb-7 flex items-center gap-3">
+          <span
+            className="flex size-9 items-center justify-center rounded-md bg-navy text-white"
+            aria-hidden
+          >
+            <Zap className="size-4" />
+          </span>
+          <div>
+            <p className="font-mono text-xs font-medium tracking-widest text-slate uppercase">
+              Quick Access
+            </p>
+            <h2
+              id="quick-access-heading"
+              className="text-lg font-semibold text-navy"
+            >
+              Jump to the most-used resources
+            </h2>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {CARDS.map(({ title, desc, id, icon: Icon, tint }) => (
             <a
               key={id}
               href={`#${id}`}
-              className="group flex flex-col gap-3 rounded-xl border border-border bg-card p-5 shadow-[0_10px_30px_-12px_rgba(35,51,84,0.25)] transition-all duration-200 hover:-translate-y-1 hover:border-sky hover:shadow-[0_18px_44px_-14px_rgba(35,51,84,0.38)] focus-visible:ring-2 focus-visible:ring-sky/50 focus-visible:outline-none"
+              className="group flex flex-col gap-3 rounded-xl border border-border bg-card p-5 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-sky hover:shadow-[0_16px_36px_-16px_rgba(35,51,84,0.35)] focus-visible:ring-2 focus-visible:ring-sky/50 focus-visible:outline-none"
             >
               <span
                 className={cn(
