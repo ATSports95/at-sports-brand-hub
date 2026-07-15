@@ -17,7 +17,7 @@ export function Photography() {
       <SectionHeading
         eyebrow="Photography & Imagery"
         title="Photography & imagery"
-        intro="Use the curated court and track project images in the Asset Library for marketing and portfolio use — these are cleared for partners. Show surfaces as installed; real projects build trust better than stock."
+        intro="Use the curated project images in the Asset Library for marketing and portfolio use — these are cleared for partners. Show surfaces as installed; real projects build trust better than stock."
       />
 
       <p className="max-w-2xl text-sm leading-relaxed text-slate">
@@ -64,9 +64,7 @@ export function Photography() {
         <div>
           <h4 className="font-semibold text-navy">Requesting new images</h4>
           <p className="mt-1 text-sm leading-relaxed text-ink/80">
-            Need a specific project shot or higher-res file? Request from
-            [email / form link] with the product line, surface color, and
-            intended use. Typical turnaround: [X days].
+            Need a specific project shot or higher-res file? Request from malory@atsports.com with the product line, surface color, and intended use. 
           </p>
         </div>
       </div>

@@ -57,11 +57,10 @@ export function Welcome() {
         </div>
         <dl className="px-6 py-6">
           <div>
-            <dt className="text-xs font-medium tracking-wide text-slate uppercase">
-              Brand &amp; marketing contact
-            </dt>
-            <dd className="mt-1 text-sm text-ink">
-              Malory Bateman, Business Development Manager
+            <dd className="mt-1 text-center text-base text-ink">
+              Malory Bateman
+              <br />
+              Business Development Manager
               <br />
               <a
                 href="mailto:malory@atsports.com"

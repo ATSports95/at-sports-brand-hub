@@ -97,10 +97,7 @@ export function Foundation() {
                 />
               </div>
               <div className="flex flex-1 flex-col gap-2 p-5">
-                <div className="flex items-baseline justify-between gap-2">
-                  <span className="font-semibold text-navy">
-                    {product.name}
-                  </span>
+                <div className="flex items-baseline justify-center gap-2">
                   <span className="rounded-sm bg-navy/5 px-2 py-0.5 text-xs font-medium text-sky">
                     {product.descriptor}
                   </span>

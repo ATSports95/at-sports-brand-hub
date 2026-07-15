@@ -47,7 +47,7 @@ export function LogoIdentity() {
 
       {/* Corporate logo */}
       <div className="mb-14">
-        <h3 className="text-xl font-semibold text-navy">The corporate logo</h3>
+        <h3 className="text-xl font-semibold text-navy">The company logo</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/80">
           Represents the company as a whole and its growing product line. Use
           it whenever you&apos;re referring to AT Sports the company — not a
@@ -174,7 +174,7 @@ export function LogoIdentity() {
         <div className="mt-6 grid grid-cols-2 gap-5 lg:grid-cols-3">
           {/* Correct */}
           <figure className="flex flex-col gap-3">
-            <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-sky bg-card p-6">
+            <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-3xl border-2 border-sky bg-card p-6">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/logos/at-sports-color.svg"
