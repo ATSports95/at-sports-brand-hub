@@ -70,6 +70,13 @@ export function Photography() {
           </p>
         </div>
       </div>
+
+      <p className="mt-6 max-w-3xl text-xs leading-relaxed text-slate">
+        No photo credit is required for approved images downloaded from the AT
+        Sports Asset Library unless a specific credit is included with the file.
+        Images may not be resold, transferred to unrelated third parties, or
+        used to suggest involvement in a project the partner did not complete.
+      </p>
     </Section>
   )
 }
