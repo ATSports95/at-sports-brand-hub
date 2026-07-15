@@ -85,7 +85,7 @@ export function LogoIdentity() {
           corporate brand. It tells the viewer the product belongs to AT
           Sports. Don&apos;t rebuild it — always use the supplied lockup.
         </p>
-        <div className="mt-6 max-w-sm">
+        <div className="mt-6 grid gap-5 sm:grid-cols-3">
           <LogoTile
             file="at-sports-tag-color.svg"
             alt="Division of AT Sports tag"
