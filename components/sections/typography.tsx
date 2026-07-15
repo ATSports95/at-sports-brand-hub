@@ -2,10 +2,10 @@ import { Section, SectionHeading } from '@/components/section'
 
 const FONTS = [
   {
-    name: 'Effra',
+    name: 'Figtree',
     role: 'Everyday font',
-    weights: 'Light · Regular · SemiBold · ExtraBold',
-    note: 'The prototype uses Figtree as a stand-in for the licensed Effra.',
+    weights: 'Light · Regular · Medium · SemiBold · Bold',
+    note: 'Clean geometric sans for body copy and UI. Loaded from Google Fonts.',
   },
   {
     name: 'Expletus Sans',
@@ -65,8 +65,8 @@ export function Typography() {
           The complete sports surfacing system
         </p>
         <p className="mt-4 max-w-xl leading-relaxed text-ink/80">
-          Body copy uses Figtree (standing in for Effra) at a comfortable line
-          height for readability. It carries the everyday message while the
+          Body copy uses Figtree at a comfortable line height for readability.
+          It carries the everyday message while the
           display font handles headlines and accents.
         </p>
       </div>

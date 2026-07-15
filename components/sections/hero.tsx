@@ -63,6 +63,7 @@ export function Hero() {
             <ArrowRight className="size-4" />
           </Button>
           <Button
+            nativeButton={false}
             render={<a href="#assets" />}
             size="lg"
             variant="outline"
