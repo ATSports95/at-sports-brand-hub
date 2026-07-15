@@ -3,8 +3,6 @@ import {
   Boxes,
   Palette,
   Type,
-  LayoutTemplate,
-  Presentation,
   FileText,
 } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
@@ -42,19 +40,6 @@ const CARDS: {
     title: 'Fonts / Type Guidance',
     description: 'Figtree, Expletus Sans, Flood usage + fallback guidance.',
     icon: Type,
-  },
-  {
-    key: 'templates',
-    title: 'Templates',
-    description:
-      'Social frames, email signature, one-pager, proposal cover.',
-    icon: LayoutTemplate,
-  },
-  {
-    key: 'overviewDeck',
-    title: 'Company Overview Deck',
-    description: 'Partner-facing AT Sports overview.',
-    icon: Presentation,
   },
   {
     key: 'hubPdf',

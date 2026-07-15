@@ -73,10 +73,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
                 kit.accentClass,
               )}
             >
-              {kit.descriptor}
-            </span>
-            <span className="text-xs tracking-wide text-slate uppercase">
-              {kit.tagline}
+              {kit.id === 'acrytech' ? 'The Coatings System' : kit.descriptor}
             </span>
           </div>
         </div>
