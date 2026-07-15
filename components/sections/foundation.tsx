@@ -79,8 +79,7 @@ export function Foundation() {
       <div className="mt-12">
         <h3 className="text-xl font-semibold text-navy">The product lines</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
-          One manufacturer, a full surfacing system. Each line solves a
-          specific job.
+          AT Sports manufactures complete sports surfacing systems. Each product line serves as a solution for a specific challenge
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-2">
           {PRODUCT_LINES.map((product) => (
