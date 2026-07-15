@@ -3,14 +3,14 @@ import { Section, SectionHeading } from '@/components/section'
 const FONTS = [
   {
     name: 'Figtree',
-    role: 'Primary typeface',
+    role: 'Primary Text Typeface',
     weights: 'Light · Regular · Medium · SemiBold · Bold',
-    note: 'open-source Google Font',
+    note: 'Open-Source Google Font',
     fontClass: 'font-display',
   },
   {
     name: 'Space Grotesk',
-    role: 'Secondary Typeface ',
+    role: 'Display Typeface ',
     weights: 'Medium · Bold',
     note: 'Open-Source Google Font',
     fontClass: 'font-secondary',
@@ -51,25 +51,6 @@ export function Typography() {
           </div>
         ))}
       </div>
-
-      {/* Live hierarchy sample */}
-      <div className="mt-8 rounded-md border border-border bg-card p-8">
-        <span className="text-xs font-medium tracking-wide text-slate uppercase">
-          Live hierarchy
-        </span>
-        <h3 className="mt-4 font-display text-4xl font-bold text-navy">
-          Engineered to perform
-        </h3>
-        <p className="mt-2 text-lg font-medium text-slate">
-          The complete sports surfacing system
-        </p>
-        <p className="mt-4 max-w-xl leading-relaxed text-ink/80">
-          Body copy uses Figtree at a comfortable line height for readability.
-          The same family sets the headlines above at heavier weights, keeping
-          the type system clean and consistent.
-        </p>
-      </div>
-
 
     </Section>
   )

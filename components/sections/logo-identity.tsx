@@ -80,10 +80,10 @@ export function LogoIdentity() {
           The AT Sports Tag
         </h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/80">
-          &ldquo;Division of AT Sports&rdquo; accompanies a product line logo
-          when that product is referenced without other context or ties to the
-          corporate brand. It tells the viewer the product belongs to AT
-          Sports. Don&apos;t rebuild it — always use the supplied lockup.
+          The &ldquo;Division of AT Sports&rdquo; tag identifies each product
+          line as part of the AT Sports portfolio. Use the supplied lockup when
+          a product-line logo appears without clear AT Sports company context.
+          Never rebuild, retype, or reposition the tag.
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-3">
           <LogoTile
@@ -135,9 +135,10 @@ export function LogoIdentity() {
           Clear space &amp; minimum size
         </h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/80">
-          Maintain at least <strong className="text-navy">0.19&quot;</strong> of
-          clear space from edges and top on the corporate lockup. Never scale
-          so small the descriptor text becomes unreadable.
+          Maintain clear space around the logo equal to at least the height of
+          the <strong className="text-navy">&quot;A&quot;</strong> in the AT
+          Sports wordmark. No text, graphics, borders, or other logos may enter
+          this area.
         </p>
       </div>
 

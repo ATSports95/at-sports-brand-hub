@@ -88,7 +88,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
         </div>
         <div className="flex flex-col gap-3 p-6">
           <h3 className="text-sm font-semibold tracking-wide text-slate uppercase">
-            Product Brand Overview
+            Brand Overview
           </h3>
           {kit.overview.map((para) => (
             <p key={para} className="leading-relaxed text-ink/80">

@@ -6,7 +6,7 @@ import { PRODUCT_LINES } from '@/lib/brand'
 const WE_SAY = [
   '"Manufactured with 100% self-crosslinking acrylic technology."',
   '"Engineered to withstand heavy play and changing climates."',
-  '"Fast and easy to install."',
+  '"Designed to reduce installation time and process complexity."',
   'Specific, provable claims.',
 ]
 
@@ -38,7 +38,8 @@ export function Foundation() {
         <p className="mt-3 max-w-2xl leading-relaxed text-ink/80">
           AT Sports sounds professional, technical, and confident — the voice
           of a manufacturer that knows its products perform. Benefit-forward
-          without hype. We let the engineering do the talking.
+          without hype. We lead with facts, explain the customer benefit, and
+          allow product performance to support the message.
         </p>
       </div>
 

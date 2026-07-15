@@ -26,10 +26,6 @@ export function Photography() {
         intro="Use the curated project images in the Asset Library for marketing and portfolio use — these are cleared for partners. Show surfaces as installed; real projects build trust better than stock."
       />
 
-      <p className="max-w-2xl text-sm leading-relaxed text-slate">
-        Credit requirements: [note here or &ldquo;none required&rdquo;].
-      </p>
-
       <div className="mt-8 grid gap-5 md:grid-cols-2">
         <div className="rounded-md border border-sky/40 bg-sky/5 p-6">
           <h4 className="mb-4 flex items-center gap-2 font-semibold text-navy">
@@ -74,6 +70,13 @@ export function Photography() {
           </p>
         </div>
       </div>
+
+      <p className="mt-6 max-w-3xl text-xs leading-relaxed text-slate">
+        No photo credit is required for approved images downloaded from the AT
+        Sports Asset Library unless a specific credit is included with the file.
+        Images may not be resold, transferred to unrelated third parties, or
+        used to suggest involvement in a project the partner did not complete.
+      </p>
     </Section>
   )
 }

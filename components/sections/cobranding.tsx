@@ -1,4 +1,4 @@
-import { Check, X, Star, Unlock, ShieldAlert } from 'lucide-react'
+import { Check, X, Unlock, ShieldAlert } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
 import { PRODUCT_NAMING } from '@/lib/brand'
 import { cn } from '@/lib/utils'
@@ -52,8 +52,7 @@ export function CoBranding() {
   return (
     <Section id="cobranding">
       <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red/10 px-3 py-1 text-xs font-semibold tracking-wide text-red uppercase">
-        <Star className="size-3.5" />
-        Most important for partners
+        Partner Standards
       </div>
       <SectionHeading
         eyebrow="Co-Branding & Partner Use"
@@ -63,15 +62,14 @@ export function CoBranding() {
       />
 
       <p className="max-w-2xl text-sm leading-relaxed text-ink/80">
-        Use approved language only:{' '}
-        <strong className="text-navy">&ldquo;Certified Installer,&rdquo;</strong>{' '}
-        <strong className="text-navy">&ldquo;Official Distributor,&rdquo;</strong>{' '}
-        or{' '}
+        Use only the designation formally assigned to the company by AT Sports, such as{' '}
+        <strong className="text-navy">&ldquo;Authorized Distributor,&rdquo;</strong>{' '}
+        <strong className="text-navy">&ldquo;Official Distributor&quot;,&nbsp;</strong>{' '}
+        <strong className="text-navy">&ldquo;Certified Installer,&rdquo;</strong> or{' '}
         <strong className="text-navy">
-          &ldquo;[Your Company] — Power by AT Sports.&rdquo;
+          &ldquo;[Company Name] — Powered by AT Sports.&rdquo;
         </strong>{' '}
-        Don&apos;t invent titles like &ldquo;Official Partner&rdquo; or
-        &ldquo;Certified by AT Sports&rdquo; without sign-off.
+        Do not create titles that imply certification, exclusivity, endorsement, or official status without written approval.
       </p>
 
       {/* Correct vs incorrect co-branding */}

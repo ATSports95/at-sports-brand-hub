@@ -89,7 +89,7 @@ export function Hero() {
 
         <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-steel">
           <span className="font-black">AT Sports is a manufacturer of professional sports surfacing systems trusted by contractors, distributors, and facilities around the world.</span>
-          <span className="mt-3 block">This Brand Hub provides the approved tools, messaging, and assets needed to represent the company and every AT Sports product line accurately and consistently.</span>
+          <span className="mt-6 block">This Brand Hub provides the approved tools, messaging, and assets needed to represent the company and every AT Sports product line accurately and consistently.</span>
         </p>
 
         {/* Product wordmarks — strong typographic band linking to the kits */}
