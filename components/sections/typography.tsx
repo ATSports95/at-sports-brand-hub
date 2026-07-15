@@ -35,13 +35,17 @@ export function Typography() {
             <span className={`${font.fontClass} text-3xl font-bold text-navy`}>
               Aa
             </span>
-            <span className="mt-2 text-lg font-semibold text-navy">
+            <span
+              className={`${font.fontClass} mt-2 text-lg font-semibold text-navy`}
+            >
               {font.name}
             </span>
             <span className="text-xs font-medium tracking-wide text-sky uppercase">
               {font.role}
             </span>
-            <span className="text-sm text-slate">{font.weights}</span>
+            <span className={`${font.fontClass} text-sm text-slate`}>
+              {font.weights}
+            </span>
             <p className="mt-1 text-xs leading-relaxed text-slate">
               {font.note}
             </p>
