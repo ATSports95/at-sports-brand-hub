@@ -5,11 +5,19 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Effra — the official AT Sports brand typeface (commercial license).
- * Drop the licensed files into /public/fonts/ using the names below and Effra
- * will render everywhere. Until then, the fallback stack (Figtree, then the
- * system UI font) keeps the layout intact.
+ * Effra — the official AT Sports brand typeface (commercial license),
+ * self-hosted from /public/fonts. Four weights per the brand standard:
+ * Light (300), Regular (400), SemiBold (600), ExtraBold (800).
  */
+@font-face {
+  font-family: 'Effra';
+  src:
+    url('/fonts/effra-light.woff2') format('woff2'),
+    url('/fonts/effra-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: 'Effra';
   src:
@@ -22,18 +30,18 @@
 @font-face {
   font-family: 'Effra';
   src:
-    url('/fonts/effra-medium.woff2') format('woff2'),
-    url('/fonts/effra-medium.woff') format('woff');
-  font-weight: 500;
+    url('/fonts/effra-semibold.woff2') format('woff2'),
+    url('/fonts/effra-semibold.woff') format('woff');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Effra';
   src:
-    url('/fonts/effra-bold.woff2') format('woff2'),
-    url('/fonts/effra-bold.woff') format('woff');
-  font-weight: 700;
+    url('/fonts/effra-extrabold.woff2') format('woff2'),
+    url('/fonts/effra-extrabold.woff') format('woff');
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -78,10 +86,9 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  /* Brand fonts — Effra is primary, Figtree is the fallback until files load */
-  --font-sans: 'Effra', var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Effra', var(--font-figtree), ui-sans-serif, system-ui,
-    sans-serif;
+  /* Brand fonts — Effra (self-hosted) for body, Expletus Sans for display */
+  --font-sans: 'Effra', ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-expletus), ui-serif, Georgia, serif;
 
   /* AT Sports brand palette */
   --color-navy: var(--navy);
