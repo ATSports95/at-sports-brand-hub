@@ -63,15 +63,14 @@ export function CoBranding() {
       />
 
       <p className="max-w-2xl text-sm leading-relaxed text-ink/80">
-        Use approved language only:{' '}
-        <strong className="text-navy">&ldquo;Certified Installer,&rdquo;</strong>{' '}
-        <strong className="text-navy">&ldquo;Official Distributor,&rdquo;</strong>{' '}
-        or{' '}
+        Use only the designation formally assigned to the company by AT Sports, such as{' '}
+        <strong className="text-navy">&ldquo;Authorized Distributor,&rdquo;</strong>{' '}
+        <strong className="text-navy">&ldquo;Official Distributor&quot;,&nbsp;</strong>{' '}
+        <strong className="text-navy">&ldquo;Certified Installer,&rdquo;</strong> or{' '}
         <strong className="text-navy">
-          &ldquo;[Your Company] — Power by AT Sports.&rdquo;
+          &ldquo;[Company Name] — Powered by AT Sports.&rdquo;
         </strong>{' '}
-        Don&apos;t invent titles like &ldquo;Official Partner&rdquo; or
-        &ldquo;Certified by AT Sports&rdquo; without sign-off.
+        Do not create titles that imply certification, exclusivity, endorsement, or official status without written approval.
       </p>
 
       {/* Correct vs incorrect co-branding */}

@@ -3,14 +3,14 @@ import { Section, SectionHeading } from '@/components/section'
 const FONTS = [
   {
     name: 'Figtree',
-    role: 'Primary typeface',
+    role: 'Primary Text Typeface',
     weights: 'Light · Regular · Medium · SemiBold · Bold',
-    note: 'open-source Google Font',
+    note: 'Open-Source Google Font',
     fontClass: 'font-display',
   },
   {
     name: 'Space Grotesk',
-    role: 'Secondary Typeface ',
+    role: 'Display Typeface ',
     weights: 'Medium · Bold',
     note: 'Open-Source Google Font',
     fontClass: 'font-secondary',
