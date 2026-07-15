@@ -23,7 +23,6 @@ export function Typography() {
       <SectionHeading
         eyebrow="Typography"
         title="Typography"
-        intro="A clear hierarchy: bold display headlines in Navy, clean body text in Near-Black and Slate."
       />
 
       <div className="grid gap-5 sm:grid-cols-2">

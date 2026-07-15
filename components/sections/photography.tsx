@@ -22,7 +22,7 @@ export function Photography() {
     <Section id="photography">
       <SectionHeading
         eyebrow="Photography & Imagery"
-        title="Photography & imagery"
+        title="Photography & Imagery"
         intro="Use the curated project images in the Asset Library for marketing and portfolio use — these are cleared for partners. Show surfaces as installed; real projects build trust better than stock."
       />
 

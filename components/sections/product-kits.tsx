@@ -100,7 +100,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
 
       {/* Positioning */}
       <div>
-        <h3 className="text-xl font-semibold text-navy">Brand positioning</h3>
+        <h3 className="text-xl font-semibold text-navy">Brand Positioning</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
           Approved benefit messaging partners may use to describe {kit.name}.
         </p>
@@ -164,7 +164,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
         <div className="flex items-center gap-2">
           <FileText className="size-5 text-sky" />
           <h3 className="text-xl font-semibold text-navy">
-            Approved marketing copy
+            Approved Marketing Copy
           </h3>
         </div>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
@@ -210,7 +210,7 @@ export function ProductKits() {
     <Section id="kits" className="bg-muted/40">
       <SectionHeading
         eyebrow="Product Brand Kits"
-        title="Approved copy & positioning by product"
+        title="Approved Positioning by Product"
         intro="Each AT Sports product line has its own approved overview, benefit messaging, and marketing copy. Select a product to view its brand kit — everything here is cleared for partner use across websites, proposals, and marketing materials."
       />
 

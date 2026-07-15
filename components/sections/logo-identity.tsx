@@ -41,13 +41,13 @@ export function LogoIdentity() {
     <Section id="logo">
       <SectionHeading
         eyebrow="Logo & Identity"
-        title="Logo & identity"
+        title="Logo & Identity"
         intro="Our logos are supplied as ready-to-use files. Show color and black versions on light tiles, and the reversed white version on Navy — never white-on-white."
       />
 
       {/* Corporate logo */}
       <div className="mb-14">
-        <h3 className="text-xl font-semibold text-navy">The company logo</h3>
+        <h3 className="text-xl font-semibold text-navy">The Company Logo</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/80">
           The AT Sports logo represents the company as a whole. Product logos represent individual solutions within the AT Sports product portfolio.
         </p>
@@ -97,7 +97,7 @@ export function LogoIdentity() {
 
       {/* Product line logos */}
       <div className="mb-14">
-        <h3 className="text-xl font-semibold text-navy">Product line logos</h3>
+        <h3 className="text-xl font-semibold text-navy">Product Line Logos</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/80">
           Each line — Acrytech, CushionX, Faultline, RollX — has its own logo
           in the same three versions. Use the product logo when marketing that
@@ -143,7 +143,7 @@ export function LogoIdentity() {
 
       {/* Don'ts */}
       <div className="mb-14">
-        <h3 className="text-xl font-semibold text-navy">Logo don&apos;ts</h3>
+        <h3 className="text-xl font-semibold text-navy">Logo Don&apos;ts</h3>
         <div className="mt-6 grid gap-3 sm:grid-cols-2">
           {DONTS.map((d) => (
             <div
@@ -162,7 +162,7 @@ export function LogoIdentity() {
       {/* Correct vs incorrect */}
       <div>
         <h3 className="text-xl font-semibold text-navy">
-          Correct vs. incorrect
+          Correct vs. Incorrect
         </h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink/80">
           Concrete examples of the rules above. The incorrect tiles apply CSS

@@ -21,7 +21,7 @@ export function Foundation() {
     <Section id="foundation">
       <SectionHeading
         eyebrow="Brand Foundation"
-        title="Mission & positioning"
+        title="Mission & Positioning"
         intro="AT Sports exists to help contractors, distributors, and facility owners build courts that perform better, last longer, and represent their businesses with confidence.&#10;Through continuous product development and in-house manufacturing, we engineer complete sports surfacing systems trusted from local community courts to professional competition."
       />
 
@@ -34,7 +34,7 @@ export function Foundation() {
 
       {/* Voice & tone */}
       <div className="mt-12">
-        <h3 className="text-xl font-semibold text-navy">Voice &amp; tone</h3>
+        <h3 className="text-xl font-semibold text-navy">Voice &amp; Tone</h3>
         <p className="mt-3 max-w-2xl leading-relaxed text-ink/80">
           AT Sports sounds professional, technical, and confident — the voice
           of a manufacturer that knows its products perform. Benefit-forward
@@ -77,7 +77,7 @@ export function Foundation() {
 
       {/* Product lines */}
       <div className="mt-12">
-        <h3 className="text-xl font-semibold text-navy">The product lines</h3>
+        <h3 className="text-xl font-semibold text-navy">The Product Lines</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
           AT Sports manufactures complete sports surfacing systems. Each product line serves as a solution for a specific challenge
         </p>
