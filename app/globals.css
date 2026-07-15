@@ -223,3 +223,28 @@
     clip-path: polygon(0 3.5rem, 100% 0, 100% 100%, 0 100%);
   }
 }
+:root {
+  --font-heading: var(--font-space-grotesk);
+  --font-body: var(--font-figtree);
+}
+
+html,
+body {
+  font-family: var(--font-body), Arial, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), Arial, sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: var(--font-body), Arial, sans-serif;
+}
