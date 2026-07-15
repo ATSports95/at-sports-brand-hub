@@ -1,10 +1,18 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Expletus_Sans } from 'next/font/google'
+import { Expletus_Sans, Figtree } from 'next/font/google'
 import './globals.css'
 
-// Body/everyday text uses Effra, self-hosted via @font-face in globals.css.
-// Expletus Sans is the accent/display font for headlines (Google Fonts).
+// Body/everyday text. The brand font is Effra (commercial license); Figtree is
+// a close geometric-humanist stand-in used until the licensed Effra files can
+// be self-hosted.
+const figtree = Figtree({
+  subsets: ['latin'],
+  variable: '--font-figtree',
+  display: 'swap',
+})
+
+// Accent/display font for headlines (Google Fonts).
 const expletusSans = Expletus_Sans({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
@@ -49,7 +57,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`light bg-background ${expletusSans.variable}`}
+      className={`light bg-background ${figtree.variable} ${expletusSans.variable}`}
     >
       <body className="font-sans antialiased">
         {children}
