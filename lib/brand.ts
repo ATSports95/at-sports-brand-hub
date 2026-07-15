@@ -164,7 +164,7 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
       {
         title: 'Proven at the Professional Level',
-        body: 'As the Official Surface of the Professional Pickleball Association and Major League Pickleball., Acrytech delivers the consistency demanded by professional competition.',
+        body: 'As the Official Surface of the Professional Pickleball Association and Major League Pickleball, Acrytech delivers the consistency demanded by professional competition.',
       },
     ],
     marketingCopy: [
