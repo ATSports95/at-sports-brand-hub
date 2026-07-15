@@ -100,7 +100,7 @@ export function Hero() {
           {PRODUCTS.map((p, i) => (
             <Fragment key={p.base}>
               {i > 0 && (
-                <span className="text-white/20" aria-hidden>
+                <span className="text-sky" aria-hidden>
                   &bull;
                 </span>
               )}
