@@ -147,20 +147,20 @@ export const PRODUCT_KITS: ProductKit[] = [
     ],
     positioning: [
       {
-        title: 'Acrylic Surfacing System',
-        body: 'Manufactured by AT Sports, Acrytech provides everything needed to prepare, repair, resurface, texture, and finish professional sports surfaces.',
+        title: 'Complete Acrylic System',
+        body: 'Every stage of the surfacing process, from preparation and repair to texture and final color, is supported within one manufacturer-backed system.',
       },
       {
-        title: 'Designed for Professional Installation',
-        body: 'Formulated to support dependable mixing, application, texture, color, and finish quality across every stage of the surfacing process.',
+        title: 'Built for Professional Application',
+        body: 'Products are formulated to support consistent mixing, application, texture, and finish quality across a wide range of court projects.',
       },
       {
-        title: 'Engineered for Long-Term Durability',
-        body: 'Formulated to withstand heavy play, changing climates, and demanding environments while maintaining color and performance.',
+        title: 'Engineered for Court Performance',
+        body: 'Designed to deliver reliable traction, consistent ball response, and lasting surface performance when installed according to specification.',
       },
       {
-        title: 'Manufacturing You Can Trust',
-        body: 'Manufactured in-house with advanced acrylic technology for consistent quality and dependable product performance.',
+        title: 'Manufacturing Expertise',
+        body: 'Manufactured in-house using advanced acrylic technology, giving AT Sports greater control over product quality, consistency, and technical support.',
       },
       {
         title: 'Proven at the Professional Level',
@@ -168,10 +168,10 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
     ],
     marketingCopy: [
-      "Acrytech is AT Sports' complete acrylic sports surfacing system, engineered to help contractors build professional-quality courts with confidence. From surface preparation to the final color coat, every product is manufactured to work together for consistent installation, long-term durability, and dependable performance.",
-      'We install Acrytech sports surfacing systems because they provide reliable installation, consistent application, and professional-grade performance. Manufactured by AT Sports, Acrytech products are engineered to work together as one complete system.',
+      'Acrytech is the acrylic sports coating division of AT Sports. Designed for new construction and court resurfacing, the product line includes surface preparation, repair, texture, and color systems engineered to work together from start to finish.',
+      'We install Acrytech coatings because it provides a complete manufacturer-supported system, from preparation through final color, that helps us deliver consistent results on every project.',
       'Acrytech delivers professional sports surfaces designed for consistent playability, long-term durability, and dependable performance. Trusted by facilities around the world, every system is engineered to perform season after season.',
-      'Manufactured with advanced acrylic technology, Acrytech systems are engineered for adhesion, durability, color stability, and consistent application across tennis, pickleball, basketball, and multi-sport courts.',
+      'Manufactured with advanced acrylic technology, Acrytech systems are engineered for adhesion, durability, color stability, and consistent application across tennis, pickleball, basketball, and multi-sport surfaces.',
     ],
     logoGuidelines: [
       'Use only official Acrytech logos provided by AT Sports.',
