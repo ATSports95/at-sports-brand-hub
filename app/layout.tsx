@@ -3,9 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import { Expletus_Sans, Figtree } from 'next/font/google'
 import './globals.css'
 
-// Body/everyday text. The brand font is Effra (commercial license); Figtree is
-// a close geometric-humanist stand-in used until the licensed Effra files can
-// be self-hosted.
+// Body/everyday text — Figtree (Google Fonts), the brand body typeface.
 const figtree = Figtree({
   subsets: ['latin'],
   variable: '--font-figtree',

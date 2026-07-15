@@ -40,7 +40,7 @@ const CARDS: {
   {
     key: 'fontsGuide',
     title: 'Fonts / Type Guidance',
-    description: 'Effra, Expletus Sans, Flood usage + fallback guidance.',
+    description: 'Figtree, Expletus Sans, Flood usage + fallback guidance.',
     icon: Type,
   },
   {

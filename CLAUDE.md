@@ -38,12 +38,10 @@ Defined as design tokens. Always reference tokens, never hardcode hex in compone
 
 ### Typography
 
-- **Effra** — the real everyday brand font (Light, Regular, SemiBold, ExtraBold). Commercially licensed.
-  - The prototype uses **Figtree** (Google Fonts) as a stand-in fallback. There's a `TODO` comment where the swap happens. Don't remove it.
-  - If self-hosted Effra files get added, swap via `@font-face` and remove the fallback.
+- **Figtree** — the everyday body font (Google Fonts, free — actually loaded). Body copy and UI.
 - **Expletus Sans** — accent/display font (Google Fonts, free — actually loaded).
 - **Flood** — high-impact accent font.
-- Headlines: Expletus Sans, Navy, bold/extrabold. Body: Effra/Figtree, Near-Black or Slate.
+- Headlines: Expletus Sans, Navy, bold/extrabold. Body: Figtree, Near-Black or Slate.
 
 ### Aesthetic
 
