@@ -1,31 +1,88 @@
-import { ArrowRight, Library } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { LogoTile } from '@/components/logo-tile'
+import { Fragment } from 'react'
 
-const CHIPS = ['Acrytech', 'CushionX', 'Faultline', 'RollX']
+// Product wordmarks. `accent` is the letter rendered in Red (the trailing X).
+const PRODUCTS = [
+  { base: 'Acrytech' },
+  { base: 'Cushion', accent: 'X' },
+  { base: 'Faultline' },
+  { base: 'Roll', accent: 'X' },
+]
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="diagonal-bottom relative scroll-mt-20 overflow-hidden bg-navy pb-28 lg:scroll-mt-0"
+      className="relative isolate scroll-mt-20 overflow-hidden bg-navy pb-16 md:pb-20 lg:scroll-mt-0"
     >
-      {/* Halftone dot texture accent */}
+      {/* Layer 2 — subtle sky-tinted radial glow behind the headline */}
       <div
-        className="halftone pointer-events-none absolute inset-0 text-white/10"
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(55% 55% at 26% 30%, rgba(78,140,179,0.16), transparent 70%)',
+        }}
+      />
+
+      {/* Layer 5 — soft light in the upper-right corner */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            'radial-gradient(42% 48% at 90% 2%, rgba(255,255,255,0.05), transparent 72%)',
+        }}
+      />
+
+      {/* Layer 4 — oversized AT Sports watermark, off-center to the upper-right,
+          white at ~5% opacity and softly masked so it dissolves before it ever
+          reaches the copy. Embossed blueprint feel, not a visible logo. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-y-0 -right-[6%] hidden w-[84%] md:block"
+        style={{
+          maskImage:
+            'linear-gradient(to left, #000 0%, #000 30%, transparent 80%)',
+          WebkitMaskImage:
+            'linear-gradient(to left, #000 0%, #000 30%, transparent 80%)',
+        }}
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/logos/at-sports-white.svg"
+          alt=""
+          className="h-full w-full object-contain object-right-bottom opacity-[0.05]"
+        />
+      </div>
+
+      {/* Layer — faint diagonal blueprint lines, fading in toward the lower half */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0"
+        style={{
+          backgroundImage:
+            'repeating-linear-gradient(118deg, transparent 0, transparent 43px, rgba(255,255,255,0.035) 43px, rgba(255,255,255,0.035) 44px)',
+          maskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
+        }}
+      />
+
+      {/* Layer 3 — dotted grid texture, dialed back to a whisper */}
+      <div
+        className="halftone pointer-events-none absolute inset-0 text-white/[0.055]"
         aria-hidden
       />
-      <div className="relative mx-auto w-full max-w-4xl px-6 pt-16 pb-8 md:px-12 md:pt-24">
-        <LogoTile
-          file="at-sports-white.svg"
-          alt="AT Sports"
-          tone="navy"
-          className="w-52 [&>div]:aspect-auto [&>div]:h-20 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
-        />
 
-        <h1 className="mt-10 text-balance text-4xl font-bold tracking-tight text-white md:text-6xl">
+      {/* Content */}
+      <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-20 pb-4 md:px-12 md:pt-28">
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 font-mono text-xs font-medium tracking-widest text-sky uppercase">
+          <span className="size-1.5 rounded-full bg-sky" aria-hidden />
+          Official Brand Portal
+        </span>
+
+        <h1 className="mt-6 text-balance text-5xl font-bold tracking-tight text-white md:text-7xl">
           AT Sports Brand Hub
-          <span className="mt-2 block text-2xl font-medium text-sky md:text-3xl">
+          <span className="mt-3 block text-2xl font-medium text-sky md:text-4xl">
             Partner Edition
           </span>
         </h1>
@@ -36,43 +93,28 @@ export function Hero() {
           ready-to-use assets.
         </p>
 
-        <div className="mt-8 flex flex-wrap items-center gap-2">
-          {CHIPS.map((chip, i) => (
-            <span
-              key={chip}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm font-medium text-white"
-            >
-              {chip}
-              {i < CHIPS.length - 1 && (
-                <span className="text-red" aria-hidden>
-                  ·
+        {/* Product wordmarks — strong typographic band linking to the kits */}
+        <nav
+          aria-label="Product lines"
+          className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-2xl font-bold tracking-tight text-white uppercase md:text-3xl"
+        >
+          {PRODUCTS.map((p, i) => (
+            <Fragment key={p.base}>
+              {i > 0 && (
+                <span className="text-white/20" aria-hidden>
+                  /
                 </span>
               )}
-            </span>
+              <a
+                href="#kits"
+                className="transition-opacity duration-200 hover:opacity-70 focus-visible:opacity-70 focus-visible:outline-none"
+              >
+                {p.base}
+                {p.accent && <span className="text-red">{p.accent}</span>}
+              </a>
+            </Fragment>
           ))}
-        </div>
-
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-          <Button
-            nativeButton={false}
-            render={<a href="#welcome" />}
-            size="lg"
-            className="bg-white text-navy hover:bg-white/90"
-          >
-            Browse the guidelines
-            <ArrowRight className="size-4" />
-          </Button>
-          <Button
-            nativeButton={false}
-            render={<a href="#assets" />}
-            size="lg"
-            variant="outline"
-            className="border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white"
-          >
-            <Library className="size-4" />
-            Go to Asset Library
-          </Button>
-        </div>
+        </nav>
       </div>
     </section>
   )

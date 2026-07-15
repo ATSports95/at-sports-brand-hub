@@ -1,5 +1,33 @@
 import { cn } from '@/lib/utils'
 
+/**
+ * Designed divider between sections: a modern dotted line that fades in from
+ * both edges to a small Sky node at the center — clean, technical, on-brand.
+ */
+function SectionDivider() {
+  return (
+    <div
+      aria-hidden
+      className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-center px-6 md:px-12"
+    >
+      <div
+        className="h-1.5 w-full text-steel"
+        style={{
+          backgroundImage:
+            'radial-gradient(currentColor 1.1px, transparent 1.6px)',
+          backgroundSize: '14px 6px',
+          backgroundPosition: 'center',
+          maskImage:
+            'linear-gradient(to right, transparent, #000 14%, #000 86%, transparent)',
+          WebkitMaskImage:
+            'linear-gradient(to right, transparent, #000 14%, #000 86%, transparent)',
+        }}
+      />
+      <span className="absolute size-2 rounded-full bg-sky ring-4 ring-background" />
+    </div>
+  )
+}
+
 export function Section({
   id,
   children,
@@ -13,11 +41,12 @@ export function Section({
     <section
       id={id}
       className={cn(
-        'scroll-mt-20 border-b border-border px-6 py-16 md:px-12 md:py-20 lg:scroll-mt-8',
+        'relative scroll-mt-20 px-6 py-16 md:px-12 md:py-20 lg:scroll-mt-8',
         className,
       )}
     >
       <div className="mx-auto w-full max-w-4xl">{children}</div>
+      <SectionDivider />
     </section>
   )
 }

@@ -52,35 +52,24 @@ export function Welcome() {
             <Mail className="size-4" />
           </span>
           <h3 className="text-lg font-semibold text-navy">
-            Contact &amp; approvals
+            AT Sports Marketing Contact
           </h3>
         </div>
-        <dl className="grid gap-x-8 gap-y-4 px-6 py-6 sm:grid-cols-2">
+        <dl className="px-6 py-6">
           <div>
             <dt className="text-xs font-medium tracking-wide text-slate uppercase">
               Brand &amp; marketing contact
             </dt>
             <dd className="mt-1 text-sm text-ink">
-              [Name], [email@atsports.com]
+              Malory Bateman, Business Development Manager
+              <br />
+              <a
+                href="mailto:malory@atsports.com"
+                className="font-medium text-sky underline underline-offset-2"
+              >
+                malory@atsports.com
+              </a>
             </dd>
-          </div>
-          <div>
-            <dt className="text-xs font-medium tracking-wide text-slate uppercase">
-              Asset requests
-            </dt>
-            <dd className="mt-1 text-sm text-ink">[email / form link]</dd>
-          </div>
-          <div>
-            <dt className="text-xs font-medium tracking-wide text-slate uppercase">
-              Co-branding approval
-            </dt>
-            <dd className="mt-1 text-sm text-ink">[email]</dd>
-          </div>
-          <div>
-            <dt className="text-xs font-medium tracking-wide text-slate uppercase">
-              Typical turnaround
-            </dt>
-            <dd className="mt-1 text-sm text-ink">[X business days]</dd>
           </div>
         </dl>
       </div>

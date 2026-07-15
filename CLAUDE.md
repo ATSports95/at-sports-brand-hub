@@ -38,10 +38,9 @@ Defined as design tokens. Always reference tokens, never hardcode hex in compone
 
 ### Typography
 
-- **Figtree** — the everyday body font (Google Fonts, free — actually loaded). Body copy and UI.
-- **Expletus Sans** — accent/display font (Google Fonts, free — actually loaded).
+- **Figtree** — the primary typeface (Google Fonts, free — actually loaded). An Effra-like geometric sans used for **both headlines and body copy/UI**; hierarchy comes from weight and size.
 - **Flood** — high-impact accent font.
-- Headlines: Expletus Sans, Navy, bold/extrabold. Body: Figtree, Near-Black or Slate.
+- Headlines: Figtree, Navy, bold/extrabold. Body: Figtree, Near-Black or Slate.
 
 ### Aesthetic
 

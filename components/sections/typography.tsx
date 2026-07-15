@@ -3,15 +3,9 @@ import { Section, SectionHeading } from '@/components/section'
 const FONTS = [
   {
     name: 'Figtree',
-    role: 'Everyday font',
+    role: 'Primary typeface',
     weights: 'Light · Regular · Medium · SemiBold · Bold',
-    note: 'Clean geometric sans for body copy and UI. Loaded from Google Fonts.',
-  },
-  {
-    name: 'Expletus Sans',
-    role: 'Accent / display font',
-    weights: 'Regular · Medium · SemiBold · Bold',
-    note: 'Used for headlines and display moments.',
+    note: 'Clean geometric sans used for both headlines and body copy. Loaded from Google Fonts.',
   },
   {
     name: 'Flood',
@@ -30,7 +24,7 @@ export function Typography() {
         intro="A clear hierarchy: bold display headlines in Navy, clean body text in Near-Black and Slate."
       />
 
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2">
         {FONTS.map((font) => (
           <div
             key={font.name}
@@ -66,8 +60,8 @@ export function Typography() {
         </p>
         <p className="mt-4 max-w-xl leading-relaxed text-ink/80">
           Body copy uses Figtree at a comfortable line height for readability.
-          It carries the everyday message while the
-          display font handles headlines and accents.
+          The same family sets the headlines above at heavier weights, keeping
+          the type system clean and consistent.
         </p>
       </div>
 

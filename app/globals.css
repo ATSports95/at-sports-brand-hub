@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Brand fonts (both Google Fonts): Figtree for everyday body text, Expletus
- * Sans for display/headlines.
+ * Brand font: Figtree (Google Fonts) — an Effra-like geometric sans used for
+ * both headlines and body copy. Hierarchy comes from weight and size.
  */
 
 @theme inline {
@@ -49,9 +49,9 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
 
-  /* Brand fonts — Figtree for body, Expletus Sans for display */
+  /* Brand font — Figtree for both body and display */
   --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-expletus), ui-serif, Georgia, serif;
+  --font-display: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
 
   /* AT Sports brand palette */
   --color-navy: var(--navy);
@@ -73,7 +73,8 @@
   --slate: #5d6f7a;
   --ink: #202528;
 
-  --background: #ffffff;
+  /* Neutral light-grey page background so white cards lift off it */
+  --background: #f5f5f5;
   --foreground: #202528;
   --card: #ffffff;
   --card-foreground: #202528;
@@ -81,9 +82,9 @@
   --popover-foreground: #202528;
   --primary: #233354;
   --primary-foreground: #ffffff;
-  --secondary: #f4f6f8;
+  --secondary: #eaeaea;
   --secondary-foreground: #233354;
-  --muted: #f4f6f8;
+  --muted: #eaeaea;
   --muted-foreground: #5d6f7a;
   --accent: #4e8cb3;
   --accent-foreground: #ffffff;
