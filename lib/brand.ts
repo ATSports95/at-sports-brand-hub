@@ -139,7 +139,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     name: 'Acrytech',
     descriptor: 'The Coatings System',
     tagline: 'The complete acrylic surfacing system from one manufacturer.',
-    accentClass: 'bg-navy',
+    accentClass: 'bg-slate',
     overview: [
       'Acrytech is the foundation of the AT Sports product portfolio\u2014a complete acrylic sports surfacing system engineered for long-term performance, consistent installation, and dependable results.',
       'Manufactured by AT Sports, the Acrytech product line includes everything contractors need to prepare, resurface, repair, texture, and finish professional-quality courts. Every product is designed to work together as part of a complete system, helping contractors deliver consistent outcomes from the first coat to the final color.',
@@ -185,7 +185,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     name: 'CushionX',
     descriptor: 'The Cushion System',
     tagline: 'Engineered comfort. Designed for performance. Built to simplify installation.',
-    accentClass: 'bg-sky',
+    accentClass: 'bg-navy',
     overview: [
       "CushionX is AT Sports' family of cushioned court systems designed to improve player comfort while providing solutions for both new court construction and court renovation.",
       'From squeefee applied cushioned systems to advanced multi-layer assemblies, CushionX gives contractors and facility owners flexible options to match performance requirements, project budgets, and levels of play.',
@@ -249,7 +249,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     name: 'Faultline',
     descriptor: 'The Crack Repair System',
     tagline: 'Smarter crack repair. Faster installation. Better results.',
-    accentClass: 'bg-red',
+    accentClass: 'bg-sky',
     overview: [
       "Faultline is AT Sports' complete crack repair product family, engineered to simplify one of the most challenging parts of court resurfacing while improving repair quality and installation efficiency.",
       'From localized crack repair systems to flexible reinforcement products and full-court restoration solutions, Faultline gives contractors multiple options to address varying levels of surface movement and deterioration.',
@@ -313,7 +313,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     name: 'RollX',
     descriptor: 'The Portable Court System',
     tagline: 'Professional pickleball\u2014wherever the game goes.',
-    accentClass: 'bg-slate',
+    accentClass: 'bg-red',
     overview: [
       "RollX gives facilities, event organizers, clubs, and contractors the flexibility to create professional-quality pickleball courts wherever the game is played.",
       "Unlike permanent court construction, RollX provides a portable playing surface that installs quickly, delivers consistent ball response, and allows courts to be deployed when and where they're needed.",
