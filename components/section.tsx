@@ -17,42 +17,59 @@ export function Section({
         className,
       )}
     >
-      {/* Subtle brand texture — echoes the hero: a soft sky glow and a whisper
-          of the dotted grid in the upper-right, masked so it never competes. */}
+      {/* Brand texture — echoes the hero header: a sky glow, diagonal blueprint
+          lines, the dotted grid, and an oversized AT Sports logo watermark. */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 overflow-hidden"
       >
         {/* soft sky glow in the upper-right */}
         <div
-          className="absolute top-0 right-0 h-64 w-1/2"
+          className="absolute top-0 right-0 h-72 w-2/3"
           style={{
             background:
-              'radial-gradient(60% 60% at 100% 0%, rgba(78,140,179,0.06), transparent 70%)',
+              'radial-gradient(60% 60% at 100% 0%, rgba(78,140,179,0.08), transparent 70%)',
           }}
         />
-        {/* faint diagonal blueprint lines, masked to the upper-right */}
+        {/* diagonal blueprint lines */}
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              'repeating-linear-gradient(118deg, transparent 0, transparent 43px, rgba(35,51,84,0.025) 43px, rgba(35,51,84,0.025) 44px)',
+              'repeating-linear-gradient(118deg, transparent 0, transparent 40px, rgba(35,51,84,0.045) 40px, rgba(35,51,84,0.045) 41px)',
             maskImage:
-              'radial-gradient(85% 65% at 100% 0%, #000, transparent 75%)',
+              'radial-gradient(100% 80% at 100% 0%, #000, transparent 80%)',
             WebkitMaskImage:
-              'radial-gradient(85% 65% at 100% 0%, #000, transparent 75%)',
+              'radial-gradient(100% 80% at 100% 0%, #000, transparent 80%)',
           }}
         />
-        {/* whisper of the dotted grid */}
+        {/* dotted grid */}
         <div
-          className="halftone absolute top-0 right-0 h-56 w-2/3 text-navy/[0.05]"
+          className="halftone absolute top-0 right-0 h-72 w-3/4 text-navy/[0.08]"
           style={{
             maskImage:
-              'radial-gradient(75% 75% at 100% 0%, #000, transparent 72%)',
+              'radial-gradient(80% 80% at 100% 0%, #000, transparent 74%)',
             WebkitMaskImage:
-              'radial-gradient(75% 75% at 100% 0%, #000, transparent 72%)',
+              'radial-gradient(80% 80% at 100% 0%, #000, transparent 74%)',
           }}
         />
+        {/* oversized logo watermark, off the right edge like the hero */}
+        <div
+          className="absolute top-1/2 -right-[5%] hidden h-[88%] w-1/2 -translate-y-1/2 md:block"
+          style={{
+            maskImage:
+              'linear-gradient(to left, #000 0%, #000 26%, transparent 82%)',
+            WebkitMaskImage:
+              'linear-gradient(to left, #000 0%, #000 26%, transparent 82%)',
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logos/at-sports-black.svg"
+            alt=""
+            className="h-full w-full object-contain object-right opacity-[0.04]"
+          />
+        </div>
       </div>
       <div className="relative mx-auto w-full max-w-4xl">{children}</div>
     </section>
