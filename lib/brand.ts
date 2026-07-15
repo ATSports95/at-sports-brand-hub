@@ -137,7 +137,7 @@ export const PRODUCT_KITS: ProductKit[] = [
   {
     id: 'acrytech',
     name: 'Acrytech',
-    descriptor: 'Sports Coatings',
+    descriptor: 'The Coatings System',
     tagline: 'The complete acrylic surfacing system from one manufacturer.',
     accentClass: 'bg-navy',
     overview: [
@@ -183,7 +183,7 @@ export const PRODUCT_KITS: ProductKit[] = [
   {
     id: 'cushionx',
     name: 'CushionX',
-    descriptor: 'Cushion Sports Surfaces',
+    descriptor: 'The Cushion System',
     tagline: 'Engineered comfort. Designed for performance. Built to simplify installation.',
     accentClass: 'bg-sky',
     overview: [
@@ -247,7 +247,7 @@ export const PRODUCT_KITS: ProductKit[] = [
   {
     id: 'faultline',
     name: 'Faultline',
-    descriptor: 'Crack Repair',
+    descriptor: 'The Crack Repair System',
     tagline: 'Smarter crack repair. Faster installation. Better results.',
     accentClass: 'bg-red',
     overview: [
@@ -311,7 +311,7 @@ export const PRODUCT_KITS: ProductKit[] = [
   {
     id: 'rollx',
     name: 'RollX',
-    descriptor: 'Portable Sports Surfaces',
+    descriptor: 'The Portable Court System',
     tagline: 'Professional pickleball\u2014wherever the game goes.',
     accentClass: 'bg-slate',
     overview: [
