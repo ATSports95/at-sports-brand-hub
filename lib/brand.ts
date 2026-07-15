@@ -72,28 +72,28 @@ export const PRODUCT_LINES: ProductLine[] = [
     name: 'Acrytech',
     descriptor: 'The Coatings System',
     whatFor:
-      'Professional line of acrylic sports coatings and surfacing materials',
+      'A complete line of acrylic coatings and surface-preparation products engineered for consistent application, reliable playability, and long-term court performance.',
   },
   {
     id: 'cushionx',
     name: 'CushionX',
     descriptor: 'The Cushion System',
     whatFor:
-      'A lightweight, pliable premium cushion overlay system that delivers a durable impact resistant surface.',
+      'A family of cushioned sports surfacing systems designed to improve player comfort and provide solutions for new construction and court renovation.',
   },
   {
     id: 'faultline',
     name: 'Faultline',
     descriptor: 'The Crack Repair System',
     whatFor:
-      'Solutions for repairing cracks and maintaining the quality and performance of sports surfaces.',
+      'Engineered crack-repair solutions designed to simplify installation, reduce repair profile, and support smoother finished surfaces.',
   },
   {
     id: 'rollx',
     name: 'RollX',
     descriptor: 'The Portable Court System',
     whatFor:
-      'Transforms any foundational surface into a high-performance playing court.',
+      'A portable pickleball playing surface designed to create consistent courts in qualified indoor venues without permanent construction.',
   },
 ]
 
