@@ -81,7 +81,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
                 kit.accentClass,
               )}
             >
-              {kit.id === 'acrytech' ? 'The Coatings System' : kit.id === 'cushionx' ? 'The Cushion System' : kit.descriptor}
+              {kit.descriptor}
             </span>
           </div>
         </div>

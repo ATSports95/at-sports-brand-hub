@@ -70,28 +70,28 @@ export const PRODUCT_LINES: ProductLine[] = [
   {
     id: 'acrytech',
     name: 'Acrytech',
-    descriptor: 'Sports Coatings',
+    descriptor: 'The Coatings System',
     whatFor:
       'Professional line of acrylic sports coatings and surfacing materials',
   },
   {
     id: 'cushionx',
     name: 'CushionX',
-    descriptor: 'Cushion Sports Surfaces',
+    descriptor: 'The Cushion System',
     whatFor:
       'A lightweight, pliable premium cushion overlay system that delivers a durable impact resistant surface.',
   },
   {
     id: 'faultline',
     name: 'Faultline',
-    descriptor: 'Crack Repair',
+    descriptor: 'The Crack Repair System',
     whatFor:
       'Solutions for repairing cracks and maintaining the quality and performance of sports surfaces.',
   },
   {
     id: 'rollx',
     name: 'RollX',
-    descriptor: 'Portable Sports Surfaces',
+    descriptor: 'The Portable Court System',
     whatFor:
       'Transforms any foundational surface into a high-performance playing court.',
   },
