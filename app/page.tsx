@@ -1,5 +1,6 @@
 import { SidebarNav } from '@/components/sidebar-nav'
 import { Hero } from '@/components/sections/hero'
+import { QuickAccess } from '@/components/sections/quick-access'
 import { Welcome } from '@/components/sections/welcome'
 import { Foundation } from '@/components/sections/foundation'
 import { ProductKits } from '@/components/sections/product-kits'
@@ -18,6 +19,7 @@ export default function Home() {
       <SidebarNav />
       <main className="min-w-0 flex-1">
         <Hero />
+        <QuickAccess />
         <Welcome />
         <Foundation />
         <ProductKits />

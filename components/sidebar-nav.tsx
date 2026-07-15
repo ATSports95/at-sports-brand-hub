@@ -5,6 +5,7 @@ import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { NAV_ITEMS } from '@/lib/brand'
 import { LogoTile } from '@/components/logo-tile'
+import { SiteSearch } from '@/components/site-search'
 
 function useScrollSpy() {
   const [active, setActive] = useState(NAV_ITEMS[0].id)
@@ -92,7 +93,10 @@ export function SidebarNav() {
             Brand Hub
           </p>
         </div>
-        <div className="flex-1 overflow-y-auto px-3 py-5">
+        <div className="px-3 pt-4">
+          <SiteSearch />
+        </div>
+        <div className="flex-1 overflow-y-auto px-3 py-4">
           <NavLinks active={active} />
         </div>
         <div className="border-t border-border px-6 py-4">
@@ -140,6 +144,9 @@ export function SidebarNav() {
             aria-hidden
           />
           <div className="absolute top-[57px] right-0 left-0 max-h-[70vh] overflow-y-auto border-b border-border bg-sidebar p-4 shadow-lg">
+            <div className="mb-3">
+              <SiteSearch onNavigate={() => setMobileOpen(false)} />
+            </div>
             <NavLinks active={active} onNavigate={() => setMobileOpen(false)} />
           </div>
         </div>

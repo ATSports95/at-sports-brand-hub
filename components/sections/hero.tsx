@@ -1,14 +1,25 @@
-import { ArrowRight, Library } from 'lucide-react'
+import {
+  ArrowRight,
+  Layers,
+  Library,
+  PaintRoller,
+  Scroll,
+  Wrench,
+} from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { LogoTile } from '@/components/logo-tile'
 
-const CHIPS = ['Acrytech', 'CushionX', 'Faultline', 'RollX']
+const PRODUCTS = [
+  { name: 'Acrytech', icon: PaintRoller },
+  { name: 'CushionX', icon: Layers },
+  { name: 'Faultline', icon: Wrench },
+  { name: 'RollX', icon: Scroll },
+]
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="diagonal-bottom relative isolate scroll-mt-20 overflow-hidden bg-navy pb-28 lg:scroll-mt-0"
+      className="diagonal-bottom relative isolate scroll-mt-20 overflow-hidden bg-navy pb-32 lg:scroll-mt-0"
     >
       {/* Layer 2 — subtle sky-tinted radial glow behind the headline */}
       <div
@@ -70,17 +81,15 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-16 pb-8 md:px-12 md:pt-24">
-        <LogoTile
-          file="at-sports-white.svg"
-          alt="AT Sports"
-          tone="navy"
-          className="w-52 [&>div]:aspect-auto [&>div]:h-20 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
-        />
+      <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-20 pb-8 md:px-12 md:pt-28">
+        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 font-mono text-xs font-medium tracking-widest text-sky uppercase">
+          <span className="size-1.5 rounded-full bg-sky" aria-hidden />
+          Official Brand Portal
+        </span>
 
-        <h1 className="mt-10 text-balance text-4xl font-bold tracking-tight text-white md:text-6xl">
+        <h1 className="mt-6 text-balance text-5xl font-bold tracking-tight text-white md:text-7xl">
           AT Sports Brand Hub
-          <span className="mt-2 block text-2xl font-medium text-sky md:text-3xl">
+          <span className="mt-3 block text-2xl font-medium text-sky md:text-4xl">
             Partner Edition
           </span>
         </h1>
@@ -91,19 +100,20 @@ export function Hero() {
           ready-to-use assets.
         </p>
 
+        {/* Product pills — one per line, icon-led, link to the product kits */}
         <div className="mt-8 flex flex-wrap items-center gap-2">
-          {CHIPS.map((chip, i) => (
-            <span
-              key={chip}
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-sm font-medium text-white"
+          {PRODUCTS.map(({ name, icon: Icon }) => (
+            <a
+              key={name}
+              href="#kits"
+              className="group/pill inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3.5 py-1.5 text-sm font-medium text-white transition-all duration-200 hover:-translate-y-0.5 hover:border-white/35 hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky/60"
             >
-              {chip}
-              {i < CHIPS.length - 1 && (
-                <span className="text-red" aria-hidden>
-                  ·
-                </span>
-              )}
-            </span>
+              <Icon
+                className="size-4 text-sky transition-transform duration-200 group-hover/pill:scale-110"
+                aria-hidden
+              />
+              {name}
+            </a>
           ))}
         </div>
 
@@ -116,8 +126,8 @@ export function Hero() {
               size="lg"
               className="bg-white text-navy hover:bg-white/90"
             >
-              Browse the guidelines
-              <ArrowRight className="size-4" />
+              Explore the guidelines
+              <ArrowRight className="size-4 transition-transform duration-200 group-hover/button:translate-x-0.5" />
             </Button>
             <Button
               nativeButton={false}
@@ -126,8 +136,8 @@ export function Hero() {
               variant="outline"
               className="border-white/25 bg-transparent text-white hover:bg-white/10 hover:text-white"
             >
-              <Library className="size-4" />
-              Go to Asset Library
+              <Library className="size-4 transition-transform duration-200 group-hover/button:scale-110" />
+              Browse the asset library
             </Button>
           </div>
         </div>
