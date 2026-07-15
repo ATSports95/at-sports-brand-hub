@@ -383,7 +383,7 @@ export const PRODUCT_NAMING = [
   {
     correct: 'Acrytech',
     not: 'Acry-Tech, AcryTech',
-    descriptor: 'Acrylic Sports Coating Systems',
+    descriptor: 'Sports Coating Systems',
   },
   {
     correct: 'CushionX',
@@ -398,7 +398,7 @@ export const PRODUCT_NAMING = [
   {
     correct: 'RollX',
     not: 'Roll X, Roll-X, Rollx',
-    descriptor: 'Portable Pickleball Surfaces',
+    descriptor: 'Portable Court Systems',
   },
 ]
 
