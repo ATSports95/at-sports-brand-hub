@@ -39,19 +39,19 @@ export function Hero() {
           reaches the copy. Embossed blueprint feel, not a visible logo. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-[8%] -right-[10%] hidden h-[80%] w-[68%] md:block"
+        className="pointer-events-none absolute inset-y-0 -right-[6%] hidden w-[84%] md:block"
         style={{
           maskImage:
-            'linear-gradient(to left, #000 0%, #000 30%, transparent 78%)',
+            'linear-gradient(to left, #000 0%, #000 30%, transparent 80%)',
           WebkitMaskImage:
-            'linear-gradient(to left, #000 0%, #000 30%, transparent 78%)',
+            'linear-gradient(to left, #000 0%, #000 30%, transparent 80%)',
         }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/logos/at-sports-white.svg"
           alt=""
-          className="h-full w-full object-contain object-right opacity-[0.05]"
+          className="h-full w-full object-contain object-right-bottom opacity-[0.05]"
         />
       </div>
 

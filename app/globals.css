@@ -73,7 +73,8 @@
   --slate: #5d6f7a;
   --ink: #202528;
 
-  --background: #ffffff;
+  /* Slightly cool off-white page background so white cards lift off it */
+  --background: #eef1f5;
   --foreground: #202528;
   --card: #ffffff;
   --card-foreground: #202528;
