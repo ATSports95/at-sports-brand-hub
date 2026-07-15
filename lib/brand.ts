@@ -251,37 +251,37 @@ export const PRODUCT_KITS: ProductKit[] = [
     tagline: 'Smarter crack repair. Faster installation. Better results.',
     accentClass: 'bg-red',
     overview: [
-      "Faultline is AT Sports' engineered crack repair system designed to help contractors repair damaged courts faster, more efficiently, and with greater confidence.",
-      'Developed to reduce installation time while producing a lower-profile repair, Faultline simplifies one of the most challenging parts of court resurfacing. Every component is engineered to work within the complete AT Sports surfacing system, creating reliable repairs that support long-term court performance.',
-      'When repairs are required, Faultline helps contractors spend less time fighting cracks and more time delivering exceptional courts.',
+      "Faultline is AT Sports' complete crack repair product family, engineered to simplify one of the most challenging parts of court resurfacing while improving repair quality and installation efficiency.",
+      'From localized crack repair systems to flexible reinforcement products and full-court restoration solutions, Faultline gives contractors multiple options to address varying levels of surface movement and deterioration.',
+      'Designed to integrate with Acrytech surfacing systems, Faultline products help create smoother finished courts, reduce installation complexity, and support long-term resurfacing success.',
     ],
     positioning: [
       {
         title: 'Smarter Crack Repair',
-        body: 'Engineered to simplify one of the most challenging parts of court resurfacing.',
+        body: 'Purpose-built solutions designed to simplify crack repair while improving consistency and installation efficiency.',
       },
       {
-        title: 'Faster Installation',
-        body: 'Designed to reduce installation time while maintaining reliable repair performance.',
+        title: 'Consistent Ball Response',
+        body: 'Designed to maintain consistent ball bounce for pickleball and tennis across repaired\nareas without excessive surface buildup',
       },
       {
         title: 'Lower Profile Results',
-        body: 'Produces smoother repairs that blend more effectively beneath finished court systems.',
+        body: 'Designed to create smoother transitions that blend naturally beneath resurfacer and color coatings.',
       },
       {
-        title: 'Integrated System Design',
-        body: 'Engineered to work seamlessly within the complete AT Sports surfacing system.',
+        title: 'Flexible Repair Options',
+        body: 'From localized repairs to full-court restoration, Faultline offers solutions for a wide range of crack conditions and project requirements.',
       },
       {
-        title: 'Built for Contractors',
-        body: 'Developed to improve productivity without sacrificing long-term performance.',
+        title: 'System Integration',
+        body: 'Designed to work seamlessly with Acrytech surfacing systems as part of a complete AT Sports court solution.',
       },
     ],
     marketingCopy: [
-      "Faultline is AT Sports' engineered crack repair system designed to help contractors repair courts faster while producing smoother, longer-lasting results.",
-      'Built to simplify crack repair, Faultline reduces installation complexity while delivering dependable performance beneath professional sports surfaces.',
-      'Every Faultline repair system is engineered to integrate with AT Sports surfacing products, creating complete court systems built for long-term reliability.',
-      'From isolated repairs to full court renovations, Faultline helps contractors spend less time repairing cracks and more time completing successful projects.',
+      "Faultline is AT Sports' complete crack repair product family, providing contractors with engineered solutions for localized repairs, reinforcement, and full-court restoration. Every product is designed to integrate with Acrytech surfacing systems for consistent project results.",
+      'We use Faultline because it provides repair solutions for a wide range of crack conditions while helping reduce installation time and create smoother finished courts.',
+      'Faultline repair systems are designed to restore damaged courts while supporting long-term resurfacing performance. Multiple repair options allow contractors to recommend the right solution based on the condition of each court.',
+      'Faultline products are engineered to integrate with Acrytech surfacing systems, providing flexible repair solutions designed to reduce reflective cracking and improve finished surface consistency.',
     ],
     systemsTitle: 'The Faultline Product Line',
     systems: [
