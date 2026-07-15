@@ -10,7 +10,7 @@ export function ColorSystem() {
     <Section id="color">
       <SectionHeading
         eyebrow="Color System"
-        title="Color system"
+        title="Brand Color System"
         intro="Click any swatch to copy its HEX value to your clipboard."
       />
 

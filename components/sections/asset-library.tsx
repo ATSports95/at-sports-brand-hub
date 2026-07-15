@@ -30,7 +30,7 @@ const CARDS: {
   },
   {
     key: 'colorSwatches',
-    title: 'Color Codes',
+    title: 'Coatings Color Codes',
     description: 'Adobe .ase swatch file for consistent color across tools.',
     icon: Palette,
   },
@@ -47,7 +47,7 @@ export function AssetLibrary() {
     <Section id="assets" className="bg-muted/50">
       <SectionHeading
         eyebrow="Asset Library"
-        title="Asset library"
+        title="Asset Library"
         intro="The download hub. Every button opens the current file in a new tab — always download fresh rather than reusing old copies."
       />
 

@@ -57,7 +57,7 @@ export function CoBranding() {
       </div>
       <SectionHeading
         eyebrow="Co-Branding & Partner Use"
-        title="Co-branding & partner use"
+        title="Co-Branding & Partner Use"
         emphasis
         intro="Co-branding should communicate partnership—not ownership. AT Sports and partner brands should appear together while maintaining independent visual identities."
       />
@@ -146,7 +146,7 @@ export function CoBranding() {
       {/* Product naming table */}
       <div className="mt-12">
         <h3 className="text-xl font-semibold text-navy">
-          Using product line names
+          Using Product Line Names
         </h3>
         <div className="mt-4 overflow-x-auto rounded-md border border-border">
           <table className="w-full min-w-[32rem] border-collapse text-left text-sm">
@@ -246,7 +246,7 @@ export function CoBranding() {
             Paid advertising; large-format signage/wraps/banners; press
             releases or media quotes; any new co-branded lockup or template.
             When in doubt, send it to{' '}
-            <span className="font-medium text-navy">[email]</span> before
+            <span className="font-medium text-navy">malory@atsports.com </span> before
             it&apos;s live.
           </p>
         </div>

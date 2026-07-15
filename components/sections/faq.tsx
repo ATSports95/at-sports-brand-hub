@@ -10,7 +10,7 @@ import { FAQ_ITEMS } from '@/lib/brand'
 export function Faq() {
   return (
     <Section id="faq">
-      <SectionHeading eyebrow="FAQ" title="Frequently asked questions" />
+      <SectionHeading eyebrow="FAQ" title="Frequently Asked Questions" />
 
       <Accordion className="rounded-md border border-border bg-card px-5">
         {FAQ_ITEMS.map((item, i) => (

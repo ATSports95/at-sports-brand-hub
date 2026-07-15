@@ -13,30 +13,7 @@ export function Welcome() {
         This Brand Hub is the single source of truth for the AT Sports brand. Every logo, product description, color, marketing asset, and positioning statement has been approved by the AT Sports Marketing Department to ensure a consistent experience across every market.
       </p>
 
-      <div className="mt-10 grid gap-5 md:grid-cols-2">
-        <div className="flex flex-col gap-3 rounded-md border border-border bg-card p-6">
-          <span className="flex size-10 items-center justify-center rounded-md bg-navy/5 text-navy">
-            <Users className="size-5" />
-          </span>
-          <h3 className="text-lg font-semibold text-navy">Who this is for</h3>
-          <p className="text-sm leading-relaxed text-ink/80">
-            AT Sports distributors, dealers, installers, and channel partners
-            representing the brand or a product line.
-          </p>
-        </div>
 
-        <div className="flex flex-col gap-3 rounded-md border border-border bg-card p-6">
-          <span className="flex size-10 items-center justify-center rounded-md bg-navy/5 text-navy">
-            <Layers className="size-5" />
-          </span>
-          <h3 className="text-lg font-semibold text-navy">Brand at a glance</h3>
-          <p className="text-sm leading-relaxed text-ink/80">
-            AT Sports designs and manufactures professional sports surfacing systems used on courts around the world.
-            <br /><br />
-            Rather than sourcing individual products from multiple suppliers, contractors can rely on one manufacturer for coatings, crack repair, cushioned systems, portable courts, equipment, and technical support - all engineered to work together as a complete system.
-          </p>
-        </div>
-      </div>
 
       {/* Contact & approvals callout */}
       <div className="mt-5 overflow-hidden rounded-md border border-sky/40 bg-sky/5">
