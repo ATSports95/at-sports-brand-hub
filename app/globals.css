@@ -73,8 +73,8 @@
   --slate: #5d6f7a;
   --ink: #202528;
 
-  /* Slightly cool off-white page background so white cards lift off it */
-  --background: #eef1f5;
+  /* Neutral light-grey page background so white cards lift off it */
+  --background: #f1f1f1;
   --foreground: #202528;
   --card: #ffffff;
   --card-foreground: #202528;
@@ -82,9 +82,9 @@
   --popover-foreground: #202528;
   --primary: #233354;
   --primary-foreground: #ffffff;
-  --secondary: #f4f6f8;
+  --secondary: #eaeaea;
   --secondary-foreground: #233354;
-  --muted: #f4f6f8;
+  --muted: #eaeaea;
   --muted-foreground: #5d6f7a;
   --accent: #4e8cb3;
   --accent-foreground: #ffffff;
