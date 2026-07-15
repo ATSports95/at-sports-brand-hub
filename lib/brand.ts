@@ -393,30 +393,30 @@ export const PRODUCT_NAMING = [
 export const FAQ_ITEMS = [
   {
     q: 'Can I make my own AT Sports flyer or ad?',
-    a: 'For standard sales materials, yes \u2014 use supplied assets and follow this hub. For paid ads, large signage, or press, send to [email] for quick approval first.',
+    a: 'Yes. Approved logos, colors, messaging, and imagery may be used in standard sales materials. Paid advertising, press releases, large-format graphics, and newly created co-branded templates must be approved before publication.',
   },
   {
-    q: 'Which logo file for embroidery, engraving, or signage?',
-    a: 'Use the solid black or reversed white one-color version, in vector (SVG/EPS) so it scales cleanly. For large-format, check with us first.',
+    q: 'Which logo file should I use for embroidery, engraving, or signage?',
+    a: 'Use a vector EPS or SVG file whenever possible. The approved one-color logo is generally best for embroidery and engraving. Contact AT Sports Marketing before producing permanent or large-format signage.',
   },
   {
     q: 'Can I change the colors to match my brand?',
-    a: 'No \u2014 don\u2019t recolor AT Sports or product logos. When co-branding, keep both brands in their own correct colors, side by side.',
+    a: 'No. AT Sports and product-line logos must remain in their approved colors, solid black, or reversed white. Partner branding may retain its own colors as long as the AT Sports identity is not altered.',
   },
   {
-    q: 'Is it "Cushion X" or "CushionX"?',
-    a: 'CushionX \u2014 one word, capital C and capital X, no space. Same for RollX. Acrytech and Faultline are each one word too.',
+    q: 'Is it \u201CCushion X\u201D or \u201CCushionX\u201D?',
+    a: 'Always write CushionX as one word with a capital C and X.',
   },
   {
-    q: 'When do I use the "Division of AT Sports" tag?',
-    a: 'Whenever a product logo appears on its own without other context tying it to AT Sports.',
+    q: 'When do I use the \u201CDivision of AT Sports\u201D tag?',
+    a: 'Use the supplied product-line lockup with the tag when the product logo appears without clear AT Sports company context. Do not rebuild or manually add the tag.',
   },
   {
-    q: 'Where do I get a higher-res or project-specific photo?',
-    a: 'Request from [email / form link] with the product, color, and intended use.',
+    q: 'Where do I get a higher-resolution or project-specific photo?',
+    a: 'Contact malory@atsports.com with the product line, project type, preferred orientation, surface color, and intended use.',
   },
   {
     q: 'Who do I contact for anything else?',
-    a: '[Name], [email].',
+    a: 'Contact AT Sports Marketing at malory@atsports.com before publishing anything that falls outside the guidance provided in this hub.',
   },
 ]
