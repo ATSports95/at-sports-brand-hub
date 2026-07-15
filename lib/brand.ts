@@ -375,18 +375,30 @@ export const PRODUCT_KITS: ProductKit[] = [
 ]
 
 export const PRODUCT_NAMING = [
-  { correct: 'AT Sports', not: 'ATSports, At Sports', descriptor: '\u2014' },
-  { correct: 'Acrytech', not: 'Acry-Tech, AcryTech', descriptor: 'Sports Coatings' },
+  {
+    correct: 'AT Sports',
+    not: 'ATSports, At Sports, ATS',
+    descriptor: 'Sports Surfacing Manufacturer',
+  },
+  {
+    correct: 'Acrytech',
+    not: 'Acry-Tech, AcryTech',
+    descriptor: 'Acrylic Sports Coating Systems',
+  },
   {
     correct: 'CushionX',
     not: 'Cushion X, Cushion-X',
-    descriptor: 'Cushion Sports Surfaces',
+    descriptor: 'Cushioned Court Systems',
   },
-  { correct: 'Faultline', not: 'Fault Line, FaultLine', descriptor: 'Crack Repair' },
+  {
+    correct: 'Faultline',
+    not: 'Fault Line, FaultLine',
+    descriptor: 'Crack Repair Systems',
+  },
   {
     correct: 'RollX',
     not: 'Roll X, Roll-X, Rollx',
-    descriptor: 'Portable Sports Surfaces',
+    descriptor: 'Portable Pickleball Surfaces',
   },
 ]
 
