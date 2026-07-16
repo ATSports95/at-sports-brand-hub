@@ -186,9 +186,8 @@ export const PRODUCT_KITS: ProductKit[] = [
     tagline: 'Engineered comfort. Designed for performance. Built to simplify installation.',
     accentClass: 'bg-navy',
     overview: [
-      "CushionX is AT Sports' family of cushioned court systems designed to improve player comfort while providing solutions for both new court construction and court renovation.",
-      'From squeefee applied cushioned systems to advanced multi-layer assemblies, CushionX gives contractors and facility owners flexible options to match performance requirements, project budgets, and levels of play.',
-      'Manufactured as part of the AT Sports sports surfacing portfolio, CushionX integrates with Acrytech coatings to create complete court systems engineered for consistent installation, dependable performance, and lasting player comfort.',
+      'CushionX is the Cushion Sport Surface Division of AT Sports, specializing in cushioned overlay systems for tennis, pickleball, basketball, and multi-sport applications. The product line includes multiple system configurations designed to increase force reduction while supporting a wide range of facility types and performance requirements.',
+      'Available in multiple performance levels, CushionX systems allow sports surfaces to be tailored to the intended use, level of play, and project objectives.',
     ],
     positioning: [
       {
