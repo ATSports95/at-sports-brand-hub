@@ -141,9 +141,8 @@ export const PRODUCT_KITS: ProductKit[] = [
     tagline: 'The complete acrylic surfacing system from one manufacturer.',
     accentClass: 'bg-slate',
     overview: [
-      'Acrytech is the foundation of the AT Sports product portfolio\u2014a complete acrylic sports surfacing system engineered for long-term performance, consistent installation, and dependable results.',
-      'Manufactured by AT Sports, the Acrytech product line includes everything contractors need to prepare, resurface, repair, texture, and finish professional-quality courts. Every product is designed to work together as part of a complete system, helping contractors deliver consistent outcomes from the first coat to the final color.',
-      'Whether building new courts or restoring existing surfaces, Acrytech provides the reliability, performance, and technical support professionals depend on.',
+      'Acrytech is the Sport Surface Coatings Division of AT Sports, specializing in acrylic surfacing systems for tennis, pickleball, basketball, and multi-sport applications. The product line is designed to provide consistent appearance, playability, and finish quality across projects ranging from neighborhood courts to professional sports facilities.',
+      'From new construction to resurfacing, Acrytech offers a complete portfolio of compatible acrylic products designed to work together as one coordinated sports surfacing system.',
     ],
     positioning: [
       {
