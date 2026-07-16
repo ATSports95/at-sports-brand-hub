@@ -250,9 +250,8 @@ export const PRODUCT_KITS: ProductKit[] = [
     tagline: 'Smarter crack repair. Faster installation. Better results.',
     accentClass: 'bg-sky',
     overview: [
-      "Faultline is AT Sports' complete crack repair product family, engineered to simplify one of the most challenging parts of court resurfacing while improving repair quality and installation efficiency.",
-      'From localized crack repair systems to flexible reinforcement products and full-court restoration solutions, Faultline gives contractors multiple options to address varying levels of surface movement and deterioration.',
-      'Designed to integrate with Acrytech surfacing systems, Faultline products help create smoother finished courts, reduce installation complexity, and support long-term resurfacing success.',
+      'Faultline is the Crack Repair Division of AT Sports, specializing in sports surface crack repair systems for tennis, pickleball, basketball, and multi-sport applications. The product line includes repair systems, reinforcement products, and restoration materials designed to address a wide range of surface conditions before resurfacing.',
+      'From isolated cracks to large-scale restoration projects, Faultline provides repair solutions for varying surface conditions and project requirements.',
     ],
     positioning: [
       {
