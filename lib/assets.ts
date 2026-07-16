@@ -8,9 +8,12 @@
  * e.g. https://www.dropbox.com/scl/.../logo-pack.zip?dl=1
  */
 export const ASSET_LINKS = {
-  logoPack: 'DROPBOX_LINK_HERE',
-  productLineAssets: 'DROPBOX_LINK_HERE',
-  colorSwatches: 'DROPBOX_LINK_HERE',
+  logoPack:
+    'https://www.dropbox.com/scl/fo/jnia9jx92vczrvrz528li/AFJCRnkzeUG40V0UpV6t6OM?rlkey=tsng14i1i2dksgruyrtmv6djd&dl=0',
+  productLineAssets:
+    'https://www.dropbox.com/scl/fo/zwh4o0jzf308bo6qx7arg/APUJfa6c-4l8QEhLEJK3lj4?rlkey=tacyioasl14qhqu6q2gh3tr8q&dl=0',
+  colorSwatches:
+    'https://www.dropbox.com/scl/fo/h6cyulxmlnh3blps0nxcr/AOhvrACRMrETOWdzT_bFkRA?rlkey=trz186g4313k9tvrfa5byr6va&dl=0',
   fontsGuide: 'DROPBOX_LINK_HERE',
   templates: 'DROPBOX_LINK_HERE',
   overviewDeck: 'DROPBOX_LINK_HERE',
