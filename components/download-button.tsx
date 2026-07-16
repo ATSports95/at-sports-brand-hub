@@ -1,10 +1,10 @@
-import { Download } from 'lucide-react'
+import { ArrowUpRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { ASSET_LINKS, type AssetKey } from '@/lib/assets'
 
 export function DownloadButton({
   assetKey,
-  label = 'Download',
+  label = 'Open Asset Library',
 }: {
   assetKey: AssetKey
   label?: string
@@ -22,7 +22,7 @@ export function DownloadButton({
       size="lg"
       className="bg-navy text-white hover:bg-navy/90"
     >
-      <Download className="size-4" />
+      <ArrowUpRight className="size-4" />
       {label}
     </Button>
   )
