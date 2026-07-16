@@ -312,9 +312,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     tagline: 'Professional pickleball\u2014wherever the game goes.',
     accentClass: 'bg-red',
     overview: [
-      "RollX is AT Sports' portable sports surfacing system, designed to create professional-quality playing surfaces wherever permanent court construction isn't practical or possible.",
-      'Whether supporting tournaments, special events, clubs, schools, or multi-purpose facilities, RollX transforms existing spaces into ready-to-play pickleball courts without permanent construction.',
-      'Manufactured by AT Sports, RollX combines dependable playability, rapid deployment, and customizable branding to help facilities expand programming, maximize space, and create new opportunities for play.',
+      'RollX is the Portable Sports Surface Division of AT Sports, specializing in portable court systems for temporary, multi-purpose, and event-based applications. The product line transforms existing spaces into high-quality playing surfaces without permanent construction, providing a flexible solution for tournaments, recreation, education, and special events.',
     ],
     positioning: [
       {
