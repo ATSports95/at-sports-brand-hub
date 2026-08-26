@@ -1,4 +1,7 @@
 import { Fragment } from 'react'
+import { Localized, LocalizedInline } from '@/components/localized'
+import { PARTNER_EDITION, type Edition } from '@/lib/editions'
+import { cn } from '@/lib/utils'
 
 // Product wordmarks. `accent` is the letter rendered in Red (the trailing X).
 const PRODUCTS = [
@@ -8,7 +11,7 @@ const PRODUCTS = [
   { base: 'Roll', accent: 'X' },
 ]
 
-export function Hero() {
+export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
   return (
     <section
       id="hero"
@@ -77,20 +80,35 @@ export function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-20 pb-4 md:px-12 md:pt-28">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 font-mono text-xs font-medium tracking-widest text-sky uppercase">
           <span className="size-1.5 rounded-full bg-sky" aria-hidden />
-          Official Brand Portal
+          <LocalizedInline text={edition.heroEyebrow} edition={edition} />
         </span>
 
         <h1 className="mt-6 text-balance text-5xl font-bold tracking-tight text-white md:text-7xl">
-          AT Sports Brand Hub
+          {edition.heroTitle.en}
           <span className="mt-3 block text-2xl font-medium text-sky md:text-4xl">
-            Partner Edition
+            <Localized
+              text={edition.heroSubtitle}
+              edition={edition}
+              secondaryClassName="text-xl font-normal text-sky/80 md:text-2xl"
+            />
           </span>
         </h1>
 
-        <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-steel">
-          <span className="font-black">AT Sports is a manufacturer of professional sports surfacing systems trusted by contractors, distributors, and facilities around the world.</span>
-          <span className="mt-6 block">This Brand Hub provides the approved tools, messaging, and assets needed to represent the company and every AT Sports product line accurately and consistently.</span>
-        </p>
+        <div className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-steel">
+          {edition.heroLead.map((para, i) => (
+            <Localized
+              key={i}
+              as="p"
+              text={para.text}
+              edition={edition}
+              className={cn(
+                i > 0 && 'mt-6',
+                para.emphasis ? 'font-black' : undefined,
+              )}
+              secondaryClassName="text-base leading-relaxed text-steel/75"
+            />
+          ))}
+        </div>
 
         {/* Product wordmarks — strong typographic band linking to the kits */}
         <nav

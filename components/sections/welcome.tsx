@@ -1,7 +1,9 @@
 import { Users, Layers, Mail } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
+import { Localized } from '@/components/localized'
+import { PARTNER_EDITION, type Edition } from '@/lib/editions'
 
-export function Welcome() {
+export function Welcome({ edition = PARTNER_EDITION }: { edition?: Edition }) {
   return (
     <Section id="welcome">
       <SectionHeading
@@ -9,9 +11,13 @@ export function Welcome() {
         title="Welcome to the Brand Hub"
       />
 
-      <p className="max-w-2xl text-pretty leading-relaxed text-ink/80">
-        This Brand Hub is the single source of truth for the AT Sports brand. Every logo, product description, color, marketing asset, and positioning statement has been approved by the AT Sports Marketing Department to ensure a consistent experience across every market.
-      </p>
+      <Localized
+        as="p"
+        text={edition.welcomeIntro}
+        edition={edition}
+        className="max-w-2xl text-pretty leading-relaxed text-ink/80"
+        secondaryClassName="mt-3 text-[0.95em] text-ink/65"
+      />
 
 
 

@@ -6,6 +6,8 @@ import { cn } from '@/lib/utils'
 import { NAV_ITEMS } from '@/lib/brand'
 import { LogoTile } from '@/components/logo-tile'
 import { SiteSearch } from '@/components/site-search'
+import { Localized } from '@/components/localized'
+import { PARTNER_EDITION, type Edition } from '@/lib/editions'
 
 function useScrollSpy() {
   const [active, setActive] = useState(NAV_ITEMS[0].id)
@@ -73,7 +75,11 @@ function NavLinks({
   )
 }
 
-export function SidebarNav() {
+export function SidebarNav({
+  edition = PARTNER_EDITION,
+}: {
+  edition?: Edition
+}) {
   const active = useScrollSpy()
   const [mobileOpen, setMobileOpen] = useState(false)
   const activeLabel =
@@ -99,9 +105,13 @@ export function SidebarNav() {
           <NavLinks active={active} />
         </div>
         <div className="border-t border-border px-6 py-4">
-          <p className="text-xs leading-relaxed text-slate">
-            Partner Edition. Always work from the live version.
-          </p>
+          <Localized
+            as="p"
+            text={edition.sidebarNote}
+            edition={edition}
+            className="text-xs leading-relaxed text-slate"
+            secondaryClassName="mt-1 text-slate/75"
+          />
         </div>
       </aside>
 

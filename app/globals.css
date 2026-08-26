@@ -55,6 +55,10 @@
   --font-secondary: var(--font-space-grotesk), ui-sans-serif, system-ui,
     sans-serif;
 
+  /* Japanese companion face — used only by Japanese text in the Courtina edition */
+  --font-jp: var(--font-noto-sans-jp), 'Hiragino Sans', 'Yu Gothic',
+    ui-sans-serif, system-ui, sans-serif;
+
   /* AT Sports brand palette */
   --color-navy: var(--navy);
   --color-red: var(--red);

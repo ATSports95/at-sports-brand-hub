@@ -1,6 +1,12 @@
 import { LogoTile } from '@/components/logo-tile'
+import { Localized } from '@/components/localized'
+import { PARTNER_EDITION, type Edition } from '@/lib/editions'
 
-export function SiteFooter() {
+export function SiteFooter({
+  edition = PARTNER_EDITION,
+}: {
+  edition?: Edition
+}) {
   const year = new Date().getFullYear()
   return (
     <footer className="relative isolate overflow-hidden bg-navy px-6 pt-20 pb-12 md:px-12">
@@ -59,9 +65,13 @@ export function SiteFooter() {
           tone="navy"
           className="w-44 [&>div]:aspect-auto [&>div]:h-14 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
         />
-        <p className="max-w-xl text-sm leading-relaxed text-steel">
-          AT Sports Brand Hub — Partner Edition. Maintained by AT Sports Marketing Department and updated as the brand evolves — always work from the live version.
-        </p>
+        <Localized
+          as="p"
+          text={edition.footerNote}
+          edition={edition}
+          className="max-w-xl text-sm leading-relaxed text-steel"
+          secondaryClassName="text-steel/70"
+        />
         <p className="text-xs text-steel/70">
           © {year} AT Sports. All rights reserved.
         </p>
