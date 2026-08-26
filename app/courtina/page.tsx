@@ -1,12 +1,7 @@
-import type { Metadata } from 'next'
-import { BrandHub } from '@/components/brand-hub'
-import { COURTINA_EDITION } from '@/lib/editions'
+import { redirect } from 'next/navigation'
 
-export const metadata: Metadata = {
-  title: COURTINA_EDITION.meta.title,
-  description: COURTINA_EDITION.meta.description,
-}
-
-export default function CourtinaBrandHub() {
-  return <BrandHub edition={COURTINA_EDITION} />
+// The Courtina edition now lives at the root. Keep /courtina working as a
+// convenience alias so existing links do not break.
+export default function CourtinaRedirect() {
+  redirect('/')
 }

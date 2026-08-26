@@ -1,12 +1,15 @@
 import type { Metadata } from 'next'
 import { BrandHub } from '@/components/brand-hub'
-import { PARTNER_EDITION } from '@/lib/editions'
+import { COURTINA_EDITION } from '@/lib/editions'
 
+// This chat's deliverable is the Courtina (Japan) edition, so it is the
+// default surface. The original AT Sports Partner Edition is preserved
+// unchanged at /partner.
 export const metadata: Metadata = {
-  title: PARTNER_EDITION.meta.title,
-  description: PARTNER_EDITION.meta.description,
+  title: COURTINA_EDITION.meta.title,
+  description: COURTINA_EDITION.meta.description,
 }
 
 export default function Home() {
-  return <BrandHub edition={PARTNER_EDITION} />
+  return <BrandHub edition={COURTINA_EDITION} />
 }
