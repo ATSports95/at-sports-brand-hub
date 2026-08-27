@@ -106,7 +106,15 @@ export function Foundation() {
                   className="w-full [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0 [&>div]:backdrop-blur-none"
                 />
               </div>
-              <div className="flex flex-1 flex-col gap-2 bg-[rgba(0,0,0,0.01)] p-5">
+              <div
+                className={`flex flex-1 flex-col gap-2 p-5 ${
+                  product.id === 'acrytech'
+                    ? 'bg-[rgba(243,243,243,0)]'
+                    : product.id === 'rollx'
+                      ? 'bg-[rgba(255,255,255,0.01)]'
+                      : 'bg-[rgba(255,255,255,0)]'
+                }`}
+              >
                 <div className="flex items-baseline justify-center gap-2">
                   <span className="rounded-sm bg-navy/5 px-2 py-0.5 text-xs font-medium text-sky">
                     {product.descriptor}
