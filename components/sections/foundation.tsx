@@ -92,7 +92,7 @@ export function Foundation() {
           {PRODUCT_LINES.map((product) => (
             <div
               key={product.id}
-              className="flex flex-col overflow-hidden rounded-md border border-border bg-card"
+              className="flex flex-col overflow-hidden rounded-md border border-border bg-black/40 backdrop-blur-sm"
             >
               {/* One uniform slightly-translucent white plate. The inner tile
                   must also drop its backdrop-blur: nested backdrop-filters

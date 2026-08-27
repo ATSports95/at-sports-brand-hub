@@ -116,7 +116,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
           {kit.positioning.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col gap-2 rounded-md border border-border bg-card p-5"
+              className="flex flex-col gap-2 rounded-md border border-border bg-black/40 p-5 backdrop-blur-sm"
             >
               <div className="flex items-center gap-2">
                 <span
@@ -240,7 +240,10 @@ export function ProductKits() {
                 'flex flex-col items-start gap-0.5 rounded-md border px-6 py-3.5 text-left transition-colors',
                 isActive
                   ? 'border-sky/60 bg-[rgba(78,140,179,0.61)] text-white shadow-[0_0_24px_-4px_var(--sky)]'
-                  : 'border-border bg-card text-white hover:border-sky/50',
+                  : // Soft downward sky-tinted glow lifts the inactive buttons
+                    // off the surface for a 3D look, distinct from the active
+                    // button's brighter all-around glow.
+                    'border-border bg-card text-white shadow-[0_8px_22px_-8px_var(--sky)] hover:border-sky/50 hover:shadow-[0_10px_26px_-8px_var(--sky)]',
               )}
             >
               <span className="text-base font-semibold">{kit.name}</span>
