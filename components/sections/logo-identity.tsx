@@ -173,7 +173,7 @@ export function LogoIdentity() {
         <div className="mt-6 grid grid-cols-2 gap-5 lg:grid-cols-3">
           {/* Correct */}
           <figure className="flex flex-col gap-3">
-            <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-3xl border-2 border-sky bg-white p-6">
+            <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-3xl border-2 border-sky bg-white/70 p-6 backdrop-blur-sm">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/logos/at-sports-color.svg"
@@ -191,7 +191,7 @@ export function LogoIdentity() {
 
           {INCORRECT.map((item) => (
             <figure key={item.label} className="flex flex-col gap-3">
-              <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-red/60 bg-white p-6">
+              <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-red/60 bg-white/70 p-6 backdrop-blur-sm">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/logos/at-sports-color.svg"

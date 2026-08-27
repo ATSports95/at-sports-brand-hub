@@ -58,7 +58,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
     <div className="flex flex-col gap-10">
       {/* Header band */}
       <div className="overflow-hidden rounded-lg border border-border bg-card">
-        <div className="flex flex-col gap-4 border-b border-border bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col gap-4 border-b border-border bg-white/70 p-6 backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
           <div
             className={cn(
               'flex h-16 items-center text-lg',

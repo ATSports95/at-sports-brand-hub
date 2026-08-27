@@ -53,10 +53,15 @@ export function LogoTile({
       <div
         className={cn(
           'relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border p-6 transition-colors',
-          // The `light` tone is an approved light plate for full-color/navy
-          // logo artwork, so it stays white under the dark UI theme —
-          // navy-on-charcoal artwork would otherwise be illegible.
-          isNavy ? 'border-navy bg-navy' : 'border-border bg-white',
+          // The `light` tone is the approved light plate for full-color/navy
+          // artwork, which would be illegible directly on the charcoal
+          // surface. It is translucent so the gradient tints through and it
+          // reads as frosted glass rather than a hard white block. 70% is the
+          // floor: it keeps the navy mark at ~6.5:1 and brand red at ~4.2:1,
+          // both clear of the 3:1 threshold for graphics.
+          isNavy
+            ? 'border-navy bg-navy'
+            : 'border-white/25 bg-white/70 backdrop-blur-sm',
         )}
       >
         {errored ? (

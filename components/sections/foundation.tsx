@@ -90,7 +90,7 @@ export function Foundation() {
               key={product.id}
               className="flex flex-col overflow-hidden rounded-md border border-border bg-card"
             >
-              <div className="flex h-28 items-center justify-center border-b border-border bg-white p-6">
+              <div className="flex h-28 items-center justify-center border-b border-border bg-white/70 p-6 backdrop-blur-sm">
                 <LogoTile
                   file={`${product.id}-color.svg`}
                   alt={`${product.name} logo`}

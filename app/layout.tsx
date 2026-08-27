@@ -44,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`light bg-background ${figtree.variable} ${spaceGrotesk.variable} ${notoSansJp.variable}`}
+      className={`bg-background ${figtree.variable} ${spaceGrotesk.variable} ${notoSansJp.variable}`}
     >
       <body className="font-sans antialiased">
         {children}

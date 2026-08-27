@@ -132,77 +132,13 @@
   --heading: #f2f6fa;
 }
 
-.dark {
-  color-scheme: dark;
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root:not(.light) {
-    color-scheme: dark;
-    --background: oklch(0.145 0 0);
-    --foreground: oklch(0.985 0 0);
-    --card: oklch(0.205 0 0);
-    --card-foreground: oklch(0.985 0 0);
-    --popover: oklch(0.205 0 0);
-    --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
-    --secondary: oklch(0.269 0 0);
-    --secondary-foreground: oklch(0.985 0 0);
-    --muted: oklch(0.269 0 0);
-    --muted-foreground: oklch(0.708 0 0);
-    --accent: oklch(0.269 0 0);
-    --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
-    --border: oklch(1 0 0 / 10%);
-    --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
-    --sidebar: oklch(0.205 0 0);
-    --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
-    --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
-    --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
-  }
-}
+/*
+ * The generic shadcn `.dark` block and the `prefers-color-scheme: dark`
+ * override that used to live here were removed. They replaced this entire
+ * brand palette with neutral greys, and the only thing suppressing them was
+ * a hardcoded `light` class on <html>. This theme is intentionally dark for
+ * every visitor, so `:root` above is now the single source of truth.
+ */
 
 @layer base {
   * {
@@ -213,11 +149,46 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Faint blueprint grid across the page, fixed so it reads as a backdrop */
+    /*
+     * Backdrop for the whole site, painted once here rather than per-section
+     * so the glow is continuous from the hero through the footer. Every layer
+     * is `fixed`, so the gradients stay anchored to the viewport while content
+     * scrolls past — that is what keeps the effect even end to end instead of
+     * restarting at each section boundary.
+     *
+     * Topmost layers first: blueprint grid, then the blue blooms, then a cool
+     * vignette that deepens the corners.
+     */
     background-image:
       linear-gradient(to right, rgb(255 255 255 / 0.025) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(255 255 255 / 0.025) 1px, transparent 1px);
-    background-size: 64px 64px;
+      linear-gradient(to bottom, rgb(255 255 255 / 0.025) 1px, transparent 1px),
+      radial-gradient(
+        70% 60% at 50% 0%,
+        rgb(103 164 214 / 0.2),
+        transparent 70%
+      ),
+      radial-gradient(
+        60% 55% at 8% 42%,
+        rgb(84 140 190 / 0.13),
+        transparent 72%
+      ),
+      radial-gradient(
+        65% 55% at 100% 78%,
+        rgb(103 164 214 / 0.12),
+        transparent 72%
+      ),
+      radial-gradient(
+        120% 120% at 50% 50%,
+        transparent 45%,
+        rgb(8 11 15 / 0.55)
+      );
+    background-size:
+      64px 64px,
+      64px 64px,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%;
     background-attachment: fixed;
   }
   h1,

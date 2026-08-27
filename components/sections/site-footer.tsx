@@ -9,16 +9,9 @@ export function SiteFooter({
 }) {
   const year = new Date().getFullYear()
   return (
-    <footer className="relative isolate overflow-hidden bg-background px-6 pt-20 pb-12 md:px-12">
-      {/* Layer — blue glow (matches hero) */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(60% 60% at 50% 100%, rgba(103,164,214,0.16), transparent 68%)',
-        }}
-      />
+    <footer className="relative isolate overflow-hidden px-6 pt-20 pb-12 md:px-12">
+      {/* No background of its own — the site-wide gradient on <body> carries
+          through here too (see hero). */}
 
       {/* Layer — oversized AT Sports watermark, off-center to the upper-right,
           white at low opacity and softly masked (matches hero) */}

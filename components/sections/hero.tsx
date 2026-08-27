@@ -15,27 +15,10 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
   return (
     <section
       id="hero"
-      className="relative isolate scroll-mt-20 overflow-hidden bg-background pb-16 md:pb-20 lg:scroll-mt-0"
+      className="relative isolate scroll-mt-20 overflow-hidden pb-16 md:pb-20 lg:scroll-mt-0"
     >
-      {/* Layer 2 — blue glow blooming from behind the headline */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(60% 55% at 50% 12%, rgba(103,164,214,0.20), transparent 68%)',
-        }}
-      />
-
-      {/* Layer 5 — cool wash pooling toward the lower half */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(70% 50% at 30% 95%, rgba(84,140,190,0.12), transparent 70%)',
-        }}
-      />
+      {/* No background of its own: the site-wide gradient on <body> shows
+          through so the hero is continuous with the rest of the page. */}
 
       {/* Layer 4 — oversized AT Sports watermark, off-center to the upper-right,
           white at low opacity and softly masked so it dissolves before it ever
