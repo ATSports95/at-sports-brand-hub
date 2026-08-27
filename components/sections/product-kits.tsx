@@ -121,8 +121,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
               <div className="flex items-center gap-2">
                 <span
                   className={cn(
-                    'flex size-6 shrink-0 items-center justify-center rounded-full text-white',
-                    kit.accentClass,
+                    'flex size-6 shrink-0 items-center justify-center rounded-full bg-[var(--slate)] text-white',
                   )}
                 >
                   <Check className="size-3.5" />
@@ -240,7 +239,7 @@ export function ProductKits() {
               className={cn(
                 'flex flex-col items-start gap-0.5 rounded-md border px-6 py-3.5 text-left transition-colors',
                 isActive
-                  ? 'border-sky/60 bg-sky/10 text-sky shadow-[0_0_24px_-4px_var(--sky)]'
+                  ? 'border-sky/60 bg-[rgba(78,140,179,0.61)] text-white shadow-[0_0_24px_-4px_var(--sky)]'
                   : 'border-border bg-card text-white hover:border-sky/50',
               )}
             >
