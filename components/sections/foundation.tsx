@@ -28,7 +28,7 @@ export function Foundation() {
       {/* Pull-quote */}
       <blockquote className="relative my-8 rounded-md border-l-4 border-red bg-muted px-6 py-6">
         <p className="text-balance font-display text-xl font-semibold text-navy md:text-2xl">
-          &ldquo;Surfaces That Perform. Solutions That Go Further.&rdquo;
+          &ldquo;Surfaces.Systems.Solutions.&rdquo;
         </p>
       </blockquote>
 
