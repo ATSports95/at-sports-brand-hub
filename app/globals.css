@@ -69,49 +69,61 @@
 }
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
-  /* Raw AT Sports brand colors */
-  --navy: #233354;
-  --red: #9a1b1e;
-  --sky: #4e8cb3;
-  --steel: #b9c4cb;
-  --slate: #5d6f7a;
-  --ink: #202528;
+  /*
+   * Dark technical theme. The official AT Sports brand hex values are the
+   * documented spec and live untouched in lib/brand.ts (rendered as swatches
+   * in the Color System section). The tokens below are UI-chrome adaptations
+   * of that palette for a near-black surface.
+   */
 
-  /* Neutral light-grey page background so white cards lift off it */
-  --background: #f5f5f5;
-  --foreground: #202528;
-  --card: #ffffff;
-  --card-foreground: #202528;
-  --popover: #ffffff;
-  --popover-foreground: #202528;
-  --primary: #233354;
-  --primary-foreground: #ffffff;
-  --secondary: #eaeaea;
-  --secondary-foreground: #233354;
-  --muted: #eaeaea;
-  --muted-foreground: #5d6f7a;
-  --accent: #4e8cb3;
-  --accent-foreground: #ffffff;
-  --destructive: #9a1b1e;
-  --border: #d8e0e5;
-  --input: #d8e0e5;
-  --ring: #4e8cb3;
-  --chart-1: #233354;
+  /* Navy stays a *surface* here: solid bg-navy reads as an elevated panel
+     that lifts off the near-black page, as in the reference. Heading text
+     that uses text-navy is remapped to --heading in the utilities layer. */
+  --navy: #0d1620;
+  --red: #c14a42;
+  --sky: #8ab4e8;
+  --steel: #aebac4;
+  --slate: #8b99a5;
+  --ink: #e7ecf0;
+
+  /* Near-black page with a faint cool cast */
+  --background: #080b0e;
+  --foreground: #e7ecf0;
+  --card: #0f1519;
+  --card-foreground: #e7ecf0;
+  --popover: #121a1f;
+  --popover-foreground: #e7ecf0;
+  --primary: #8ab4e8;
+  --primary-foreground: #08111c;
+  --secondary: #161f26;
+  --secondary-foreground: #e7ecf0;
+  --muted: #131b21;
+  --muted-foreground: #8b99a5;
+  --accent: #8ab4e8;
+  --accent-foreground: #08111c;
+  --destructive: #c14a42;
+  --border: #1d2a33;
+  --input: #1d2a33;
+  --ring: #8ab4e8;
+  --chart-1: #8ab4e8;
   --chart-2: #4e8cb3;
-  --chart-3: #9a1b1e;
-  --chart-4: #5d6f7a;
-  --chart-5: #b9c4cb;
+  --chart-3: #c14a42;
+  --chart-4: #8b99a5;
+  --chart-5: #aebac4;
   --radius: 0.5rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #202528;
-  --sidebar-primary: #233354;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f4f6f8;
-  --sidebar-accent-foreground: #233354;
-  --sidebar-border: #d8e0e5;
-  --sidebar-ring: #4e8cb3;
+  --sidebar: #0b1014;
+  --sidebar-foreground: #e7ecf0;
+  --sidebar-primary: #8ab4e8;
+  --sidebar-primary-foreground: #08111c;
+  --sidebar-accent: #141d24;
+  --sidebar-accent-foreground: #e7ecf0;
+  --sidebar-border: #1d2a33;
+  --sidebar-ring: #8ab4e8;
+
+  /* Light heading ink for copy that was navy-on-white in the light theme */
+  --heading: #f3f7fa;
 }
 
 .dark {
@@ -195,6 +207,12 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Faint blueprint grid across the page, fixed so it reads as a backdrop */
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.025) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-attachment: fixed;
   }
   h1,
   h2,
@@ -227,6 +245,44 @@
   }
   .diagonal-top {
     clip-path: polygon(0 3.5rem, 100% 0, 100% 100%, 0 100%);
+  }
+
+  /*
+   * `navy` is a dual-purpose brand token: solid fills need to stay a dark
+   * elevated surface, but the ~57 `text-navy` headings and the low-alpha
+   * `bg-navy/5` chip tints were designed against white. Rather than rewrite
+   * every call site, both are remapped once here for the dark theme.
+   */
+  .text-navy {
+    color: var(--heading);
+  }
+
+  /*
+   * `sky` is likewise dual-purpose. It must stay pale to read as accent *text*
+   * on near-black, but solid `bg-sky` chips pair it with `text-white`, which
+   * would only reach ~2:1. Solid fills therefore get a deeper blue (~5.6:1
+   * against white) while `text-sky` and the low-alpha `bg-sky/5` tints keep
+   * the pale value.
+   */
+  .bg-sky {
+    background-color: #2f5d8a;
+  }
+
+  /* Faint glassy chip/callout tints, matching the reference's translucent panels */
+  .bg-navy\/5,
+  .bg-navy\/\[0\.03\] {
+    background-color: rgb(255 255 255 / 0.055);
+  }
+  .border-navy\/15 {
+    border-color: rgb(255 255 255 / 0.12);
+  }
+
+  /* Blueprint grid wash used behind the page, as in the reference */
+  .grid-wash {
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / 0.028) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.028) 1px, transparent 1px);
+    background-size: 64px 64px;
   }
 }
 :root {
