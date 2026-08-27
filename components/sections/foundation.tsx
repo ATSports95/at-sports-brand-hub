@@ -26,7 +26,11 @@ export function Foundation() {
       />
 
       {/* Pull-quote */}
-      <blockquote className="relative my-8 rounded-md border-l-4 border-sky bg-transparent px-6 py-7 md:px-8 md:py-8">
+      {/* Fill and hairline border are the same faint glassy tint used by the
+          logo-guideline panels (bg-navy/[0.03] + border-navy/15, both remapped
+          to low-alpha white for the dark theme), so this reads as translucent
+          glass rather than an opaque card. The sky left stripe is kept. */}
+      <blockquote className="relative my-8 rounded-md border border-navy/15 border-l-4 border-l-sky bg-navy/[0.03] px-6 py-7 md:px-8 md:py-8">
         {/* No spaces in the tagline, so <wbr /> supplies break points after each
             period — otherwise the line is one unbreakable token and overflows. */}
         <p className="font-display text-xl font-black uppercase leading-tight tracking-tight text-navy sm:text-2xl md:text-3xl">
