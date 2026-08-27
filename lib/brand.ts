@@ -93,7 +93,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     name: 'RollX',
     descriptor: 'The Portable Court System',
     whatFor:
-      'A ready-to-play, prefabricated court surface made from a durable reinforced membrane that rolls out over a hard, level surface, providing a high-quality playing surface without requiring a permanent installation.',
+      'A ready-to-play court made from a durable reinforced membrane that rolls out over a hard, level surface, providing a high-quality playing surface without permanent installation.',
   },
 ]
 
