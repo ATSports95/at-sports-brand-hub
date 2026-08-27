@@ -93,25 +93,27 @@
   --slate: #93a1af;
   --ink: #e9eef4;
 
-  /* Single charcoal-navy surface, shared by every major region */
-  --surface-base: #15191e;
+  /* Single charcoal-navy surface, shared by every major region. The whole
+     elevation ramp (surface -> card -> muted -> border) steps down together
+     so cards and borders keep the same separation against the darker base. */
+  --surface-base: #0e1216;
   --background: var(--surface-base);
   --foreground: #e9eef4;
-  --card: #1b2027;
+  --card: #14181e;
   --card-foreground: #e9eef4;
-  --popover: #1b2027;
+  --popover: #14181e;
   --popover-foreground: #e9eef4;
   --primary: #8ec1e8;
   --primary-foreground: #0c1218;
-  --secondary: #212831;
+  --secondary: #1a2027;
   --secondary-foreground: #e9eef4;
-  --muted: #212831;
+  --muted: #1a2027;
   --muted-foreground: #93a1af;
   --accent: #8ec1e8;
   --accent-foreground: #0c1218;
   --destructive: #c1544c;
-  --border: #2b333d;
-  --input: #2b333d;
+  --border: #242b34;
+  --input: #242b34;
   --ring: #8ec1e8;
   --chart-1: #8ec1e8;
   --chart-2: #5d92bb;
@@ -119,13 +121,13 @@
   --chart-4: #93a1af;
   --chart-5: #b3c0cc;
   --radius: 0.5rem;
-  --sidebar: #15191e;
+  --sidebar: #0e1216;
   --sidebar-foreground: #e9eef4;
   --sidebar-primary: #8ec1e8;
   --sidebar-primary-foreground: #0c1218;
-  --sidebar-accent: #212831;
+  --sidebar-accent: #1a2027;
   --sidebar-accent-foreground: #e9eef4;
-  --sidebar-border: #2b333d;
+  --sidebar-border: #242b34;
   --sidebar-ring: #8ec1e8;
 
   /* Light heading ink for copy that was navy-on-white in the light theme */
@@ -192,7 +194,7 @@
       radial-gradient(
         120% 120% at 50% 50%,
         transparent 45%,
-        rgb(8 11 15 / 0.55)
+        rgb(3 5 8 / 0.6)
       );
     background-size:
       200px 200px,
