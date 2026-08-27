@@ -60,7 +60,7 @@ function NavLinks({
             <span
               className={cn(
                 'h-4 w-0.5 rounded-full transition-colors',
-                isActive ? 'bg-red' : 'bg-transparent group-hover:bg-steel',
+                isActive ? 'bg-accent' : 'bg-transparent group-hover:bg-steel',
               )}
               aria-hidden
             />

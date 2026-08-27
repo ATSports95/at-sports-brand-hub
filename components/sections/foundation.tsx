@@ -50,7 +50,7 @@ export function Foundation() {
       </div>
 
       <div className="mt-6 grid gap-5 md:grid-cols-2">
-        <div className="rounded-md border border-sky/40 bg-sky/5 p-6">
+        <div className="rounded-md border border-sky/40 bg-[rgba(78,140,179,0.26)] p-6">
           <div className="mb-4 flex items-center gap-2">
             <span className="flex size-6 items-center justify-center rounded-full bg-sky text-white">
               <Check className="size-3.5" />
@@ -65,7 +65,7 @@ export function Foundation() {
             ))}
           </ul>
         </div>
-        <div className="rounded-md border border-red/30 bg-red/5 p-6">
+        <div className="rounded-md border border-red/30 bg-[rgba(193,84,76,0.18)] p-6">
           <div className="mb-4 flex items-center gap-2">
             <span className="flex size-6 items-center justify-center rounded-full bg-red text-white">
               <X className="size-3.5" />
@@ -106,7 +106,7 @@ export function Foundation() {
                   className="w-full [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0 [&>div]:backdrop-blur-none"
                 />
               </div>
-              <div className="flex flex-1 flex-col gap-2 p-5">
+              <div className="flex flex-1 flex-col gap-2 bg-[rgba(0,0,0,0.01)] p-5">
                 <div className="flex items-baseline justify-center gap-2">
                   <span className="rounded-sm bg-navy/5 px-2 py-0.5 text-xs font-medium text-sky">
                     {product.descriptor}
