@@ -13,9 +13,17 @@
 export type Locale = 'en' | 'ja'
 
 /**
- * A string with an optional Japanese counterpart. When an edition is
- * `bilingual` and `ja` is present, both are rendered — English leads,
- * Japanese sits beneath it in a muted tone.
+ * A string with an optional Japanese counterpart.
+ *
+ * No `ja` values exist in the codebase at the moment — the previous partial
+ * translations were removed pending a full set of approved copy. Every string
+ * therefore renders English only. The slot is kept so that arriving
+ * translations are a data change rather than a markup change.
+ *
+ * Note that the incoming requirement is a *toggle* (show one language at a
+ * time) rather than the stacked English-over-Japanese treatment the current
+ * `bilingual` flag describes, so that flag is likely to be replaced by a
+ * language selector when the translated copy lands.
  */
 export type LocalizedText = {
   en: string
@@ -114,50 +122,38 @@ export const PARTNER_EDITION: Edition = {
 export const COURTINA_EDITION: Edition = {
   slug: 'courtina',
   partnerName: 'Courtina',
-  bilingual: true,
+  // No Japanese copy is in the codebase right now, so this stays false and the
+  // edition renders English only. See the `bilingual` note on `Edition`.
+  bilingual: false,
   secondaryLocale: 'ja',
 
-  heroEyebrow: {
-    en: 'Official Brand Portal',
-    ja: '公式ブランドポータル',
-  },
-  heroTitle: {
-    en: 'AT Sports Brand Hub',
-    ja: 'AT Sports ブランドハブ',
-  },
-  heroSubtitle: {
-    en: 'Courtina Edition — Japan',
-    ja: 'コルティーナ版 — 日本',
-  },
+  heroEyebrow: { en: 'Official Brand Portal' },
+  heroTitle: { en: 'AT Sports Brand Hub' },
+  heroSubtitle: { en: 'Courtina Edition — Japan' },
   heroLead: [
     {
       emphasis: true,
       text: {
         en: 'AT Sports is a manufacturer of professional sports surfacing systems trusted by contractors, distributors, and facilities around the world.',
-        ja: 'AT Sports は、世界中の施工業者・販売代理店・施設から信頼される、プロフェッショナル向けスポーツ表面システムのメーカーです。',
       },
     },
     {
       text: {
         en: 'This edition is maintained for Courtina, the authorized AT Sports distributor in Japan. It provides the approved tools, messaging, and assets needed to represent the company and every AT Sports product line accurately and consistently in the Japanese market.',
-        ja: '本エディションは、日本における AT Sports 正規販売代理店であるコルティーナ向けに管理されています。日本市場において、当社および AT Sports の各製品ラインを正確かつ一貫して表現するために承認されたツール、メッセージ、アセットを提供します。',
       },
     },
   ],
 
   welcomeIntro: {
     en: 'This Brand Hub is the single source of truth for the AT Sports brand in Japan. Every logo, product description, color, marketing asset, and positioning statement has been approved by the AT Sports Marketing Department to ensure a consistent experience across every market.',
-    ja: '本ブランドハブは、日本における AT Sports ブランドの唯一の正式な情報源です。すべてのロゴ、製品説明、カラー、マーケティングアセット、ポジショニングステートメントは、AT Sports マーケティング部門の承認を受けており、あらゆる市場で一貫した体験を確保します。',
   },
 
   sidebarNote: {
     en: 'Courtina Edition. Always work from the live version.',
-    ja: 'コルティーナ版。常に最新版をご参照ください。',
   },
 
   footerNote: {
     en: 'AT Sports Brand Hub — Courtina Edition, Japan. Maintained by AT Sports Marketing Department and updated as the brand evolves — always work from the live version.',
-    ja: 'AT Sports ブランドハブ — コルティーナ版（日本）。AT Sports マーケティング部門が管理し、ブランドの進化に合わせて更新されます。常に最新版をご参照ください。',
   },
 
   meta: {
