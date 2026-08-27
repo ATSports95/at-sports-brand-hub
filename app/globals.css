@@ -69,66 +69,67 @@
 }
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 
   /*
-   * Dimmed gunmetal-slate theme. One continuous surface tone is used for the
-   * page, the hero, the footer and the sidebar so the background reads as
-   * consistent top to bottom.
+   * Charcoal / navy-black theme with a cool blue cast. One continuous surface
+   * tone is shared by the page, hero, sidebar and footer so the background
+   * reads as consistent top to bottom.
    *
-   * The surface lightness is deliberate, not arbitrary. Full-color/navy logo
-   * artwork (#233354) must sit directly on this background, and contrast is
-   * symmetric: a surface dark enough for white body text (needs L <= 0.183)
-   * can never also give navy artwork 3:1 (needs L >= 0.199). So the surface
-   * is pushed as dark as it can go while still satisfying both halves of the
-   * brief: #87929d holds the navy mark at 3.96:1 and keeps every text tone
-   * below at 4.5:1 or better. Darker than this and the logos start to fail.
+   * Note on logo artwork: contrast is symmetric, so a surface this dark can
+   * never also give the navy brand mark (#233354) a passing ratio. That is
+   * why full-color/navy artwork sits on explicit light plates (see LogoTile's
+   * `light` tone) while reversed white marks are used directly on the dark
+   * chrome, matching the brand's own reversed-logo rule.
    *
    * The official AT Sports brand hex values remain untouched in lib/brand.ts
    * and are rendered from source in the Color System swatches; the tokens
    * here are UI-chrome adaptations of that palette.
    */
-  --navy: #141d33;
-  --red: #4e0f11;
-  --sky: #122a41;
-  --steel: #151b21;
-  --slate: #1a2129;
-  --ink: #0b1013;
+  --navy: #0e1622;
+  --red: #c1544c;
+  --sky: #8ec1e8;
+  --steel: #b3c0cc;
+  --slate: #93a1af;
+  --ink: #e9eef4;
 
-  /* Single dimmed slate surface, shared by every major region */
-  --surface-base: #87929d;
+  /* Single charcoal-navy surface, shared by every major region */
+  --surface-base: #15191e;
   --background: var(--surface-base);
-  --foreground: #0b1013;
-  --card: #929ca6;
-  --card-foreground: #0b1013;
-  --popover: #929ca6;
-  --popover-foreground: #0b1013;
-  --primary: #141d33;
-  --primary-foreground: #ffffff;
-  --secondary: #8d97a1;
-  --secondary-foreground: #0b1013;
-  --muted: #8d97a1;
-  --muted-foreground: #1a2129;
-  --accent: #122a41;
-  --accent-foreground: #ffffff;
-  --destructive: #4e0f11;
-  --border: #6b7783;
-  --input: #6b7783;
-  --ring: #122a41;
-  --chart-1: #141d33;
-  --chart-2: #122a41;
-  --chart-3: #4e0f11;
-  --chart-4: #1a2129;
-  --chart-5: #6b7783;
+  --foreground: #e9eef4;
+  --card: #1b2027;
+  --card-foreground: #e9eef4;
+  --popover: #1b2027;
+  --popover-foreground: #e9eef4;
+  --primary: #8ec1e8;
+  --primary-foreground: #0c1218;
+  --secondary: #212831;
+  --secondary-foreground: #e9eef4;
+  --muted: #212831;
+  --muted-foreground: #93a1af;
+  --accent: #8ec1e8;
+  --accent-foreground: #0c1218;
+  --destructive: #c1544c;
+  --border: #2b333d;
+  --input: #2b333d;
+  --ring: #8ec1e8;
+  --chart-1: #8ec1e8;
+  --chart-2: #5d92bb;
+  --chart-3: #c1544c;
+  --chart-4: #93a1af;
+  --chart-5: #b3c0cc;
   --radius: 0.5rem;
-  --sidebar: #87929d;
-  --sidebar-foreground: #0b1013;
-  --sidebar-primary: #141d33;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #929ca6;
-  --sidebar-accent-foreground: #0b1013;
-  --sidebar-border: #6b7783;
-  --sidebar-ring: #122a41;
+  --sidebar: #15191e;
+  --sidebar-foreground: #e9eef4;
+  --sidebar-primary: #8ec1e8;
+  --sidebar-primary-foreground: #0c1218;
+  --sidebar-accent: #212831;
+  --sidebar-accent-foreground: #e9eef4;
+  --sidebar-border: #2b333d;
+  --sidebar-ring: #8ec1e8;
+
+  /* Light heading ink for copy that was navy-on-white in the light theme */
+  --heading: #f2f6fa;
 }
 
 .dark {
@@ -214,8 +215,8 @@
     @apply bg-background text-foreground;
     /* Faint blueprint grid across the page, fixed so it reads as a backdrop */
     background-image:
-      linear-gradient(to right, rgb(0 0 0 / 0.04) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(0 0 0 / 0.04) 1px, transparent 1px);
+      linear-gradient(to right, rgb(255 255 255 / 0.025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.025) 1px, transparent 1px);
     background-size: 64px 64px;
     background-attachment: fixed;
   }
@@ -252,11 +253,40 @@
     clip-path: polygon(0 3.5rem, 100% 0, 100% 100%, 0 100%);
   }
 
-  /* Blueprint grid wash: dark hairlines now that the surface is a light slate */
+  /*
+   * `navy` is a dual-purpose brand token: solid fills stay a dark elevated
+   * surface, but the ~57 `text-navy` headings and the low-alpha `bg-navy/5`
+   * chip tints were designed against white. Rather than rewrite every call
+   * site, both are remapped once here for the dark theme.
+   */
+  .text-navy {
+    color: var(--heading);
+  }
+
+  /*
+   * `sky` is likewise dual-purpose. It stays pale to read as accent *text* on
+   * charcoal, but solid `bg-sky` chips pair it with `text-white`, which would
+   * only reach ~2:1. Solid fills therefore get a deeper blue (~5.6:1 against
+   * white) while `text-sky` and the low-alpha tints keep the pale value.
+   */
+  .bg-sky {
+    background-color: #2f5d8a;
+  }
+
+  /* Faint glassy chip/callout tints */
+  .bg-navy\/5,
+  .bg-navy\/\[0\.03\] {
+    background-color: rgb(255 255 255 / 0.055);
+  }
+  .border-navy\/15 {
+    border-color: rgb(255 255 255 / 0.12);
+  }
+
+  /* Blueprint grid wash: light hairlines on the charcoal surface */
   .grid-wash {
     background-image:
-      linear-gradient(to right, rgb(0 0 0 / 0.045) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(0 0 0 / 0.045) 1px, transparent 1px);
+      linear-gradient(to right, rgb(255 255 255 / 0.028) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / 0.028) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 }
