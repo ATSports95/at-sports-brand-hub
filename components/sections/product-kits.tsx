@@ -238,13 +238,13 @@ export function ProductKits() {
               aria-selected={isActive}
               onClick={() => setActiveId(kit.id)}
               className={cn(
-                'flex flex-col items-start gap-0.5 rounded-md border px-4 py-2.5 text-left transition-colors',
+                'flex flex-col items-start gap-0.5 rounded-md border px-6 py-3.5 text-left transition-colors',
                 isActive
                   ? 'border-sky/60 bg-sky/10 text-sky shadow-[0_0_24px_-4px_var(--sky)]'
                   : 'border-border bg-card text-navy hover:border-sky/50',
               )}
             >
-              <span className="text-sm font-semibold">{kit.name}</span>
+              <span className="text-base font-semibold">{kit.name}</span>
             </button>
           )
         })}
