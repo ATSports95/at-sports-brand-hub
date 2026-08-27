@@ -53,9 +53,12 @@ export function LogoTile({
       <div
         className={cn(
           'relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border p-6 transition-colors',
+          // The `light` tone is an approved light plate for full-color/navy
+          // logo artwork, so it stays white under the dark UI theme —
+          // otherwise navy-on-near-black artwork would be illegible.
           isNavy
             ? 'border-navy bg-navy'
-            : 'border-border bg-card',
+            : 'border-border bg-white',
         )}
       >
         {errored ? (

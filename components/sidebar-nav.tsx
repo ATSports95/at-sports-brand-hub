@@ -91,8 +91,10 @@ export function SidebarNav({
       <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-border bg-sidebar lg:flex">
         <div className="border-b border-border px-6 py-6">
           <div className="flex items-center justify-center">
+            {/* Reversed white mark: the sidebar is a dark surface, and the
+                brand rule is white-on-dark, never full-color-on-dark. */}
             <LogoTile
-              file="at-sports-color.svg"
+              file="at-sports-white.svg"
               alt="AT Sports"
               className="w-40 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
             />
@@ -119,7 +121,7 @@ export function SidebarNav({
       <div className="sticky top-0 z-40 flex items-center justify-between border-b border-border bg-sidebar/95 px-4 py-3 backdrop-blur lg:hidden">
         <div className="flex items-center gap-3">
           <LogoTile
-            file="at-sports-color.svg"
+            file="at-sports-white.svg"
             alt="AT Sports"
             className="w-28 [&>div]:aspect-auto [&>div]:h-9 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
           />
