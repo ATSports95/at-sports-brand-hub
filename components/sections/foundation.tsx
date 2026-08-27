@@ -26,9 +26,11 @@ export function Foundation() {
       />
 
       {/* Pull-quote */}
-      <blockquote className="relative my-8 rounded-md border-l-4 border-red bg-muted px-6 py-6">
-        <p className="text-balance font-display text-xl font-semibold text-navy md:text-2xl">
-          &ldquo;Surfaces.Systems.Solutions.&rdquo;
+      <blockquote className="relative my-8 rounded-md border-l-4 border-red bg-muted px-6 py-10 md:px-10 md:py-12">
+        {/* No spaces in the tagline, so <wbr /> supplies break points after each
+            period — otherwise the line is one unbreakable token and overflows. */}
+        <p className="font-display text-2xl font-black uppercase leading-tight tracking-tight text-navy sm:text-3xl md:text-4xl lg:text-5xl">
+          &ldquo;Surfaces.<wbr />Systems.<wbr />Solutions.&rdquo;
         </p>
       </blockquote>
 
