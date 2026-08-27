@@ -79,55 +79,56 @@
    * The surface lightness is deliberate, not arbitrary. Full-color/navy logo
    * artwork (#233354) must sit directly on this background, and contrast is
    * symmetric: a surface dark enough for white body text (needs L <= 0.183)
-   * can never also give navy artwork 3:1 (needs L >= 0.199). #8f9aa4 is the
-   * DARKEST surface where the navy mark clears 3:1 (4.38:1) while every text
-   * tone below still clears 4.5:1. Going darker breaks the logos; going
-   * lighter just washes out the mood.
+   * can never also give navy artwork 3:1 (needs L >= 0.199). So the surface
+   * is pushed as dark as it can go while still satisfying both halves of the
+   * brief: #87929d holds the navy mark at 3.96:1 and keeps every text tone
+   * below at 4.5:1 or better. Darker than this and the logos start to fail.
    *
    * The official AT Sports brand hex values remain untouched in lib/brand.ts
    * and are rendered from source in the Color System swatches; the tokens
    * here are UI-chrome adaptations of that palette.
    */
-  --navy: #1b2540;
-  --red: #5f1214;
-  --sky: #16334f;
-  --steel: #1c242b;
-  --slate: #232c35;
-  --ink: #0f151a;
+  --navy: #141d33;
+  --red: #4e0f11;
+  --sky: #122a41;
+  --steel: #151b21;
+  --slate: #1a2129;
+  --ink: #0b1013;
 
   /* Single dimmed slate surface, shared by every major region */
-  --background: #8f9aa4;
-  --foreground: #0f151a;
-  --card: #99a3ac;
-  --card-foreground: #0f151a;
-  --popover: #99a3ac;
-  --popover-foreground: #0f151a;
-  --primary: #1b2540;
+  --surface-base: #87929d;
+  --background: var(--surface-base);
+  --foreground: #0b1013;
+  --card: #929ca6;
+  --card-foreground: #0b1013;
+  --popover: #929ca6;
+  --popover-foreground: #0b1013;
+  --primary: #141d33;
   --primary-foreground: #ffffff;
-  --secondary: #949ea8;
-  --secondary-foreground: #0f151a;
-  --muted: #949ea8;
-  --muted-foreground: #232c35;
-  --accent: #16334f;
+  --secondary: #8d97a1;
+  --secondary-foreground: #0b1013;
+  --muted: #8d97a1;
+  --muted-foreground: #1a2129;
+  --accent: #122a41;
   --accent-foreground: #ffffff;
-  --destructive: #5f1214;
-  --border: #75818d;
-  --input: #75818d;
-  --ring: #16334f;
-  --chart-1: #1b2540;
-  --chart-2: #16334f;
-  --chart-3: #5f1214;
-  --chart-4: #232c35;
-  --chart-5: #75818d;
+  --destructive: #4e0f11;
+  --border: #6b7783;
+  --input: #6b7783;
+  --ring: #122a41;
+  --chart-1: #141d33;
+  --chart-2: #122a41;
+  --chart-3: #4e0f11;
+  --chart-4: #1a2129;
+  --chart-5: #6b7783;
   --radius: 0.5rem;
-  --sidebar: #8f9aa4;
-  --sidebar-foreground: #0f151a;
-  --sidebar-primary: #1b2540;
+  --sidebar: #87929d;
+  --sidebar-foreground: #0b1013;
+  --sidebar-primary: #141d33;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #99a3ac;
-  --sidebar-accent-foreground: #0f151a;
-  --sidebar-border: #75818d;
-  --sidebar-ring: #16334f;
+  --sidebar-accent: #929ca6;
+  --sidebar-accent-foreground: #0b1013;
+  --sidebar-border: #6b7783;
+  --sidebar-ring: #122a41;
 }
 
 .dark {

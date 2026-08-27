@@ -44,7 +44,7 @@ const CARDS: {
 
 export function AssetLibrary() {
   return (
-    <Section id="assets" className="bg-muted/50">
+    <Section id="assets">
       <SectionHeading
         eyebrow="Asset Library"
         title="Asset Library"

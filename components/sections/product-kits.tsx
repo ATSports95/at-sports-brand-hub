@@ -207,7 +207,7 @@ export function ProductKits() {
     PRODUCT_KITS.find((k) => k.id === activeId) ?? PRODUCT_KITS[0]
 
   return (
-    <Section id="kits" className="bg-muted/40">
+    <Section id="kits">
       <SectionHeading
         eyebrow="Product Brand Kits"
         title="Approved Positioning by Product"
