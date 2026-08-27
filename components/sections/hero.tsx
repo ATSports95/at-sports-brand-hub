@@ -72,9 +72,17 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
               edition={edition}
               className={cn(
                 i > 0 && 'mt-6',
-                para.emphasis ? 'font-black' : undefined,
+                // The emphasized opening paragraph is white so it leads the
+                // block; the paragraphs after it keep the inherited steel.
+                para.emphasis ? 'font-black text-white' : undefined,
               )}
-              secondaryClassName="text-base leading-relaxed text-steel/75"
+              secondaryClassName={cn(
+                'text-base leading-relaxed',
+                // The Japanese line belongs to the same sentence, so it
+                // matches its paragraph's color. Hierarchy against the
+                // English lead comes from the smaller size, not a dimmer tone.
+                para.emphasis ? 'text-white' : 'text-steel/75',
+              )}
             />
           ))}
         </div>
