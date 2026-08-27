@@ -33,7 +33,7 @@ export function Foundation() {
       <blockquote className="relative my-8 rounded-md border border-sky border-l-4 bg-navy/[0.03] px-6 py-7 md:px-8 md:py-8">
         {/* No spaces in the tagline, so <wbr /> supplies break points after each
             period — otherwise the line is one unbreakable token and overflows. */}
-        <p className="font-display text-xl font-black uppercase leading-tight tracking-tight text-navy sm:text-2xl md:text-3xl">
+        <p className="font-secondary text-[28px] font-black uppercase leading-tight tracking-[0.004em] text-navy">
           &ldquo;Surfaces.<wbr />Systems.<wbr />Solutions.&rdquo;
         </p>
       </blockquote>
