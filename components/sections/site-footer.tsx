@@ -9,19 +9,19 @@ export function SiteFooter({
 }) {
   const year = new Date().getFullYear()
   return (
-    <footer className="relative isolate overflow-hidden bg-navy px-6 pt-20 pb-12 md:px-12">
+    <footer className="relative isolate overflow-hidden bg-background px-6 pt-20 pb-12 md:px-12">
       {/* Layer — subtle sky-tinted radial glow (matches hero) */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(55% 55% at 26% 30%, rgba(78,140,179,0.16), transparent 70%)',
+            'radial-gradient(55% 55% at 26% 30%, rgba(22,51,79,0.13), transparent 70%)',
         }}
       />
 
       {/* Layer — oversized AT Sports watermark, off-center to the upper-right,
-          white at ~5% opacity and softly masked (matches hero) */}
+          black mark at low opacity so it debosses into the light slate (matches hero) */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 -right-[6%] hidden w-[84%] md:block"
@@ -34,9 +34,9 @@ export function SiteFooter({
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/logos/at-sports-white.svg"
+          src="/logos/at-sports-black.svg"
           alt=""
-          className="h-full w-full object-contain object-right-bottom opacity-[0.05]"
+          className="h-full w-full object-contain object-right-bottom opacity-[0.055]"
         />
       </div>
 
@@ -46,7 +46,7 @@ export function SiteFooter({
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            'repeating-linear-gradient(118deg, transparent 0, transparent 43px, rgba(255,255,255,0.035) 43px, rgba(255,255,255,0.035) 44px)',
+            'repeating-linear-gradient(118deg, transparent 0, transparent 43px, rgba(0,0,0,0.05) 43px, rgba(0,0,0,0.05) 44px)',
           maskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
           WebkitMaskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
         }}
@@ -54,15 +54,16 @@ export function SiteFooter({
 
       {/* Layer — dotted grid texture (matches hero) */}
       <div
-        className="halftone pointer-events-none absolute inset-0 text-white/[0.055]"
+        className="halftone pointer-events-none absolute inset-0 text-ink/[0.07]"
         aria-hidden
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col gap-6">
+        {/* Full-color mark: the footer now shares the light slate surface, so
+            the navy logo reads directly on it (4.4:1) with no plate needed. */}
         <LogoTile
-          file="at-sports-white.svg"
+          file="at-sports-color.svg"
           alt="AT Sports"
-          tone="navy"
           className="w-44 [&>div]:aspect-auto [&>div]:h-14 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
         />
         <Localized

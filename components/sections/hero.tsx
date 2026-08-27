@@ -15,7 +15,7 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
   return (
     <section
       id="hero"
-      className="relative isolate scroll-mt-20 overflow-hidden bg-navy pb-16 md:pb-20 lg:scroll-mt-0"
+      className="relative isolate scroll-mt-20 overflow-hidden bg-background pb-16 md:pb-20 lg:scroll-mt-0"
     >
       {/* Layer 2 — subtle sky-tinted radial glow behind the headline */}
       <div
@@ -23,7 +23,7 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(55% 55% at 26% 30%, rgba(78,140,179,0.16), transparent 70%)',
+            'radial-gradient(55% 55% at 26% 30%, rgba(22,51,79,0.13), transparent 70%)',
         }}
       />
 
@@ -33,13 +33,14 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(42% 48% at 90% 2%, rgba(255,255,255,0.05), transparent 72%)',
+            'radial-gradient(42% 48% at 90% 2%, rgba(255,255,255,0.20), transparent 72%)',
         }}
       />
 
       {/* Layer 4 — oversized AT Sports watermark, off-center to the upper-right,
-          white at ~5% opacity and softly masked so it dissolves before it ever
-          reaches the copy. Embossed blueprint feel, not a visible logo. */}
+          softly masked so it dissolves before it ever reaches the copy. Uses the
+          black mark at low opacity to read as an embossed debossing on the light
+          slate surface (a white mark would vanish here). */}
       <div
         aria-hidden
         className="pointer-events-none absolute inset-y-0 -right-[6%] hidden w-[84%] md:block"
@@ -52,9 +53,9 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/logos/at-sports-white.svg"
+          src="/logos/at-sports-black.svg"
           alt=""
-          className="h-full w-full object-contain object-right-bottom opacity-[0.05]"
+          className="h-full w-full object-contain object-right-bottom opacity-[0.055]"
         />
       </div>
 
@@ -64,7 +65,7 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
         className="pointer-events-none absolute inset-0"
         style={{
           backgroundImage:
-            'repeating-linear-gradient(118deg, transparent 0, transparent 43px, rgba(255,255,255,0.035) 43px, rgba(255,255,255,0.035) 44px)',
+            'repeating-linear-gradient(118deg, transparent 0, transparent 43px, rgba(0,0,0,0.05) 43px, rgba(0,0,0,0.05) 44px)',
           maskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
           WebkitMaskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
         }}
@@ -72,18 +73,18 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
 
       {/* Layer 3 — dotted grid texture, dialed back to a whisper */}
       <div
-        className="halftone pointer-events-none absolute inset-0 text-white/[0.055]"
+        className="halftone pointer-events-none absolute inset-0 text-ink/[0.07]"
         aria-hidden
       />
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-20 pb-4 md:px-12 md:pt-28">
-        <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 font-mono text-xs font-medium tracking-widest text-sky uppercase">
+        <span className="inline-flex items-center gap-2 rounded-full border border-ink/20 bg-ink/[0.06] px-3 py-1 font-mono text-xs font-medium tracking-widest text-sky uppercase">
           <span className="size-1.5 rounded-full bg-sky" aria-hidden />
           <LocalizedInline text={edition.heroEyebrow} edition={edition} />
         </span>
 
-        <h1 className="mt-6 text-balance text-5xl font-bold tracking-tight text-white md:text-7xl">
+        <h1 className="mt-6 text-balance text-5xl font-bold tracking-tight text-navy md:text-7xl">
           {edition.heroTitle.en}
           <span className="mt-3 block text-2xl font-medium text-sky md:text-4xl">
             <Localized
@@ -113,7 +114,7 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
         {/* Product wordmarks — strong typographic band linking to the kits */}
         <nav
           aria-label="Product lines"
-          className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-2xl font-bold tracking-tight text-white uppercase md:text-3xl"
+          className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-2xl font-bold tracking-tight text-navy uppercase md:text-3xl"
         >
           {PRODUCTS.map((p, i) => (
             <Fragment key={p.base}>

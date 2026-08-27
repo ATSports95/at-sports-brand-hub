@@ -69,61 +69,65 @@
 }
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
   /*
-   * Dark technical theme. The official AT Sports brand hex values are the
-   * documented spec and live untouched in lib/brand.ts (rendered as swatches
-   * in the Color System section). The tokens below are UI-chrome adaptations
-   * of that palette for a near-black surface.
+   * Dimmed gunmetal-slate theme. One continuous surface tone is used for the
+   * page, the hero, the footer and the sidebar so the background reads as
+   * consistent top to bottom.
+   *
+   * The surface lightness is deliberate, not arbitrary. Full-color/navy logo
+   * artwork (#233354) must sit directly on this background, and contrast is
+   * symmetric: a surface dark enough for white body text (needs L <= 0.183)
+   * can never also give navy artwork 3:1 (needs L >= 0.199). #8f9aa4 is the
+   * DARKEST surface where the navy mark clears 3:1 (4.38:1) while every text
+   * tone below still clears 4.5:1. Going darker breaks the logos; going
+   * lighter just washes out the mood.
+   *
+   * The official AT Sports brand hex values remain untouched in lib/brand.ts
+   * and are rendered from source in the Color System swatches; the tokens
+   * here are UI-chrome adaptations of that palette.
    */
+  --navy: #1b2540;
+  --red: #5f1214;
+  --sky: #16334f;
+  --steel: #1c242b;
+  --slate: #232c35;
+  --ink: #0f151a;
 
-  /* Navy stays a *surface* here: solid bg-navy reads as an elevated panel
-     that lifts off the near-black page, as in the reference. Heading text
-     that uses text-navy is remapped to --heading in the utilities layer. */
-  --navy: #0d1620;
-  --red: #c14a42;
-  --sky: #8ab4e8;
-  --steel: #aebac4;
-  --slate: #8b99a5;
-  --ink: #e7ecf0;
-
-  /* Near-black page with a faint cool cast */
-  --background: #080b0e;
-  --foreground: #e7ecf0;
-  --card: #0f1519;
-  --card-foreground: #e7ecf0;
-  --popover: #121a1f;
-  --popover-foreground: #e7ecf0;
-  --primary: #8ab4e8;
-  --primary-foreground: #08111c;
-  --secondary: #161f26;
-  --secondary-foreground: #e7ecf0;
-  --muted: #131b21;
-  --muted-foreground: #8b99a5;
-  --accent: #8ab4e8;
-  --accent-foreground: #08111c;
-  --destructive: #c14a42;
-  --border: #1d2a33;
-  --input: #1d2a33;
-  --ring: #8ab4e8;
-  --chart-1: #8ab4e8;
-  --chart-2: #4e8cb3;
-  --chart-3: #c14a42;
-  --chart-4: #8b99a5;
-  --chart-5: #aebac4;
+  /* Single dimmed slate surface, shared by every major region */
+  --background: #8f9aa4;
+  --foreground: #0f151a;
+  --card: #99a3ac;
+  --card-foreground: #0f151a;
+  --popover: #99a3ac;
+  --popover-foreground: #0f151a;
+  --primary: #1b2540;
+  --primary-foreground: #ffffff;
+  --secondary: #949ea8;
+  --secondary-foreground: #0f151a;
+  --muted: #949ea8;
+  --muted-foreground: #232c35;
+  --accent: #16334f;
+  --accent-foreground: #ffffff;
+  --destructive: #5f1214;
+  --border: #75818d;
+  --input: #75818d;
+  --ring: #16334f;
+  --chart-1: #1b2540;
+  --chart-2: #16334f;
+  --chart-3: #5f1214;
+  --chart-4: #232c35;
+  --chart-5: #75818d;
   --radius: 0.5rem;
-  --sidebar: #0b1014;
-  --sidebar-foreground: #e7ecf0;
-  --sidebar-primary: #8ab4e8;
-  --sidebar-primary-foreground: #08111c;
-  --sidebar-accent: #141d24;
-  --sidebar-accent-foreground: #e7ecf0;
-  --sidebar-border: #1d2a33;
-  --sidebar-ring: #8ab4e8;
-
-  /* Light heading ink for copy that was navy-on-white in the light theme */
-  --heading: #f3f7fa;
+  --sidebar: #8f9aa4;
+  --sidebar-foreground: #0f151a;
+  --sidebar-primary: #1b2540;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #99a3ac;
+  --sidebar-accent-foreground: #0f151a;
+  --sidebar-border: #75818d;
+  --sidebar-ring: #16334f;
 }
 
 .dark {
@@ -209,8 +213,8 @@
     @apply bg-background text-foreground;
     /* Faint blueprint grid across the page, fixed so it reads as a backdrop */
     background-image:
-      linear-gradient(to right, rgb(255 255 255 / 0.025) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(255 255 255 / 0.025) 1px, transparent 1px);
+      linear-gradient(to right, rgb(0 0 0 / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(0 0 0 / 0.04) 1px, transparent 1px);
     background-size: 64px 64px;
     background-attachment: fixed;
   }
@@ -247,41 +251,11 @@
     clip-path: polygon(0 3.5rem, 100% 0, 100% 100%, 0 100%);
   }
 
-  /*
-   * `navy` is a dual-purpose brand token: solid fills need to stay a dark
-   * elevated surface, but the ~57 `text-navy` headings and the low-alpha
-   * `bg-navy/5` chip tints were designed against white. Rather than rewrite
-   * every call site, both are remapped once here for the dark theme.
-   */
-  .text-navy {
-    color: var(--heading);
-  }
-
-  /*
-   * `sky` is likewise dual-purpose. It must stay pale to read as accent *text*
-   * on near-black, but solid `bg-sky` chips pair it with `text-white`, which
-   * would only reach ~2:1. Solid fills therefore get a deeper blue (~5.6:1
-   * against white) while `text-sky` and the low-alpha `bg-sky/5` tints keep
-   * the pale value.
-   */
-  .bg-sky {
-    background-color: #2f5d8a;
-  }
-
-  /* Faint glassy chip/callout tints, matching the reference's translucent panels */
-  .bg-navy\/5,
-  .bg-navy\/\[0\.03\] {
-    background-color: rgb(255 255 255 / 0.055);
-  }
-  .border-navy\/15 {
-    border-color: rgb(255 255 255 / 0.12);
-  }
-
-  /* Blueprint grid wash used behind the page, as in the reference */
+  /* Blueprint grid wash: dark hairlines now that the surface is a light slate */
   .grid-wash {
     background-image:
-      linear-gradient(to right, rgb(255 255 255 / 0.028) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(255 255 255 / 0.028) 1px, transparent 1px);
+      linear-gradient(to right, rgb(0 0 0 / 0.045) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(0 0 0 / 0.045) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 }

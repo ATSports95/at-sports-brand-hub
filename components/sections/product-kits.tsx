@@ -232,8 +232,8 @@ export function ProductKits() {
               className={cn(
                 'flex flex-col items-start gap-0.5 rounded-md border px-4 py-2.5 text-left transition-colors',
                 isActive
-                  ? 'border-sky/60 bg-sky/10 text-sky shadow-[0_0_24px_-4px_var(--sky)]'
-                  : 'border-border bg-card text-navy hover:border-sky/50',
+                  ? 'border-navy bg-navy text-white'
+                  : 'border-border bg-card text-navy hover:border-sky',
               )}
             >
               <span className="text-sm font-semibold">{kit.name}</span>
