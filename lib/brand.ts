@@ -79,7 +79,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     name: 'CushionX',
     descriptor: 'The Cushion System',
     whatFor:
-      'A family of cushioned sports surfacing systems designed to improve player comfort and provide solutions for new construction and court renovation.',
+      'A premium cushioned system engineered for impact resistance, durability, and long-term athlete comfort without sacrificing performance.',
   },
   {
     id: 'faultline',
@@ -93,7 +93,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     name: 'RollX',
     descriptor: 'The Portable Court System',
     whatFor:
-      'A portable pickleball playing surface designed to create consistent courts in qualified indoor venues without permanent construction.',
+      'A ready-to-play, prefabricated court surface made from a durable reinforced membrane that rolls out over a hard, level surface, providing a high-quality playing surface without requiring a permanent installation.',
   },
 ]
 
