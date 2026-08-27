@@ -107,7 +107,7 @@ export function LogoIdentity() {
           {PRODUCT_LINES.map((p) => (
             <LogoTile
               key={p.id}
-              file={`${p.id}-color.svg`}
+              file={`${p.id}-color.png`}
               alt={`${p.name} logo`}
               caption={p.name}
             />

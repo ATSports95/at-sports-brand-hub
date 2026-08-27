@@ -93,7 +93,7 @@
      which also fixes white-on-sky chips (1.92:1 before, 3.67:1 now). */
   --sky: #4e8cb3;
   --steel: #b3c0cc;
-  --slate: #93a1af;
+  --slate: #b9c4cb;
   --ink: #e9eef4;
 
   /* Single charcoal-navy surface, shared by every major region. The whole

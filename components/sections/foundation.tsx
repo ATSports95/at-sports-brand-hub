@@ -101,7 +101,7 @@ export function Foundation() {
                   inside a grayer band instead of a single flat surface. */}
               <div className="flex h-28 items-center justify-center border-b border-border bg-white/90 p-6 backdrop-blur-sm">
                 <LogoTile
-                  file={`${product.id}-color.svg`}
+                  file={`${product.id}-color.png`}
                   alt={`${product.name} logo`}
                   className="w-full [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0 [&>div]:backdrop-blur-none"
                 />

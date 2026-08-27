@@ -71,7 +71,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
             )}
           >
             <LogoTile
-              file={`${kit.id}-color.svg`}
+              file={`${kit.id}-color.png`}
               alt={`${kit.name} logo`}
               // backdrop-blur-none: nested backdrop-filters would re-composite
               // the band's translucent white a second time, lightening a
