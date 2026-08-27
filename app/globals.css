@@ -88,7 +88,10 @@
    */
   --navy: #0e1622;
   --red: #c1544c;
-  --sky: #8ec1e8;
+  /* The official AT Sports Sky hex from lib/brand.ts. The UI chrome used to
+     run a lightened adaptation (#8ec1e8); it now matches the real brand blue,
+     which also fixes white-on-sky chips (1.92:1 before, 3.67:1 now). */
+  --sky: #4e8cb3;
   --steel: #b3c0cc;
   --slate: #93a1af;
   --ink: #e9eef4;
@@ -96,39 +99,39 @@
   /* Single charcoal-navy surface, shared by every major region. The whole
      elevation ramp (surface -> card -> muted -> border) steps down together
      so cards and borders keep the same separation against the darker base. */
-  --surface-base: #0e1216;
+  --surface-base: #080b0e;
   --background: var(--surface-base);
   --foreground: #e9eef4;
-  --card: #14181e;
+  --card: #0f1317;
   --card-foreground: #e9eef4;
-  --popover: #14181e;
+  --popover: #0f1317;
   --popover-foreground: #e9eef4;
-  --primary: #8ec1e8;
+  --primary: #4e8cb3;
   --primary-foreground: #0c1218;
-  --secondary: #1a2027;
+  --secondary: #151a20;
   --secondary-foreground: #e9eef4;
-  --muted: #1a2027;
+  --muted: #151a20;
   --muted-foreground: #93a1af;
-  --accent: #8ec1e8;
+  --accent: #4e8cb3;
   --accent-foreground: #0c1218;
   --destructive: #c1544c;
-  --border: #242b34;
-  --input: #242b34;
-  --ring: #8ec1e8;
-  --chart-1: #8ec1e8;
-  --chart-2: #5d92bb;
+  --border: #1f262e;
+  --input: #1f262e;
+  --ring: #4e8cb3;
+  --chart-1: #4e8cb3;
+  --chart-2: #3a6b8a;
   --chart-3: #c1544c;
   --chart-4: #93a1af;
   --chart-5: #b3c0cc;
   --radius: 0.5rem;
-  --sidebar: #0e1216;
+  --sidebar: #080b0e;
   --sidebar-foreground: #e9eef4;
-  --sidebar-primary: #8ec1e8;
+  --sidebar-primary: #4e8cb3;
   --sidebar-primary-foreground: #0c1218;
-  --sidebar-accent: #1a2027;
+  --sidebar-accent: #151a20;
   --sidebar-accent-foreground: #e9eef4;
-  --sidebar-border: #242b34;
-  --sidebar-ring: #8ec1e8;
+  --sidebar-border: #1f262e;
+  --sidebar-ring: #4e8cb3;
 
   /* Light heading ink for copy that was navy-on-white in the light theme */
   --heading: #f2f6fa;
@@ -176,19 +179,22 @@
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.3' numOctaves='3' stitchTiles='stitch' seed='5'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.09'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23a)'/%3E%3C/svg%3E"),
       /* broad mottling — subtle unevenness of a squeegeed surface */
       url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='620' height='620'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.01' numOctaves='2' stitchTiles='stitch' seed='19'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='620' height='620' filter='url(%23m)'/%3E%3C/svg%3E"),
+      /* Glow blooms in the brand Sky #4e8cb3 (rgb 78 140 179). Alpha is a
+         touch higher than before so the glow still reads against the
+         near-black base. */
       radial-gradient(
         70% 60% at 50% 0%,
-        rgb(103 164 214 / 0.2),
+        rgb(78 140 179 / 0.26),
         transparent 70%
       ),
       radial-gradient(
         60% 55% at 8% 42%,
-        rgb(84 140 190 / 0.13),
+        rgb(78 140 179 / 0.17),
         transparent 72%
       ),
       radial-gradient(
         65% 55% at 100% 78%,
-        rgb(103 164 214 / 0.12),
+        rgb(78 140 179 / 0.16),
         transparent 72%
       ),
       radial-gradient(

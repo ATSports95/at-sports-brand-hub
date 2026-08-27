@@ -57,8 +57,13 @@ function KitPanel({ kit }: { kit: ProductKit }) {
   return (
     <div className="flex flex-col gap-10">
       {/* Header band */}
-      <div className="overflow-hidden rounded-lg border border-border bg-card">
-        <div className="flex flex-col gap-4 border-b border-border bg-white/70 p-6 backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
+      {/* Panel shell is black-but-transparent, so the "Brand Overview" copy
+          below the logo sits on a translucent black field rather than an
+          opaque card. */}
+      <div className="overflow-hidden rounded-lg border border-border bg-black/40 backdrop-blur-sm">
+        {/* Logo band: white, only slightly transparent, so the full-color
+            product marks read cleanly while the backdrop still tints through. */}
+        <div className="flex flex-col gap-4 border-b border-border bg-white/90 p-6 backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
           <div
             className={cn(
               'flex h-16 items-center text-lg',
