@@ -61,7 +61,7 @@ export function LogoTile({
           // both clear of the 3:1 threshold for graphics.
           isNavy
             ? 'border-navy bg-navy'
-            : 'border-white/25 bg-white/70 backdrop-blur-sm',
+              : 'border-white/25 bg-white text-[#fefefe] backdrop-blur-sm',
         )}
       >
         {errored ? (

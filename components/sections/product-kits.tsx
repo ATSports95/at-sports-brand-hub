@@ -149,10 +149,10 @@ function KitPanel({ kit }: { kit: ProductKit }) {
                 <div
                   className={cn(
                     'flex items-baseline justify-between gap-2 px-5 py-3 text-white',
-                    kit.accentClass,
+                    'bg-accent',
                   )}
                 >
-                  <span className="font-mono text-xs tracking-wide uppercase opacity-90">
+                  <span className="font-mono text-xs tracking-wide text-black uppercase opacity-90">
                     {sys.label}
                   </span>
                   <span className="text-sm font-semibold">{sys.name}</span>

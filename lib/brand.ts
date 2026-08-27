@@ -346,7 +346,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     systems: [
       {
         label: 'Surface',
-        name: 'Reinforced Membrane Surface',
+        name: 'Reinforced Membrane',
         body: 'A ready-to-play prefabricated surface built from a proprietary reinforced membrane, engineered for exceptional durability and dependable ball response over concrete, asphalt, or any level surface.',
       },
       {
