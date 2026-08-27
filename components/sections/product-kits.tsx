@@ -73,8 +73,11 @@ function KitPanel({ kit }: { kit: ProductKit }) {
             <LogoTile
               file={`${kit.id}-color.svg`}
               alt={`${kit.name} logo`}
+              // backdrop-blur-none: nested backdrop-filters would re-composite
+              // the band's translucent white a second time, lightening a
+              // rectangle behind the mark instead of leaving one flat surface.
               className={cn(
-                'w-44 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0',
+                'w-44 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0 [&>div]:backdrop-blur-none',
                 (kit.id === 'cushionx' || kit.id === 'faultline') &&
                   'w-52 [&>div]:h-20',
               )}

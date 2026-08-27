@@ -94,11 +94,16 @@ export function Foundation() {
               key={product.id}
               className="flex flex-col overflow-hidden rounded-md border border-border bg-card"
             >
-              <div className="flex h-28 items-center justify-center border-b border-border bg-white/70 p-6 backdrop-blur-sm">
+              {/* One uniform slightly-translucent white plate. The inner tile
+                  must also drop its backdrop-blur: nested backdrop-filters
+                  re-composite this band's translucent white a second time,
+                  which is what previously produced a lighter inner rectangle
+                  inside a grayer band instead of a single flat surface. */}
+              <div className="flex h-28 items-center justify-center border-b border-border bg-white/90 p-6 backdrop-blur-sm">
                 <LogoTile
                   file={`${product.id}-color.svg`}
                   alt={`${product.name} logo`}
-                  className="w-full [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
+                  className="w-full [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0 [&>div]:backdrop-blur-none"
                 />
               </div>
               <div className="flex flex-1 flex-col gap-2 p-5">
