@@ -213,7 +213,7 @@ export function LogoIdentity() {
           <figure className="flex flex-col gap-3">
             <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-red/60 bg-slate p-6">
               <div
-                className="halftone-sm pointer-events-none absolute inset-0 text-white/30"
+                className="court-surface pointer-events-none absolute inset-0 opacity-60"
                 aria-hidden
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}

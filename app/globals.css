@@ -152,16 +152,28 @@
     /*
      * Backdrop for the whole site, painted once here rather than per-section
      * so the glow is continuous from the hero through the footer. Every layer
-     * is `fixed`, so the gradients stay anchored to the viewport while content
-     * scrolls past — that is what keeps the effect even end to end instead of
+     * is `fixed`, so it stays anchored to the viewport while content scrolls
+     * past — that is what keeps the effect even end to end instead of
      * restarting at each section boundary.
      *
-     * Topmost layers first: blueprint grid, then the blue blooms, then a cool
+     * The top three layers are a tennis court surface: an acrylic hard court
+     * (what Acrytech is) is sand-filled acrylic, so this is real SVG fractal
+     * noise rather than a geometric pattern — fine sand grit, then coarser
+     * aggregate clumping, then broad tonal mottling from squeegee
+     * application. All three tile seamlessly via `stitchTiles`, and the
+     * opacity is baked into each SVG's alpha channel so they can be plain
+     * background layers with no blend modes or stacking-context risk.
+     *
+     * Topmost layers first: court texture, then the blue blooms, then a cool
      * vignette that deepens the corners.
      */
     background-image:
-      linear-gradient(to right, rgb(255 255 255 / 0.025) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(255 255 255 / 0.025) 1px, transparent 1px),
+      /* fine sand grit — the dominant surface texture */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch' seed='11'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.17'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E"),
+      /* coarser aggregate — gives the grit some clumping and depth */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.3' numOctaves='3' stitchTiles='stitch' seed='5'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.09'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='320' height='320' filter='url(%23a)'/%3E%3C/svg%3E"),
+      /* broad mottling — subtle unevenness of a squeegeed surface */
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='620' height='620'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.01' numOctaves='2' stitchTiles='stitch' seed='19'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.1'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='620' height='620' filter='url(%23m)'/%3E%3C/svg%3E"),
       radial-gradient(
         70% 60% at 50% 0%,
         rgb(103 164 214 / 0.2),
@@ -183,8 +195,9 @@
         rgb(8 11 15 / 0.55)
       );
     background-size:
-      64px 64px,
-      64px 64px,
+      200px 200px,
+      320px 320px,
+      620px 620px,
       100% 100%,
       100% 100%,
       100% 100%,
@@ -200,20 +213,19 @@
 }
 
 @layer utilities {
-  /* Subtle halftone dot texture accent */
-  .halftone {
-    background-image: radial-gradient(
-      currentColor 1px,
-      transparent 1.4px
-    );
-    background-size: 14px 14px;
-  }
-  .halftone-sm {
-    background-image: radial-gradient(
-      currentColor 1px,
-      transparent 1.3px
-    );
-    background-size: 10px 10px;
+  /*
+   * Pronounced court-surface texture, for the one case that needs the grit to
+   * actually be visible: the "busy background" logo-misuse demo. Same
+   * sand-filled-acrylic fractal noise as the site backdrop, but at a coarser
+   * frequency and much higher alpha so it reads as a genuinely busy surface.
+   */
+  .court-surface {
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='s'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch' seed='7'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.85'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23s)'/%3E%3C/svg%3E"),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='s2'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.22' numOctaves='3' stitchTiles='stitch' seed='13'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.5'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23s2)'/%3E%3C/svg%3E");
+    background-size:
+      180px 180px,
+      300px 300px;
   }
 
   /* Recurring diagonal split motif for section dividers */
@@ -253,13 +265,7 @@
     border-color: rgb(255 255 255 / 0.12);
   }
 
-  /* Blueprint grid wash: light hairlines on the charcoal surface */
-  .grid-wash {
-    background-image:
-      linear-gradient(to right, rgb(255 255 255 / 0.028) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(255 255 255 / 0.028) 1px, transparent 1px);
-    background-size: 64px 64px;
-  }
+
 }
 :root {
   --font-heading: var(--font-space-grotesk);

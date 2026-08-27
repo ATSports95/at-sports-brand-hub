@@ -33,23 +33,8 @@ export function SiteFooter({
         />
       </div>
 
-      {/* Layer — faint diagonal blueprint lines (matches hero) */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            'repeating-linear-gradient(118deg, transparent 0, transparent 43px, rgba(255,255,255,0.035) 43px, rgba(255,255,255,0.035) 44px)',
-          maskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
-        }}
-      />
-
-      {/* Layer — dotted grid texture (matches hero) */}
-      <div
-        className="halftone pointer-events-none absolute inset-0 text-white/[0.055]"
-        aria-hidden
-      />
+      {/* Pattern overlays removed to match the hero — the court-surface
+          texture on <body> carries through here too. */}
 
       <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col gap-6">
         {/* Reversed white mark: the footer is a dark charcoal surface, which is

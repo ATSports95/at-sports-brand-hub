@@ -41,23 +41,9 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
         />
       </div>
 
-      {/* Layer — faint diagonal blueprint lines, fading in toward the lower half */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            'repeating-linear-gradient(118deg, transparent 0, transparent 43px, rgba(255,255,255,0.035) 43px, rgba(255,255,255,0.035) 44px)',
-          maskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
-        }}
-      />
-
-      {/* Layer 3 — dotted grid texture, dialed back to a whisper */}
-      <div
-        className="halftone pointer-events-none absolute inset-0 text-white/[0.055]"
-        aria-hidden
-      />
+      {/* The diagonal-line and dotted-grid layers that used to sit here are
+          gone: the court-surface texture on <body> now carries the whole page,
+          so local pattern overlays would only fight it. */}
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-20 pb-4 md:px-12 md:pt-28">
