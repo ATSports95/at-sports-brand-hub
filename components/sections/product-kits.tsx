@@ -87,10 +87,10 @@ function KitPanel({ kit }: { kit: ProductKit }) {
             <span
               className={cn(
                 'inline-flex w-fit rounded-sm px-2.5 py-1 text-xs font-semibold text-white',
-                kit.accentClass,
-              )}
-            >
-              {kit.descriptor}
+  kit.id === 'acrytech' ? 'bg-accent' : kit.accentClass,
+  )}
+  >
+  {kit.descriptor}
             </span>
           </div>
         </div>
