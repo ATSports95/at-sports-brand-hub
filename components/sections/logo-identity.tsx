@@ -5,10 +5,9 @@ import { PRODUCT_LINES } from '@/lib/brand'
 
 const DONTS = [
   'Don\u2019t stretch, squash, or distort — scale proportionally only.',
-  'Don\u2019t recolor or add gradients, shadows, glows, effects.',
+  'Don\u2019t recolor or add gradients or glows.',
   'Don\u2019t rotate or tilt.',
   'Don\u2019t rebuild or retype any part — always use the supplied file.',
-  'Don\u2019t place on busy or low-contrast backgrounds.',
   'Don\u2019t crowd it inside its clear space.',
   'Don\u2019t add words or your own logo inside the AT Sports lockup.',
 ]
