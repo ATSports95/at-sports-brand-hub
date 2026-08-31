@@ -14,7 +14,7 @@ function PartnerBox({
     <div
       style={style}
       className={cn(
-        'flex items-center justify-center rounded-sm bg-steel/50 text-center text-xs font-medium text-slate',
+        'flex items-center justify-center rounded-sm border border-dashed border-navy/40 bg-navy/5 text-center text-xs font-semibold text-navy/70',
         className,
       )}
     >
@@ -76,7 +76,7 @@ export function CoBranding() {
       <div className="mt-8 grid gap-5 sm:grid-cols-2">
         {/* Correct */}
         <figure className="flex flex-col gap-3">
-          <div className="flex aspect-[3/2] items-center justify-center gap-4 rounded-md border-2 border-sky bg-white/70 p-6 backdrop-blur-sm">
+          <div className="flex aspect-[3/2] items-center justify-center gap-4 rounded-md border-2 border-sky bg-white p-6">
             <PartnerBox className="h-14 w-28" />
             <span className="h-16 w-px bg-steel" aria-hidden />
             <div className="flex h-14 w-28 items-center justify-center">
@@ -93,7 +93,7 @@ export function CoBranding() {
 
         {/* Overlapping */}
         <figure className="flex flex-col gap-3">
-          <div className="relative flex aspect-[3/2] items-center justify-center rounded-md border-2 border-red/60 bg-white/70 p-6 backdrop-blur-sm">
+          <div className="relative flex aspect-[3/2] items-center justify-center rounded-md border-2 border-red/60 bg-white p-6">
             <PartnerBox className="absolute h-14 w-28 -translate-x-4" />
             <div className="absolute flex h-14 w-28 translate-x-6 items-center justify-center">
               <ATLogo />
@@ -109,7 +109,7 @@ export function CoBranding() {
 
         {/* Mismatched weight */}
         <figure className="flex flex-col gap-3">
-          <div className="flex aspect-[3/2] items-center justify-center gap-4 rounded-md border-2 border-red/60 bg-white/70 p-6 backdrop-blur-sm">
+          <div className="flex aspect-[3/2] items-center justify-center gap-4 rounded-md border-2 border-red/60 bg-white p-6">
             <PartnerBox className="h-24 w-40" />
             <div className="flex h-8 w-16 items-center justify-center">
               <ATLogo />
@@ -125,7 +125,7 @@ export function CoBranding() {
 
         {/* Recolored */}
         <figure className="flex flex-col gap-3">
-          <div className="flex aspect-[3/2] items-center justify-center gap-4 rounded-md border-2 border-red/60 bg-white/70 p-6 backdrop-blur-sm">
+          <div className="flex aspect-[3/2] items-center justify-center gap-4 rounded-md border-2 border-red/60 bg-white p-6">
             <PartnerBox className="h-14 w-28" />
             <span className="h-16 w-px bg-steel" aria-hidden />
             <div className="flex h-14 w-28 items-center justify-center">
