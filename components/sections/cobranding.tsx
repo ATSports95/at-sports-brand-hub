@@ -51,7 +51,7 @@ const DONT = [
 export function CoBranding() {
   return (
     <Section id="cobranding">
-      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-red/10 px-3 py-1 text-xs font-semibold tracking-wide text-red uppercase">
+      <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-sky/10 px-3 py-1 text-xs font-semibold tracking-wide text-sky uppercase">
         Partner Standards
       </div>
       <SectionHeading
