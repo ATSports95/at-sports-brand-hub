@@ -125,7 +125,9 @@ export function LogoIdentity() {
           {PRODUCT_LINES.map((p) => (
             <LogoTile
               key={p.id}
-              file={`${p.id}-tag-color.${p.id === 'acrytech' ? 'png' : 'svg'}`}
+              file={`${p.id}-tag-color.${
+                p.id === 'acrytech' || p.id === 'cushionx' ? 'png' : 'svg'
+              }`}
               alt={`${p.name} with Division of AT Sports tag`}
               caption={`${p.name} + Tag`}
             />
