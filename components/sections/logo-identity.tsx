@@ -91,7 +91,7 @@ export function LogoIdentity() {
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-3">
           <LogoTile
-            file="at-sports-tag-color.svg"
+            file="division-tag-color.png"
             alt="Division of AT Sports tag"
             caption="The Tag"
             subCaption="Division of AT Sports"
@@ -125,9 +125,7 @@ export function LogoIdentity() {
           {PRODUCT_LINES.map((p) => (
             <LogoTile
               key={p.id}
-              file={`${p.id}-tag-color.${
-                p.id === 'rollx' ? 'svg' : 'png'
-              }`}
+              file={`${p.id}-tag-color.png`}
               alt={`${p.name} with Division of AT Sports tag`}
               caption={`${p.name} + Tag`}
             />
