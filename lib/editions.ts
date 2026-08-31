@@ -153,7 +153,7 @@ export const COURTINA_EDITION: Edition = {
   },
 
   footerNote: {
-    en: 'AT Sports Brand Hub — Courtina Edition, Japan.\nMaintained by AT Sports Marketing Department and updated as the brand evolves — always work from the live version.',
+    en: 'AT Sports Brand Hub — Courtina Edition, Japan. Maintained by AT Sports Marketing Department and updated as the brand evolves — always work from the live version.',
   },
 
   meta: {

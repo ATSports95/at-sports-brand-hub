@@ -68,7 +68,7 @@ export function SectionHeading({
         <span
           className={cn(
             'h-4 w-1 rounded-full',
-            emphasis ? 'bg-accent' : 'bg-sky',
+            emphasis ? 'bg-red' : 'bg-sky',
           )}
           aria-hidden
         />

@@ -48,7 +48,7 @@ export function SiteFooter({
           as="p"
           text={edition.footerNote}
           edition={edition}
-          className="max-w-xl text-xs leading-relaxed text-steel"
+          className="max-w-xl text-sm leading-relaxed text-steel"
           secondaryClassName="text-steel/70"
         />
         <p className="text-xs text-steel/70">

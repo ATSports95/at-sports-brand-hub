@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import { NAV_ITEMS } from '@/lib/brand'
 import { LogoTile } from '@/components/logo-tile'
 import { SiteSearch } from '@/components/site-search'
+import { Localized } from '@/components/localized'
 import { PARTNER_EDITION, type Edition } from '@/lib/editions'
 
 function useScrollSpy() {
@@ -105,6 +106,15 @@ export function SidebarNav({
         </div>
         <div className="flex-1 overflow-y-auto px-3 py-4">
           <NavLinks active={active} />
+        </div>
+        <div className="border-t border-border px-6 py-4">
+          <Localized
+            as="p"
+            text={edition.sidebarNote}
+            edition={edition}
+            className="text-xs leading-relaxed text-slate"
+            secondaryClassName="mt-1 text-slate/75"
+          />
         </div>
       </aside>
 
