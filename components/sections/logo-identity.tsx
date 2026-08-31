@@ -126,7 +126,7 @@ export function LogoIdentity() {
             <LogoTile
               key={p.id}
               file={`${p.id}-tag-color.${
-                p.id === 'acrytech' || p.id === 'cushionx' ? 'png' : 'svg'
+                p.id === 'rollx' ? 'svg' : 'png'
               }`}
               alt={`${p.name} with Division of AT Sports tag`}
               caption={`${p.name} + Tag`}
