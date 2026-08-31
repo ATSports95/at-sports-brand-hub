@@ -1,4 +1,4 @@
-import { Ban, Check, X } from 'lucide-react'
+import { Check, X } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
 import { LogoTile } from '@/components/logo-tile'
 import { PRODUCT_LINES } from '@/lib/brand'
@@ -25,14 +25,18 @@ const INCORRECT = [
     style: { filter: 'hue-rotate(120deg) saturate(2)' },
   },
   {
-    label: 'Drop shadow',
-    caption: 'Added effects',
-    style: { filter: 'drop-shadow(4px 6px 3px rgba(0,0,0,0.55))' },
-  },
-  {
     label: 'Rotated',
     caption: 'Tilted lockup',
     style: { transform: 'rotate(-12deg)' },
+  },
+]
+
+// Approved treatments demonstrated alongside the incorrect examples.
+const APPROVED = [
+  {
+    label: 'Drop shadow',
+    caption: 'OK to use',
+    style: { filter: 'drop-shadow(4px 6px 3px rgba(0,0,0,0.55))' },
   },
 ]
 
@@ -209,9 +213,29 @@ export function LogoIdentity() {
             </figure>
           ))}
 
+          {APPROVED.map((item) => (
+            <figure key={item.label} className="flex flex-col gap-3">
+              <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-sky bg-white p-6">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logos/at-sports-color.svg"
+                  alt={`Approved logo usage: ${item.label}`}
+                  style={item.style}
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <figcaption className="flex items-center gap-2 text-sm font-medium text-navy">
+                <span className="flex size-5 items-center justify-center rounded-full bg-sky text-white">
+                  <Check className="size-3" />
+                </span>
+                {item.label} — {item.caption}
+              </figcaption>
+            </figure>
+          ))}
+
           {/* Busy background */}
           <figure className="flex flex-col gap-3">
-            <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-red/60 bg-slate p-6">
+            <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-sky bg-slate p-6">
               <div
                 className="court-surface pointer-events-none absolute inset-0 opacity-60"
                 aria-hidden
@@ -219,15 +243,15 @@ export function LogoIdentity() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/logos/at-sports-color.svg"
-                alt="Incorrect logo usage: busy background"
-                className="relative max-h-full max-w-full object-contain opacity-80"
+                alt="Approved logo usage: busy background"
+                className="relative max-h-full max-w-full object-contain"
               />
             </div>
             <figcaption className="flex items-center gap-2 text-sm font-medium text-navy">
-              <span className="flex size-5 items-center justify-center rounded-full bg-red text-white">
-                <Ban className="size-3" />
+              <span className="flex size-5 items-center justify-center rounded-full bg-sky text-white">
+                <Check className="size-3" />
               </span>
-              On busy background — hard to read
+              On busy background — OK to use
             </figcaption>
           </figure>
         </div>
