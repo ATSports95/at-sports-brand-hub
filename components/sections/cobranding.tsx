@@ -27,7 +27,7 @@ function PartnerBox({
 const ATLogo = ({ style }: { style?: React.CSSProperties }) => (
   // eslint-disable-next-line @next/next/no-img-element
   <img
-    src="/logos/at-sports-color.svg"
+    src="/logos/at-sports-color.png"
     alt="AT Sports logo"
     style={style}
     className="max-h-full max-w-full object-contain"

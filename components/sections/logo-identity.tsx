@@ -57,7 +57,7 @@ export function LogoIdentity() {
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-3">
           <LogoTile
-            file="at-sports-color.svg"
+            file="at-sports-color.png"
             alt="AT Sports full color logo"
             caption="Full color"
             subCaption="Default — use whenever possible"
@@ -125,7 +125,7 @@ export function LogoIdentity() {
           {PRODUCT_LINES.map((p) => (
             <LogoTile
               key={p.id}
-              file={`${p.id}-tag-color.svg`}
+              file={`${p.id}-tag-color.${p.id === 'acrytech' ? 'png' : 'svg'}`}
               alt={`${p.name} with Division of AT Sports tag`}
               caption={`${p.name} + Tag`}
             />
@@ -180,7 +180,7 @@ export function LogoIdentity() {
             <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-3xl border-2 border-sky bg-white/70 p-6 backdrop-blur-sm">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/logos/at-sports-color.svg"
+                src="/logos/at-sports-color.png"
                 alt="Correct AT Sports logo usage"
                 className="max-h-full max-w-full object-contain"
               />
@@ -198,7 +198,7 @@ export function LogoIdentity() {
               <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-red/60 bg-white/70 p-6 backdrop-blur-sm">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/logos/at-sports-color.svg"
+                  src="/logos/at-sports-color.png"
                   alt={`Incorrect logo usage: ${item.label}`}
                   style={item.style}
                   className="max-h-full max-w-full object-contain"
@@ -218,7 +218,7 @@ export function LogoIdentity() {
               <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-sky bg-white p-6">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/logos/at-sports-color.svg"
+                  src="/logos/at-sports-color.png"
                   alt={`Approved logo usage: ${item.label}`}
                   style={item.style}
                   className="max-h-full max-w-full object-contain"
@@ -242,7 +242,7 @@ export function LogoIdentity() {
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/logos/at-sports-color.svg"
+                src="/logos/at-sports-color.png"
                 alt="Approved logo usage: busy background"
                 className="relative max-h-full max-w-full object-contain"
               />
