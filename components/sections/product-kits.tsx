@@ -257,7 +257,7 @@ export function ProductKits() {
       </div>
 
       {/* Approval note */}
-      <div className="mt-10 rounded-md border-l-4 border-red bg-card px-5 py-4">
+      <div className="mt-10 rounded-md border-l-4 border-sky bg-card px-5 py-4">
         <p className="text-sm leading-relaxed text-ink/80">
           Any newly created marketing content, product claims, or messaging
           outside of the approved language above should be reviewed and approved
