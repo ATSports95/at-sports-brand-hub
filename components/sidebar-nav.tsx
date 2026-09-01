@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import { NAV_ITEMS } from '@/lib/brand'
 import { LogoTile } from '@/components/logo-tile'
 import { SiteSearch } from '@/components/site-search'
+import { PARTNER_EDITION, type Edition } from '@/lib/editions'
 
 function useScrollSpy() {
   const [active, setActive] = useState(NAV_ITEMS[0].id)
@@ -58,7 +59,7 @@ function NavLinks({
             <span
               className={cn(
                 'h-4 w-0.5 rounded-full transition-colors',
-                isActive ? 'bg-red' : 'bg-transparent group-hover:bg-steel',
+                isActive ? 'bg-accent' : 'bg-transparent group-hover:bg-steel',
               )}
               aria-hidden
             />
@@ -73,7 +74,11 @@ function NavLinks({
   )
 }
 
-export function SidebarNav() {
+export function SidebarNav({
+  edition = PARTNER_EDITION,
+}: {
+  edition?: Edition
+}) {
   const active = useScrollSpy()
   const [mobileOpen, setMobileOpen] = useState(false)
   const activeLabel =
@@ -82,11 +87,14 @@ export function SidebarNav() {
   return (
     <>
       {/* Desktop sidebar */}
-      <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-border bg-sidebar lg:flex">
+      {/* No background: the fixed site-wide gradient shows through here too */}
+      <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-border lg:flex">
         <div className="border-b border-border px-6 py-6">
           <div className="flex items-center justify-center">
+            {/* Reversed white mark: the sidebar is a dark charcoal surface, and
+                the brand rule is white-on-dark, never full-color-on-dark. */}
             <LogoTile
-              file="at-sports-color.svg"
+              file="at-sports-white.svg"
               alt="AT Sports"
               className="w-40 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
             />
@@ -98,18 +106,13 @@ export function SidebarNav() {
         <div className="flex-1 overflow-y-auto px-3 py-4">
           <NavLinks active={active} />
         </div>
-        <div className="border-t border-border px-6 py-4">
-          <p className="text-xs leading-relaxed text-slate">
-            Partner Edition. Always work from the live version.
-          </p>
-        </div>
       </aside>
 
       {/* Mobile top bar */}
       <div className="sticky top-0 z-40 flex items-center justify-between border-b border-border bg-sidebar/95 px-4 py-3 backdrop-blur lg:hidden">
         <div className="flex items-center gap-3">
           <LogoTile
-            file="at-sports-color.svg"
+            file="at-sports-white.svg"
             alt="AT Sports"
             className="w-28 [&>div]:aspect-auto [&>div]:h-9 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
           />

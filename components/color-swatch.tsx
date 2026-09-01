@@ -25,11 +25,14 @@ export function ColorSwatch({ color }: { color: ColorToken }) {
       aria-label={`Copy ${color.name} hex ${color.hex}`}
       className="group flex flex-col overflow-hidden rounded-md border border-border bg-card text-left transition-shadow hover:shadow-md focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
     >
+      {/*
+        Painted from the documented hex, not a theme token: these swatches are
+        the brand spec, so they must render the true AT Sports colors even
+        though the surrounding UI theme retunes tokens like `ink` and `navy`.
+      */}
       <span
-        className={cn(
-          'flex h-24 items-end justify-end p-2',
-          color.swatchClass,
-        )}
+        className="flex h-24 items-end justify-end p-2"
+        style={{ backgroundColor: color.hex }}
       >
         <span
           className={cn(

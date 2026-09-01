@@ -26,9 +26,15 @@ export function Foundation() {
       />
 
       {/* Pull-quote */}
-      <blockquote className="relative my-8 rounded-md border-l-4 border-red bg-muted px-6 py-6">
-        <p className="text-balance font-display text-xl font-semibold text-navy md:text-2xl">
-          &ldquo;Surfaces That Perform. Solutions That Go Further.&rdquo;
+      {/* Fill is the same faint glassy tint as the logo-guideline panels
+          (bg-navy/[0.03], remapped to low-alpha white for the dark theme) so
+          this reads as translucent glass rather than an opaque card. The whole
+          edge is brand Sky #4e8cb3, with the left side thickened into a stripe. */}
+      <blockquote className="relative my-8 rounded-md border border-sky border-l-4 bg-navy/[0.03] px-6 py-7 md:px-8 md:py-8">
+        {/* No spaces in the tagline, so <wbr /> supplies break points after each
+            period — otherwise the line is one unbreakable token and overflows. */}
+        <p className="font-secondary text-[28px] font-black uppercase leading-tight tracking-[0.004em] text-navy">
+          &ldquo;Surfaces.<wbr />Systems.<wbr />Solutions.&rdquo;
         </p>
       </blockquote>
 
@@ -44,7 +50,7 @@ export function Foundation() {
       </div>
 
       <div className="mt-6 grid gap-5 md:grid-cols-2">
-        <div className="rounded-md border border-sky/40 bg-sky/5 p-6">
+        <div className="rounded-md border border-sky/40 bg-[rgba(78,140,179,0.26)] p-6">
           <div className="mb-4 flex items-center gap-2">
             <span className="flex size-6 items-center justify-center rounded-full bg-sky text-white">
               <Check className="size-3.5" />
@@ -59,7 +65,7 @@ export function Foundation() {
             ))}
           </ul>
         </div>
-        <div className="rounded-md border border-red/30 bg-red/5 p-6">
+        <div className="rounded-md border border-red/30 bg-[rgba(193,84,76,0.18)] p-6">
           <div className="mb-4 flex items-center gap-2">
             <span className="flex size-6 items-center justify-center rounded-full bg-red text-white">
               <X className="size-3.5" />
@@ -86,16 +92,29 @@ export function Foundation() {
           {PRODUCT_LINES.map((product) => (
             <div
               key={product.id}
-              className="flex flex-col overflow-hidden rounded-md border border-border bg-card"
+              className="flex flex-col overflow-hidden rounded-md border border-border bg-black/40 backdrop-blur-sm"
             >
-              <div className="flex h-28 items-center justify-center border-b border-border bg-white p-6">
+              {/* One uniform slightly-translucent white plate. The inner tile
+                  must also drop its backdrop-blur: nested backdrop-filters
+                  re-composite this band's translucent white a second time,
+                  which is what previously produced a lighter inner rectangle
+                  inside a grayer band instead of a single flat surface. */}
+              <div className="flex h-28 items-center justify-center border-b border-border bg-white/90 p-6 backdrop-blur-sm">
                 <LogoTile
-                  file={`${product.id}-color.svg`}
+                  file={`${product.id}-color.png`}
                   alt={`${product.name} logo`}
-                  className="w-full [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0"
+                  className="w-full [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0 [&>div]:backdrop-blur-none"
                 />
               </div>
-              <div className="flex flex-1 flex-col gap-2 p-5">
+              <div
+                className={`flex flex-1 flex-col gap-2 p-5 ${
+                  product.id === 'acrytech'
+                    ? 'bg-[rgba(243,243,243,0)]'
+                    : product.id === 'rollx'
+                      ? 'bg-[rgba(255,255,255,0.01)]'
+                      : 'bg-[rgba(255,255,255,0)]'
+                }`}
+              >
                 <div className="flex items-baseline justify-center gap-2">
                   <span className="rounded-sm bg-navy/5 px-2 py-0.5 text-xs font-medium text-sky">
                     {product.descriptor}

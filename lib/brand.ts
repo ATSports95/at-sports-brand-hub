@@ -17,44 +17,43 @@ export type ColorToken = {
 
 export const BRAND_COLORS: ColorToken[] = [
   {
-    name: 'Navy',
+    name: 'Charcoal',
+    hex: '#202528',
+    swatchClass: 'bg-ink',
+    reversedText: true,
+    group: 'primary',
+  },
+  {
+    name: 'Modern Blue',
+    hex: '#327EA8',
+    swatchClass: 'bg-sky',
+    reversedText: true,
+    group: 'primary',
+  },
+  {
+    name: 'Deep Navy',
     hex: '#233354',
     swatchClass: 'bg-navy',
     reversedText: true,
-    group: 'primary',
-  },
-  {
-    name: 'Red',
-    hex: '#9A1B1E',
-    swatchClass: 'bg-red',
-    reversedText: true,
-    group: 'primary',
-  },
-  {
-    name: 'Sky',
-    hex: '#4E8CB3',
-    swatchClass: 'bg-sky',
-    reversedText: true,
     group: 'secondary',
   },
   {
-    name: 'Steel',
-    hex: '#B9C4CB',
-    swatchClass: 'bg-steel',
-    group: 'secondary',
-  },
-  {
-    name: 'Slate',
+    name: 'Steel Blue',
     hex: '#5D6F7A',
     swatchClass: 'bg-slate',
     reversedText: true,
     group: 'secondary',
   },
   {
-    name: 'Near-Black',
-    hex: '#202528',
-    swatchClass: 'bg-ink',
-    reversedText: true,
+    name: 'Light Blue Gray',
+    hex: '#B9C4CB',
+    swatchClass: 'bg-steel',
+    group: 'secondary',
+  },
+  {
+    name: 'Off White',
+    hex: '#F5F6F6',
+    swatchClass: 'bg-background',
     group: 'secondary',
   },
 ]
@@ -79,7 +78,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     name: 'CushionX',
     descriptor: 'The Cushion System',
     whatFor:
-      'A family of cushioned sports surfacing systems designed to improve player comfort and provide solutions for new construction and court renovation.',
+      'A premium cushioned system engineered for impact resistance, durability, and long-term athlete comfort without sacrificing performance.',
   },
   {
     id: 'faultline',
@@ -93,7 +92,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     name: 'RollX',
     descriptor: 'The Portable Court System',
     whatFor:
-      'A portable pickleball playing surface designed to create consistent courts in qualified indoor venues without permanent construction.',
+      'A ready-to-play court made from a durable reinforced membrane that rolls out over a hard, level surface, providing a high-quality playing surface without permanent installation.',
   },
 ]
 
@@ -346,7 +345,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     systems: [
       {
         label: 'Surface',
-        name: 'Reinforced Membrane Surface',
+        name: 'Reinforced Membrane',
         body: 'A ready-to-play prefabricated surface built from a proprietary reinforced membrane, engineered for exceptional durability and dependable ball response over concrete, asphalt, or any level surface.',
       },
       {

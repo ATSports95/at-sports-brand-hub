@@ -1,14 +1,13 @@
-import { Ban, Check, X } from 'lucide-react'
+import { Check, X } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
 import { LogoTile } from '@/components/logo-tile'
 import { PRODUCT_LINES } from '@/lib/brand'
 
 const DONTS = [
   'Don\u2019t stretch, squash, or distort — scale proportionally only.',
-  'Don\u2019t recolor or add gradients, shadows, glows, effects.',
+  'Don\u2019t recolor or add gradients or glows.',
   'Don\u2019t rotate or tilt.',
   'Don\u2019t rebuild or retype any part — always use the supplied file.',
-  'Don\u2019t place on busy or low-contrast backgrounds.',
   'Don\u2019t crowd it inside its clear space.',
   'Don\u2019t add words or your own logo inside the AT Sports lockup.',
 ]
@@ -25,14 +24,18 @@ const INCORRECT = [
     style: { filter: 'hue-rotate(120deg) saturate(2)' },
   },
   {
-    label: 'Drop shadow',
-    caption: 'Added effects',
-    style: { filter: 'drop-shadow(4px 6px 3px rgba(0,0,0,0.55))' },
-  },
-  {
     label: 'Rotated',
     caption: 'Tilted lockup',
     style: { transform: 'rotate(-12deg)' },
+  },
+]
+
+// Approved treatments demonstrated alongside the incorrect examples.
+const APPROVED = [
+  {
+    label: 'Drop shadow',
+    caption: 'OK to use',
+    style: { filter: 'drop-shadow(4px 6px 3px rgba(0,0,0,0.55))' },
   },
 ]
 
@@ -53,7 +56,7 @@ export function LogoIdentity() {
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-3">
           <LogoTile
-            file="at-sports-color.svg"
+            file="at-sports-color.png"
             alt="AT Sports full color logo"
             caption="Full color"
             subCaption="Default — use whenever possible"
@@ -87,7 +90,7 @@ export function LogoIdentity() {
         </p>
         <div className="mt-6 grid gap-5 sm:grid-cols-3">
           <LogoTile
-            file="at-sports-tag-color.svg"
+            file="division-tag-color.png"
             alt="Division of AT Sports tag"
             caption="The Tag"
             subCaption="Division of AT Sports"
@@ -107,7 +110,7 @@ export function LogoIdentity() {
           {PRODUCT_LINES.map((p) => (
             <LogoTile
               key={p.id}
-              file={`${p.id}-color.svg`}
+              file={`${p.id}-color.png`}
               alt={`${p.name} logo`}
               caption={p.name}
             />
@@ -121,7 +124,7 @@ export function LogoIdentity() {
           {PRODUCT_LINES.map((p) => (
             <LogoTile
               key={p.id}
-              file={`${p.id}-tag-color.svg`}
+              file={`${p.id}-tag-color.png`}
               alt={`${p.name} with Division of AT Sports tag`}
               caption={`${p.name} + Tag`}
             />
@@ -173,10 +176,10 @@ export function LogoIdentity() {
         <div className="mt-6 grid grid-cols-2 gap-5 lg:grid-cols-3">
           {/* Correct */}
           <figure className="flex flex-col gap-3">
-            <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-3xl border-2 border-sky bg-card p-6">
+            <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-3xl border-2 border-sky bg-white/70 p-6 backdrop-blur-sm">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/logos/at-sports-color.svg"
+                src="/logos/at-sports-color.png"
                 alt="Correct AT Sports logo usage"
                 className="max-h-full max-w-full object-contain"
               />
@@ -191,10 +194,10 @@ export function LogoIdentity() {
 
           {INCORRECT.map((item) => (
             <figure key={item.label} className="flex flex-col gap-3">
-              <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-red/60 bg-card p-6">
+              <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-red/60 bg-white/70 p-6 backdrop-blur-sm">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/logos/at-sports-color.svg"
+                  src="/logos/at-sports-color.png"
                   alt={`Incorrect logo usage: ${item.label}`}
                   style={item.style}
                   className="max-h-full max-w-full object-contain"
@@ -209,25 +212,45 @@ export function LogoIdentity() {
             </figure>
           ))}
 
+          {APPROVED.map((item) => (
+            <figure key={item.label} className="flex flex-col gap-3">
+              <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-sky bg-white p-6">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/logos/at-sports-color.png"
+                  alt={`Approved logo usage: ${item.label}`}
+                  style={item.style}
+                  className="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <figcaption className="flex items-center gap-2 text-sm font-medium text-navy">
+                <span className="flex size-5 items-center justify-center rounded-full bg-sky text-white">
+                  <Check className="size-3" />
+                </span>
+                {item.label} — {item.caption}
+              </figcaption>
+            </figure>
+          ))}
+
           {/* Busy background */}
           <figure className="flex flex-col gap-3">
-            <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-red/60 bg-slate p-6">
+            <div className="relative flex aspect-[3/2] items-center justify-center overflow-hidden rounded-md border-2 border-sky bg-slate p-6">
               <div
-                className="halftone-sm pointer-events-none absolute inset-0 text-white/30"
+                className="court-surface pointer-events-none absolute inset-0 opacity-60"
                 aria-hidden
               />
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/logos/at-sports-color.svg"
-                alt="Incorrect logo usage: busy background"
-                className="relative max-h-full max-w-full object-contain opacity-80"
+                src="/logos/at-sports-color.png"
+                alt="Approved logo usage: busy background"
+                className="relative max-h-full max-w-full object-contain"
               />
             </div>
             <figcaption className="flex items-center gap-2 text-sm font-medium text-navy">
-              <span className="flex size-5 items-center justify-center rounded-full bg-red text-white">
-                <Ban className="size-3" />
+              <span className="flex size-5 items-center justify-center rounded-full bg-sky text-white">
+                <Check className="size-3" />
               </span>
-              On busy background — hard to read
+              On busy background — OK to use
             </figcaption>
           </figure>
         </div>

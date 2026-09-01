@@ -35,11 +35,12 @@ export function ColorSystem() {
       <div className="mt-10 rounded-md border border-border bg-muted p-6">
         <h4 className="font-semibold text-navy">Usage notes</h4>
         <p className="mt-2 text-sm leading-relaxed text-ink/80">
-          Navy leads and should dominate layouts with white space. Red is the
-          accent, not the field — use it for emphasis, never as a large
-          background. Sky and the neutrals support. Keep text legible: dark
-          text on light, white on Navy/Near-Black; avoid low-contrast pairings
-          like Steel on white.
+          Charcoal is the primary brand color for typography and backgrounds.
+          Modern Blue is the primary accent — use it for buttons, graphics, and
+          key brand moments, not as a large field. Deep Navy and Steel Blue
+          support, while Light Blue Gray and Off White carry backgrounds,
+          dividers, and clean space. Keep text legible: light text on Charcoal,
+          Deep Navy, or Steel Blue; dark text on Light Blue Gray and Off White.
         </p>
       </div>
     </Section>

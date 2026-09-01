@@ -1,4 +1,7 @@
 import { Fragment } from 'react'
+import { Localized, LocalizedInline } from '@/components/localized'
+import { PARTNER_EDITION, type Edition } from '@/lib/editions'
+import { cn } from '@/lib/utils'
 
 // Product wordmarks. `accent` is the letter rendered in Red (the trailing X).
 const PRODUCTS = [
@@ -8,34 +11,17 @@ const PRODUCTS = [
   { base: 'Roll', accent: 'X' },
 ]
 
-export function Hero() {
+export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
   return (
     <section
       id="hero"
-      className="relative isolate scroll-mt-20 overflow-hidden bg-navy pb-16 md:pb-20 lg:scroll-mt-0"
+      className="relative isolate scroll-mt-20 overflow-hidden pb-16 md:pb-20 lg:scroll-mt-0"
     >
-      {/* Layer 2 — subtle sky-tinted radial glow behind the headline */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(55% 55% at 26% 30%, rgba(78,140,179,0.16), transparent 70%)',
-        }}
-      />
-
-      {/* Layer 5 — soft light in the upper-right corner */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(42% 48% at 90% 2%, rgba(255,255,255,0.05), transparent 72%)',
-        }}
-      />
+      {/* No background of its own: the site-wide gradient on <body> shows
+          through so the hero is continuous with the rest of the page. */}
 
       {/* Layer 4 — oversized AT Sports watermark, off-center to the upper-right,
-          white at ~5% opacity and softly masked so it dissolves before it ever
+          white at low opacity and softly masked so it dissolves before it ever
           reaches the copy. Embossed blueprint feel, not a visible logo. */}
       <div
         aria-hidden
@@ -55,47 +41,49 @@ export function Hero() {
         />
       </div>
 
-      {/* Layer — faint diagonal blueprint lines, fading in toward the lower half */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage:
-            'repeating-linear-gradient(118deg, transparent 0, transparent 43px, rgba(255,255,255,0.035) 43px, rgba(255,255,255,0.035) 44px)',
-          maskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent, #000 55%)',
-        }}
-      />
-
-      {/* Layer 3 — dotted grid texture, dialed back to a whisper */}
-      <div
-        className="halftone pointer-events-none absolute inset-0 text-white/[0.055]"
-        aria-hidden
-      />
+      {/* The diagonal-line and dotted-grid layers that used to sit here are
+          gone: the court-surface texture on <body> now carries the whole page,
+          so local pattern overlays would only fight it. */}
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-20 pb-4 md:px-12 md:pt-28">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 font-mono text-xs font-medium tracking-widest text-sky uppercase">
           <span className="size-1.5 rounded-full bg-sky" aria-hidden />
-          Official Brand Portal
+          <LocalizedInline text={edition.heroEyebrow} edition={edition} />
         </span>
 
-        <h1 className="mt-6 text-balance text-5xl font-bold tracking-tight text-white md:text-7xl">
-          AT Sports Brand Hub
+        <h1 className="mt-6 text-balance text-5xl font-bold tracking-tight text-navy md:text-7xl">
+          {edition.heroTitle.en}
           <span className="mt-3 block text-2xl font-medium text-sky md:text-4xl">
-            Partner Edition
+            <Localized
+              text={edition.heroSubtitle}
+              edition={edition}
+              secondaryClassName="text-xl font-normal text-sky/80 md:text-2xl"
+            />
           </span>
         </h1>
 
-        <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-steel">
-          <span className="font-black">AT Sports is a manufacturer of professional sports surfacing systems trusted by contractors, distributors, and facilities around the world.</span>
-          <span className="mt-6 block">This Brand Hub provides the approved tools, messaging, and assets needed to represent the company and every AT Sports product line accurately and consistently.</span>
-        </p>
+        <div className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-steel">
+          {edition.heroLead.map((para, i) => (
+            <Localized
+              key={i}
+              as="p"
+              text={para.text}
+              edition={edition}
+              className={cn(
+                i > 0 && 'mt-6',
+                // The emphasized opening paragraph is white so it leads the
+                // block; the paragraphs after it keep the inherited steel.
+                para.emphasis ? 'font-black text-white' : undefined,
+              )}
+            />
+          ))}
+        </div>
 
         {/* Product wordmarks — strong typographic band linking to the kits */}
         <nav
           aria-label="Product lines"
-          className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-2xl font-bold tracking-tight text-white uppercase md:text-3xl"
+          className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-2xl font-bold tracking-tight text-navy uppercase md:text-3xl"
         >
           {PRODUCTS.map((p, i) => (
             <Fragment key={p.base}>

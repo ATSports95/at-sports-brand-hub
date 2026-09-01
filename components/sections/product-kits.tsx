@@ -57,8 +57,13 @@ function KitPanel({ kit }: { kit: ProductKit }) {
   return (
     <div className="flex flex-col gap-10">
       {/* Header band */}
-      <div className="overflow-hidden rounded-lg border border-border bg-card">
-        <div className="flex flex-col gap-4 border-b border-border bg-white p-6 sm:flex-row sm:items-center sm:justify-between">
+      {/* Panel shell is black-but-transparent, so the "Brand Overview" copy
+          below the logo sits on a translucent black field rather than an
+          opaque card. */}
+      <div className="overflow-hidden rounded-lg border border-border bg-black/40 backdrop-blur-sm">
+        {/* Logo band: white, only slightly transparent, so the full-color
+            product marks read cleanly while the backdrop still tints through. */}
+        <div className="flex flex-col gap-4 border-b border-border bg-white/90 p-6 backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between">
           <div
             className={cn(
               'flex h-16 items-center text-lg',
@@ -66,10 +71,13 @@ function KitPanel({ kit }: { kit: ProductKit }) {
             )}
           >
             <LogoTile
-              file={`${kit.id}-color.svg`}
+              file={`${kit.id}-color.png`}
               alt={`${kit.name} logo`}
+              // backdrop-blur-none: nested backdrop-filters would re-composite
+              // the band's translucent white a second time, lightening a
+              // rectangle behind the mark instead of leaving one flat surface.
               className={cn(
-                'w-44 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0',
+                'w-44 [&>div]:aspect-auto [&>div]:h-16 [&>div]:border-0 [&>div]:bg-transparent [&>div]:p-0 [&>div]:backdrop-blur-none',
                 (kit.id === 'cushionx' || kit.id === 'faultline') &&
                   'w-52 [&>div]:h-20',
               )}
@@ -79,10 +87,10 @@ function KitPanel({ kit }: { kit: ProductKit }) {
             <span
               className={cn(
                 'inline-flex w-fit rounded-sm px-2.5 py-1 text-xs font-semibold text-white',
-                kit.accentClass,
-              )}
-            >
-              {kit.descriptor}
+  kit.id === 'acrytech' ? 'bg-accent' : kit.accentClass,
+  )}
+  >
+  {kit.descriptor}
             </span>
           </div>
         </div>
@@ -108,13 +116,12 @@ function KitPanel({ kit }: { kit: ProductKit }) {
           {kit.positioning.map((item) => (
             <div
               key={item.title}
-              className="flex flex-col gap-2 rounded-md border border-border bg-card p-5"
+              className="flex flex-col gap-2 rounded-md border border-border bg-black/40 p-5 backdrop-blur-sm"
             >
               <div className="flex items-center gap-2">
                 <span
                   className={cn(
-                    'flex size-6 shrink-0 items-center justify-center rounded-full text-white',
-                    kit.accentClass,
+                    'flex size-6 shrink-0 items-center justify-center rounded-full bg-[var(--slate)] text-white',
                   )}
                 >
                   <Check className="size-3.5" />
@@ -142,10 +149,10 @@ function KitPanel({ kit }: { kit: ProductKit }) {
                 <div
                   className={cn(
                     'flex items-baseline justify-between gap-2 px-5 py-3 text-white',
-                    kit.accentClass,
+                    'bg-accent',
                   )}
                 >
-                  <span className="font-mono text-xs tracking-wide uppercase opacity-90">
+                  <span className="font-mono text-xs tracking-wide text-black uppercase opacity-90">
                     {sys.label}
                   </span>
                   <span className="text-sm font-semibold">{sys.name}</span>
@@ -207,7 +214,7 @@ export function ProductKits() {
     PRODUCT_KITS.find((k) => k.id === activeId) ?? PRODUCT_KITS[0]
 
   return (
-    <Section id="kits" className="bg-muted/40">
+    <Section id="kits">
       <SectionHeading
         eyebrow="Product Brand Kits"
         title="Approved Positioning by Product"
@@ -230,13 +237,16 @@ export function ProductKits() {
               aria-selected={isActive}
               onClick={() => setActiveId(kit.id)}
               className={cn(
-                'flex flex-col items-start gap-0.5 rounded-md border px-4 py-2.5 text-left transition-colors',
+                'flex flex-col items-start gap-0.5 rounded-md border px-6 py-3.5 text-left transition-colors',
                 isActive
-                  ? 'border-navy bg-navy text-white'
-                  : 'border-border bg-card text-navy hover:border-sky',
+                  ? 'border-sky/60 bg-[rgba(78,140,179,0.61)] text-white shadow-[0_0_24px_-4px_var(--sky)]'
+                  : // Soft downward sky-tinted glow lifts the inactive buttons
+                    // off the surface for a 3D look, distinct from the active
+                    // button's brighter all-around glow.
+                    'border-border bg-card text-white shadow-[0_8px_22px_-8px_var(--sky)] hover:border-sky/50 hover:shadow-[0_10px_26px_-8px_var(--sky)]',
               )}
             >
-              <span className="text-sm font-semibold">{kit.name}</span>
+              <span className="text-base font-semibold">{kit.name}</span>
             </button>
           )
         })}
@@ -247,7 +257,7 @@ export function ProductKits() {
       </div>
 
       {/* Approval note */}
-      <div className="mt-10 rounded-md border-l-4 border-red bg-card px-5 py-4">
+      <div className="mt-10 rounded-md border-l-4 border-sky bg-card px-5 py-4">
         <p className="text-sm leading-relaxed text-ink/80">
           Any newly created marketing content, product claims, or messaging
           outside of the approved language above should be reviewed and approved

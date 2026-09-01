@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Figtree, Space_Grotesk } from "next/font/google";
+import { Figtree, Space_Grotesk, Noto_Sans_JP } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
@@ -13,6 +13,15 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["500", "700"],
   variable: "--font-space-grotesk",
+  display: "swap",
+});
+
+// Japanese companion face for the Courtina (Japan) edition. Only the
+// Japanese text nodes use it; English copy stays on Figtree everywhere.
+const notoSansJp = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-noto-sans-jp",
   display: "swap",
 });
 
@@ -35,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`light bg-background ${figtree.variable} ${spaceGrotesk.variable}`}
+      className={`bg-background ${figtree.variable} ${spaceGrotesk.variable} ${notoSansJp.variable}`}
     >
       <body className="font-sans antialiased">
         {children}
