@@ -3,7 +3,7 @@ import { Localized, LocalizedInline } from '@/components/localized'
 import { PARTNER_EDITION, type Edition } from '@/lib/editions'
 import { cn } from '@/lib/utils'
 
-// Product wordmarks. `accent` is the letter rendered in Red (the trailing X).
+// Product wordmarks. `accent` is the letter rendered in the brand accent (the trailing X).
 const PRODUCTS = [
   { base: 'Acrytech' },
   { base: 'Cushion', accent: 'X' },
@@ -97,7 +97,7 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
                 className="transition-opacity duration-200 hover:opacity-70 focus-visible:opacity-70 focus-visible:outline-none"
               >
                 {p.base}
-                {p.accent && <span className="text-red">{p.accent}</span>}
+                {p.accent && <span className="text-accent">{p.accent}</span>}
               </a>
             </Fragment>
           ))}
