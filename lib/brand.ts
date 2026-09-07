@@ -146,23 +146,23 @@ export const PRODUCT_KITS: ProductKit[] = [
     positioning: [
       {
         title: 'Complete Acrylic Surfacing System',
-        body: 'Acrytech provides a complete line of acrylic court surfacing products designed to work together throughout the installation process, helping support consistent application, appearance, and performance.',
+        body: 'Acrytech offers a comprehensive line of acrylic sports surfacing products for new construction, resurfacing, and ongoing court projects. The system includes products for surface preparation, resurfacing, texture, and final color.',
       },
       {
-        title: 'Built for Quality Court Installation',
-        body: 'From surface preparation through texture and final color, Acrytech products are formulated to support consistent application and a high-quality finished court.',
+        title: 'Built for the Court-Building Industry',
+        body: 'Acrytech products are formulated with contractors and court builders in mind, supporting consistent mixing, application, texture, and finish across a wide range of sports surfacing projects.',
       },
       {
         title: 'Engineered for Court Performance',
-        body: 'Acrytech surfacing systems are designed to provide reliable traction, consistent ball response, and lasting surface performance when properly installed and maintained.',
+        body: 'Acrytech surfacing systems are designed to deliver reliable traction, consistent ball response, and lasting surface performance when installed according to specification.',
       },
       {
-        title: 'Manufactured with Purpose',
-        body: 'Acrytech products are manufactured in-house by AT Sports, providing greater control over formulation, product consistency, and quality across the surfacing system.',
+        title: 'Manufactured by AT Sports',
+        body: 'Acrytech is manufactured in-house by AT Sports, providing greater control over formulation, product quality, consistency, and technical support throughout the product line.',
       },
       {
         title: 'Proven at the Highest Level',
-        body: 'As the Official Surface of the Professional Pickleball Association and Major League Pickleball, Acrytech is trusted for the consistency and performance required at the highest levels of competition.',
+        body: 'Acrytech is the Official Surface of the Professional Pickleball Association and Major League Pickleball, bringing the same manufacturer and surfacing technology trusted in professional competition to court projects around the world.',
       },
     ],
     marketingCopy: [
