@@ -187,10 +187,6 @@ export const PRODUCT_KITS: ProductKit[] = [
         label: 'Sales / Customer Communication',
         body: 'We supply Acrytech products for new construction, resurfacing, and ongoing court projects. With a complete range of surface preparation, texture, and color products, Acrytech gives contractors a cohesive system for consistent application and court performance.',
       },
-      {
-        label: 'PPA + MLP Credibility',
-        body: 'Acrytech is the Official Surface of the PPA and MLP, bringing proven surfacing technology from professional competition to court projects of all types.',
-      },
     ],
     marketingStatements: {
       intro:

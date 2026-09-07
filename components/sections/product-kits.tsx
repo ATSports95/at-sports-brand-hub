@@ -235,13 +235,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
                 key={benefit.title}
                 className="rounded-md border border-border bg-card p-5"
               >
-                <h5
-                  className={`text-sm font-semibold ${
-                    benefit.title === 'Complete System Approach'
-                      ? 'text-accent'
-                      : 'text-navy'
-                  }`}
-                >
+                <h5 className="text-sm font-semibold text-accent">
                   {benefit.title}
                 </h5>
                 <p className="mt-2 text-sm leading-relaxed text-ink/80">
