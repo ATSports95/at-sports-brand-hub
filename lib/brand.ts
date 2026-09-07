@@ -145,25 +145,24 @@ export const PRODUCT_KITS: ProductKit[] = [
     tagline: 'The complete acrylic surfacing system from one manufacturer.',
     accentClass: 'bg-slate',
     overview: [
-      'Acrytech is the Sport Surface Coatings Division of AT Sports, specializing in acrylic surfacing systems for tennis, pickleball, basketball, and multi-sport applications. The product line is designed to provide consistent appearance, playability, and finish quality across projects ranging from neighborhood courts to professional sports facilities.',
-      'From new construction to resurfacing, Acrytech offers a complete portfolio of compatible acrylic products designed to work together as one coordinated sports surfacing system.',
+      'Acrytech is the Sport Surface Coatings Division of AT Sports, providing acrylic surfacing products for tennis, pickleball, basketball, and multi-sport applications. The portfolio supports new construction and resurfacing projects with products spanning surface preparation through final color.',
     ],
     positioning: [
       {
         title: 'Complete Acrylic Surfacing System',
-        body: 'Acrytech offers a comprehensive line of acrylic sports surfacing products for new construction, resurfacing, and ongoing court projects. The system includes products for surface preparation, resurfacing, texture, and final color.',
+        body: 'Surface preparation, resurfacing, texture, and color products within one coordinated product portfolio.',
       },
       {
         title: 'Built for the Court-Building Industry',
-        body: 'Acrytech products are formulated with contractors and court builders in mind, supporting consistent mixing, application, texture, and finish across a wide range of sports surfacing projects.',
+        body: 'Formulated with the needs of court builders and surfacing contractors in mind, supporting dependable mixing, application, texture, and finish.',
       },
       {
         title: 'Engineered for Court Performance',
-        body: 'Acrytech surfacing systems are designed to deliver reliable traction, consistent ball response, and lasting surface performance when installed according to specification.',
+        body: 'Designed to provide the traction, ball response, and surface characteristics expected across tennis, pickleball, basketball, and multi-sport applications.',
       },
       {
         title: 'Manufactured by AT Sports',
-        body: 'Acrytech is manufactured in-house by AT Sports, providing greater control over formulation, product quality, consistency, and technical support throughout the product line.',
+        body: 'Manufactured in-house, providing greater control over formulation, product quality, and consistency throughout the Acrytech line.',
       },
       {
         title: 'Proven at the Highest Level',
@@ -173,7 +172,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     marketingCopy: [
       {
         label: 'Website / Product Page',
-        body: 'Acrytech is a complete acrylic sports surfacing system for new court construction and resurfacing. From surface preparation and resurfacing through texture and final color, Acrytech products are engineered to work together for consistent application, appearance, and court performance.',
+        body: 'Acrytech offers a comprehensive line of acrylic sports surfacing products for tennis, pickleball, basketball, and multi-sport courts. From surface preparation and resurfacing through texture and final color, the product portfolio provides contractors and court builders with solutions for both new construction and resurfacing projects.',
       },
       {
         label: 'Distributor / Brand Description',
@@ -181,11 +180,11 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
       {
         label: 'Short Product Description',
-        body: 'Acrytech is a complete acrylic sports surfacing system for tennis, pickleball, basketball, and multi-sport courts, with products supporting every stage from surface preparation through final color.',
+        body: 'Acrytech provides acrylic sports surfacing products for tennis, pickleball, basketball, and multi-sport courts, with solutions spanning surface preparation through final color.',
       },
       {
         label: 'Sales / Customer Communication',
-        body: 'We supply Acrytech products for new construction, resurfacing, and ongoing court projects. With a complete range of surface preparation, texture, and color products, Acrytech gives contractors a cohesive system for consistent application and court performance.',
+        body: 'We supply Acrytech products for new construction, resurfacing, and ongoing court projects. Our team can help identify the products and system components needed for your specific project.',
       },
     ],
     marketingStatements: {
@@ -195,7 +194,6 @@ export const PRODUCT_KITS: ProductKit[] = [
         'Complete Court Surfacing. One Integrated System.',
         'Engineered for Consistency. Built for Court Performance.',
         'From Surface Preparation to Final Color.',
-        'Products Designed to Work Together.',
         'Court Surfacing Backed by Manufacturing Expertise.',
         'Built for the Demands of Court Construction.',
         'Trusted by Contractors. Proven in Competition.',
@@ -204,7 +202,7 @@ export const PRODUCT_KITS: ProductKit[] = [
       benefitStatements: [
         {
           title: 'Complete System Approach',
-          body: 'A comprehensive product line gives contractors access to compatible solutions for surface preparation, resurfacing, texture, and final color within one surfacing system.',
+          body: 'Access compatible products for surface preparation, resurfacing, texture, and final color within one coordinated surfacing system.',
         },
         {
           title: 'Consistent Application',
@@ -216,7 +214,7 @@ export const PRODUCT_KITS: ProductKit[] = [
         },
         {
           title: 'Manufacturing Consistency',
-          body: 'In-house manufacturing provides greater control over formulation and product quality, helping maintain consistency across the Acrytech product line.',
+          body: 'In-house manufacturing provides greater control over formulation and product quality, supporting consistency throughout the Acrytech product line.',
         },
         {
           title: 'Contractor-Focused Products',
@@ -224,15 +222,11 @@ export const PRODUCT_KITS: ProductKit[] = [
         },
         {
           title: 'Manufacturer-Backed Support',
-          body: 'Contractors have access to product knowledge and technical expertise from a manufacturer focused specifically on sports surfacing systems.',
-        },
-        {
-          title: 'Versatility Across Court Applications',
-          body: 'Acrytech systems support tennis, pickleball, basketball, and multi-sport applications for both new construction and resurfacing projects.',
+          body: 'Acrytech is backed by product knowledge and technical expertise from a manufacturer focused specifically on sports surfacing systems.',
         },
         {
           title: 'Proven Performance',
-          body: 'As the Official Surface of the PPA and MLP, Acrytech brings the consistency and performance trusted in professional pickleball to court projects across a wide range of applications.',
+          body: 'As the Official Surface of the PPA and MLP, Acrytech brings the consistency and performance trusted at the professional level to court projects across a wide range of applications.',
         },
       ],
     },
