@@ -247,23 +247,6 @@ function KitPanel({ kit }: { kit: ProductKit }) {
         </div>
       )}
 
-      {/* Logo usage */}
-      <div className="rounded-md border border-navy/15 bg-navy/[0.03] p-6">
-        <h3 className="text-lg font-semibold text-navy">
-          {kit.name} logo usage guidelines
-        </h3>
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-          {kit.logoGuidelines.map((rule) => (
-            <li
-              key={rule}
-              className="flex items-start gap-2.5 text-sm leading-relaxed text-ink/80"
-            >
-              <Check className="mt-0.5 size-4 shrink-0 text-sky" />
-              {rule}
-            </li>
-          ))}
-        </ul>
-      </div>
     </div>
   )
 }
