@@ -167,20 +167,24 @@ export const PRODUCT_KITS: ProductKit[] = [
     ],
     marketingCopy: [
       {
-        label: 'Website / Services Page',
-        body: 'We install Acrytech acrylic court surfacing systems, manufactured by AT Sports. From surface preparation through final color, Acrytech products are engineered to work together as a complete system, helping us deliver consistent court performance, appearance, and long-term quality.',
+        label: 'Website / Product Page',
+        body: 'Acrytech is a complete acrylic sports surfacing system for new court construction and resurfacing. From surface preparation and resurfacing through texture and final color, Acrytech products are engineered to work together for consistent application, appearance, and court performance.',
       },
       {
-        label: 'Proposal / Sales Material',
-        body: 'Our court surfacing projects utilize Acrytech products manufactured by AT Sports. The complete acrylic system combines surface preparation, resurfacing, texture, and color products engineered to work together for consistent application and court performance.',
+        label: 'Distributor / Brand Description',
+        body: 'We\u2019re proud to offer Acrytech, a complete line of acrylic sports surfacing products manufactured by AT Sports. Designed for contractors and court builders, the system combines quality products, consistent formulations, and manufacturer-backed technical support.',
       },
       {
-        label: 'Short-Form Marketing',
-        body: 'We use Acrytech court surfacing products to deliver durable, consistent playing surfaces built for reliable traction, ball response, and long-term performance.',
+        label: 'Short Product Description',
+        body: 'Acrytech is a complete acrylic sports surfacing system for tennis, pickleball, basketball, and multi-sport courts, with products supporting every stage from surface preparation through final color.',
       },
       {
-        label: 'Credibility / Premium Version',
-        body: 'Our courts are surfaced with Acrytech, the Official Surface of the PPA and MLP. Manufactured by AT Sports, Acrytech combines a complete acrylic surfacing system with the consistency and performance trusted at the highest levels of pickleball.',
+        label: 'Sales / Customer Communication',
+        body: 'We supply Acrytech products for new construction, resurfacing, and ongoing court projects. With a complete range of surface preparation, texture, and color products, Acrytech gives contractors a cohesive system for consistent application and court performance.',
+      },
+      {
+        label: 'PPA + MLP Credibility',
+        body: 'Acrytech is the Official Surface of the PPA and MLP, bringing proven surfacing technology from professional competition to court projects of all types.',
       },
     ],
     logoGuidelines: [
