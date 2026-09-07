@@ -127,6 +127,11 @@ export type ProductKit = {
   overview: string[]
   positioning: { title: string; body: string }[]
   marketingCopy: (string | { label: string; body: string })[]
+  marketingStatements?: {
+    intro: string
+    powerStatements: string[]
+    benefitStatements: { title: string; body: string }[]
+  }
   systems?: { label: string; name: string; body: string }[]
   systemsTitle?: string
   logoGuidelines: string[]
@@ -187,6 +192,54 @@ export const PRODUCT_KITS: ProductKit[] = [
         body: 'Acrytech is the Official Surface of the PPA and MLP, bringing proven surfacing technology from professional competition to court projects of all types.',
       },
     ],
+    marketingStatements: {
+      intro:
+        'Approved Acrytech messaging for use across websites, sales materials, digital marketing, and customer communications.',
+      powerStatements: [
+        'Complete Court Surfacing. One Integrated System.',
+        'Engineered for Consistency. Built for Court Performance.',
+        'From Surface Preparation to Final Color.',
+        'Products Designed to Work Together.',
+        'Court Surfacing Backed by Manufacturing Expertise.',
+        'Built for the Demands of Court Construction.',
+        'Trusted by Contractors. Proven in Competition.',
+        'The Official Surface of the PPA and MLP.',
+      ],
+      benefitStatements: [
+        {
+          title: 'Complete System Approach',
+          body: 'A comprehensive product line gives contractors access to compatible solutions for surface preparation, resurfacing, texture, and final color within one surfacing system.',
+        },
+        {
+          title: 'Consistent Application',
+          body: 'Products are formulated to work together, helping contractors achieve consistent mixing, application, texture, and finish across court projects.',
+        },
+        {
+          title: 'Reliable Court Performance',
+          body: 'Acrytech systems are engineered to provide the traction, ball response, and playing characteristics expected from a quality sports surface.',
+        },
+        {
+          title: 'Manufacturing Consistency',
+          body: 'In-house manufacturing provides greater control over formulation and product quality, helping maintain consistency across the Acrytech product line.',
+        },
+        {
+          title: 'Contractor-Focused Products',
+          body: 'Acrytech products are developed around the demands of sports surfacing professionals, with formulations designed to support efficient application and dependable results in the field.',
+        },
+        {
+          title: 'Manufacturer-Backed Support',
+          body: 'Contractors have access to product knowledge and technical expertise from a manufacturer focused specifically on sports surfacing systems.',
+        },
+        {
+          title: 'Versatility Across Court Applications',
+          body: 'Acrytech systems support tennis, pickleball, basketball, and multi-sport applications for both new construction and resurfacing projects.',
+        },
+        {
+          title: 'Proven Performance',
+          body: 'As the Official Surface of the PPA and MLP, Acrytech brings the consistency and performance trusted in professional pickleball to court projects across a wide range of applications.',
+        },
+      ],
+    },
     logoGuidelines: [
       'Use only official Acrytech logos provided by AT Sports.',
       'When appropriate, reference Acrytech as \u201cA Division of AT Sports.\u201d',

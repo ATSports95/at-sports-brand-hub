@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Check, Copy, FileText } from 'lucide-react'
+import { Check, Copy, FileText, Megaphone } from 'lucide-react'
 import { Section, SectionHeading } from '@/components/section'
 import { LogoTile } from '@/components/logo-tile'
 import { PRODUCT_KITS, type ProductKit } from '@/lib/brand'
@@ -198,6 +198,54 @@ function KitPanel({ kit }: { kit: ProductKit }) {
           ))}
         </div>
       </div>
+
+      {/* Marketing statements */}
+      {kit.marketingStatements && (
+        <div>
+          <div className="flex items-center gap-2">
+            <Megaphone className="size-5 text-sky" />
+            <h3 className="text-xl font-semibold text-navy">
+              Marketing Statements
+            </h3>
+          </div>
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
+            {kit.marketingStatements.intro}
+          </p>
+
+          <h4 className="mt-6 text-xs font-semibold tracking-wide text-sky uppercase">
+            Power Statements
+          </h4>
+          <div className="mt-3 grid gap-3 sm:grid-cols-2">
+            {kit.marketingStatements.powerStatements.map((statement) => (
+              <div
+                key={statement}
+                className="rounded-md border-l-2 border-sky bg-card px-4 py-3 text-sm font-medium text-balance text-ink/90"
+              >
+                {statement}
+              </div>
+            ))}
+          </div>
+
+          <h4 className="mt-8 text-xs font-semibold tracking-wide text-sky uppercase">
+            Benefit Statements
+          </h4>
+          <div className="mt-3 grid gap-4 lg:grid-cols-2">
+            {kit.marketingStatements.benefitStatements.map((benefit) => (
+              <div
+                key={benefit.title}
+                className="rounded-md border border-border bg-card p-5"
+              >
+                <h5 className="text-sm font-semibold text-navy">
+                  {benefit.title}
+                </h5>
+                <p className="mt-2 text-sm leading-relaxed text-ink/80">
+                  {benefit.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Logo usage */}
       <div className="rounded-md border border-navy/15 bg-navy/[0.03] p-6">
