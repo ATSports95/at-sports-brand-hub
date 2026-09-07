@@ -184,8 +184,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
           </h3>
         </div>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
-          Copy and paste directly, or adapt into your existing materials. Ready
-          to use as-is.
+          Core positioning points that define how Acrytech should be represented in the market.
         </p>
         <div className="mt-5 grid gap-4 lg:grid-cols-2">
           {kit.marketingCopy.map((copy, i) => (
@@ -208,10 +207,6 @@ function KitPanel({ kit }: { kit: ProductKit }) {
               Marketing Statements
             </h3>
           </div>
-          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
-            {kit.marketingStatements.intro}
-          </p>
-
           <h4 className="mt-6 text-xs font-semibold tracking-wide text-sky uppercase">
             Power Statements
           </h4>
