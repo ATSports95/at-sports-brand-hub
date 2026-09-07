@@ -30,14 +30,15 @@ const CARDS: {
   },
   {
     key: 'colorSwatches',
-    title: 'Acrytech Color Codes',
+    title: 'Acrytech Color Charts',
     description: 'Official coating color specifications for print and digital design.',
     icon: Palette,
   },
   {
     key: 'hubPdf',
-    title: 'This Hub as a PDF',
-    description: 'Offline copy of the full brand hub.',
+    title: 'Website/Digital Tools',
+    description:
+      'Interactive tools and resources for court planning, product selection, system estimating, and project support.',
     icon: FileText,
   },
 ]
