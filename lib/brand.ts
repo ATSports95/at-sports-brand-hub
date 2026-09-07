@@ -126,7 +126,12 @@ export type ProductKit = {
   accentClass: string
   overview: string[]
   positioning: { title: string; body: string }[]
-  marketingCopy: string[]
+  marketingCopy: (string | { label: string; body: string })[]
+  marketingStatements?: {
+    intro: string
+    powerStatements: string[]
+    benefitStatements: { title: string; body: string }[]
+  }
   systems?: { label: string; name: string; body: string }[]
   systemsTitle?: string
   logoGuidelines: string[]
@@ -145,32 +150,92 @@ export const PRODUCT_KITS: ProductKit[] = [
     ],
     positioning: [
       {
-        title: 'Complete Acrylic System',
-        body: 'Every stage of the surfacing process, from preparation and repair to texture and final color, is supported within one manufacturer-backed system.',
+        title: 'Complete Acrylic Surfacing System',
+        body: 'Acrytech offers a comprehensive line of acrylic sports surfacing products for new construction, resurfacing, and ongoing court projects. The system includes products for surface preparation, resurfacing, texture, and final color.',
       },
       {
-        title: 'Built for Professional Application',
-        body: 'Products are formulated to support consistent mixing, application, texture, and finish quality across a wide range of court projects.',
+        title: 'Built for the Court-Building Industry',
+        body: 'Acrytech products are formulated with contractors and court builders in mind, supporting consistent mixing, application, texture, and finish across a wide range of sports surfacing projects.',
       },
       {
         title: 'Engineered for Court Performance',
-        body: 'Designed to deliver reliable traction, consistent ball response, and lasting surface performance when installed according to specification.',
+        body: 'Acrytech surfacing systems are designed to deliver reliable traction, consistent ball response, and lasting surface performance when installed according to specification.',
       },
       {
-        title: 'Manufacturing Expertise',
-        body: 'Manufactured in-house using advanced acrylic technology, giving AT Sports greater control over product quality, consistency, and technical support.',
+        title: 'Manufactured by AT Sports',
+        body: 'Acrytech is manufactured in-house by AT Sports, providing greater control over formulation, product quality, consistency, and technical support throughout the product line.',
       },
       {
-        title: 'Proven at the Professional Level',
-        body: 'As the Official Surface of the Professional Pickleball Association and Major League Pickleball, Acrytech delivers the consistency demanded by professional competition.',
+        title: 'Proven at the Highest Level',
+        body: 'Acrytech is the Official Surface of the Professional Pickleball Association and Major League Pickleball, bringing the same manufacturer and surfacing technology trusted in professional competition to court projects around the world.',
       },
     ],
     marketingCopy: [
-      'Acrytech is the acrylic sports coating division of AT Sports. Designed for new construction and court resurfacing, the product line includes surface preparation, repair, texture, and color systems engineered to work together from start to finish.',
-      'We install Acrytech coatings because it provides a complete manufacturer-supported system, from preparation through final color, that helps us deliver consistent results on every project.',
-      'Acrytech delivers professional sports surfaces designed for consistent playability, long-term durability, and dependable performance. Trusted by facilities around the world, every system is engineered to perform season after season.',
-      'Manufactured with advanced acrylic technology, Acrytech systems are engineered for adhesion, durability, color stability, and consistent application across tennis, pickleball, basketball, and multi-sport surfaces.',
+      {
+        label: 'Website / Product Page',
+        body: 'Acrytech is a complete acrylic sports surfacing system for new court construction and resurfacing. From surface preparation and resurfacing through texture and final color, Acrytech products are engineered to work together for consistent application, appearance, and court performance.',
+      },
+      {
+        label: 'Distributor / Brand Description',
+        body: 'We\u2019re proud to offer Acrytech, a complete line of acrylic sports surfacing products manufactured by AT Sports. Designed for contractors and court builders, the system combines quality products, consistent formulations, and manufacturer-backed technical support.',
+      },
+      {
+        label: 'Short Product Description',
+        body: 'Acrytech is a complete acrylic sports surfacing system for tennis, pickleball, basketball, and multi-sport courts, with products supporting every stage from surface preparation through final color.',
+      },
+      {
+        label: 'Sales / Customer Communication',
+        body: 'We supply Acrytech products for new construction, resurfacing, and ongoing court projects. With a complete range of surface preparation, texture, and color products, Acrytech gives contractors a cohesive system for consistent application and court performance.',
+      },
     ],
+    marketingStatements: {
+      intro:
+        'Approved Acrytech messaging for use across websites, sales materials, digital marketing, and customer communications.',
+      powerStatements: [
+        'Complete Court Surfacing. One Integrated System.',
+        'Engineered for Consistency. Built for Court Performance.',
+        'From Surface Preparation to Final Color.',
+        'Products Designed to Work Together.',
+        'Court Surfacing Backed by Manufacturing Expertise.',
+        'Built for the Demands of Court Construction.',
+        'Trusted by Contractors. Proven in Competition.',
+        'The Official Surface of the PPA and MLP.',
+      ],
+      benefitStatements: [
+        {
+          title: 'Complete System Approach',
+          body: 'A comprehensive product line gives contractors access to compatible solutions for surface preparation, resurfacing, texture, and final color within one surfacing system.',
+        },
+        {
+          title: 'Consistent Application',
+          body: 'Products are formulated to work together, helping contractors achieve consistent mixing, application, texture, and finish across court projects.',
+        },
+        {
+          title: 'Reliable Court Performance',
+          body: 'Acrytech systems are engineered to provide the traction, ball response, and playing characteristics expected from a quality sports surface.',
+        },
+        {
+          title: 'Manufacturing Consistency',
+          body: 'In-house manufacturing provides greater control over formulation and product quality, helping maintain consistency across the Acrytech product line.',
+        },
+        {
+          title: 'Contractor-Focused Products',
+          body: 'Acrytech products are developed around the demands of sports surfacing professionals, with formulations designed to support efficient application and dependable results in the field.',
+        },
+        {
+          title: 'Manufacturer-Backed Support',
+          body: 'Contractors have access to product knowledge and technical expertise from a manufacturer focused specifically on sports surfacing systems.',
+        },
+        {
+          title: 'Versatility Across Court Applications',
+          body: 'Acrytech systems support tennis, pickleball, basketball, and multi-sport applications for both new construction and resurfacing projects.',
+        },
+        {
+          title: 'Proven Performance',
+          body: 'As the Official Surface of the PPA and MLP, Acrytech brings the consistency and performance trusted in professional pickleball to court projects across a wide range of applications.',
+        },
+      ],
+    },
     logoGuidelines: [
       'Use only official Acrytech logos provided by AT Sports.',
       'When appropriate, reference Acrytech as \u201cA Division of AT Sports.\u201d',
