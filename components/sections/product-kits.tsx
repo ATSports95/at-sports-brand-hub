@@ -110,7 +110,8 @@ function KitPanel({ kit }: { kit: ProductKit }) {
       <div>
         <h3 className="text-xl font-semibold text-navy">Brand Positioning</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
-          Approved benefit messaging partners may use to describe {kit.name}.
+          Approved {kit.name} messaging for use in your website, proposals,
+          social media, and customer-facing marketing materials.
         </p>
         <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {kit.positioning.map((item) => (
