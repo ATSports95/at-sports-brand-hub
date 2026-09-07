@@ -145,25 +145,24 @@ export const PRODUCT_KITS: ProductKit[] = [
     tagline: 'The complete acrylic surfacing system from one manufacturer.',
     accentClass: 'bg-slate',
     overview: [
-      'Acrytech is the Sport Surface Coatings Division of AT Sports, specializing in acrylic surfacing systems for tennis, pickleball, basketball, and multi-sport applications. The product line is designed to provide consistent appearance, playability, and finish quality across projects ranging from neighborhood courts to professional sports facilities.',
-      'From new construction to resurfacing, Acrytech offers a complete portfolio of compatible acrylic products designed to work together as one coordinated sports surfacing system.',
+      'Acrytech is the Sport Surface Coatings Division of AT Sports, providing acrylic surfacing products for tennis, pickleball, basketball, and multi-sport applications. The portfolio supports new construction and resurfacing projects with products spanning surface preparation through final color.',
     ],
     positioning: [
       {
         title: 'Complete Acrylic Surfacing System',
-        body: 'Acrytech offers a comprehensive line of acrylic sports surfacing products for new construction, resurfacing, and ongoing court projects. The system includes products for surface preparation, resurfacing, texture, and final color.',
+        body: 'Surface preparation, resurfacing, texture, and color products within one coordinated product portfolio.',
       },
       {
         title: 'Built for the Court-Building Industry',
-        body: 'Acrytech products are formulated with contractors and court builders in mind, supporting consistent mixing, application, texture, and finish across a wide range of sports surfacing projects.',
+        body: 'Formulated with the needs of court builders and surfacing contractors in mind, supporting dependable mixing, application, texture, and finish.',
       },
       {
         title: 'Engineered for Court Performance',
-        body: 'Acrytech surfacing systems are designed to deliver reliable traction, consistent ball response, and lasting surface performance when installed according to specification.',
+        body: 'Designed to provide the traction, ball response, and surface characteristics expected across tennis, pickleball, basketball, and multi-sport applications.',
       },
       {
         title: 'Manufactured by AT Sports',
-        body: 'Acrytech is manufactured in-house by AT Sports, providing greater control over formulation, product quality, consistency, and technical support throughout the product line.',
+        body: 'Manufactured in-house, providing greater control over formulation, product quality, and consistency throughout the Acrytech line.',
       },
       {
         title: 'Proven at the Highest Level',
