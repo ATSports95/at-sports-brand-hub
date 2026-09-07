@@ -7,7 +7,15 @@ import { LogoTile } from '@/components/logo-tile'
 import { PRODUCT_KITS, type ProductKit } from '@/lib/brand'
 import { cn } from '@/lib/utils'
 
-function CopyableCopy({ text, index }: { text: string; index: number }) {
+function CopyableCopy({
+  text,
+  index,
+  label,
+}: {
+  text: string
+  index: number
+  label?: string
+}) {
   const [copied, setCopied] = useState(false)
 
   async function handleCopy() {
@@ -27,7 +35,7 @@ function CopyableCopy({ text, index }: { text: string; index: number }) {
           <span className="flex size-5 items-center justify-center rounded-sm bg-navy/5 font-mono text-navy">
             {index + 1}
           </span>
-          Option {index + 1}
+          {label ?? `Option ${index + 1}`}
         </span>
         <button
           type="button"
@@ -181,7 +189,12 @@ function KitPanel({ kit }: { kit: ProductKit }) {
         </p>
         <div className="mt-5 grid gap-4 lg:grid-cols-2">
           {kit.marketingCopy.map((copy, i) => (
-            <CopyableCopy key={i} text={copy} index={i} />
+            <CopyableCopy
+              key={i}
+              text={typeof copy === 'string' ? copy : copy.body}
+              label={typeof copy === 'string' ? undefined : copy.label}
+              index={i}
+            />
           ))}
         </div>
       </div>
