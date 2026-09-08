@@ -394,6 +394,18 @@ export const PRODUCT_KITS: ProductKit[] = [
         body: "Visible cracking doesn't always mean starting over. Faultline provides repair solutions for addressing problem areas within an existing court, helping facilities restore playing surfaces and extend their serviceable life before more extensive reconstruction is considered.",
       },
     ],
+    marketingStatements: {
+      powerStatements: [
+        'Court Cracks Require Court-Specific Solutions.',
+        'Repair the Problem. Restore the Surface.',
+        'Built for Cracks. Designed for Courts.',
+        'Target the Damage. Preserve the Surface.',
+        'Specialized Solutions for Court Repair.',
+        'A Smarter Approach to Court Cracks.',
+        'Extend the Potential of the Existing Surface.',
+        'Court Repair Backed by Sports Surfacing Expertise.',
+      ],
+    },
     systemsTitle: 'The Faultline Product Line',
     systems: [
       {
