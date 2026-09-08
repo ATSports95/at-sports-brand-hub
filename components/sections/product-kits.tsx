@@ -221,24 +221,28 @@ function KitPanel({ kit }: { kit: ProductKit }) {
             ))}
           </div>
 
-          <h4 className="mt-8 text-xs font-semibold tracking-wide text-sky uppercase">
-            Benefit Statements
-          </h4>
-          <div className="mt-3 grid gap-4 lg:grid-cols-2">
-            {kit.marketingStatements.benefitStatements.map((benefit) => (
-              <div
-                key={benefit.title}
-                className="rounded-md border border-border bg-card p-5"
-              >
-                <h5 className="text-sm font-semibold text-accent">
-                  {benefit.title}
-                </h5>
-                <p className="mt-2 text-sm leading-relaxed text-ink/80">
-                  {benefit.body}
-                </p>
+          {kit.marketingStatements.benefitStatements && (
+            <>
+              <h4 className="mt-8 text-xs font-semibold tracking-wide text-sky uppercase">
+                Benefit Statements
+              </h4>
+              <div className="mt-3 grid gap-4 lg:grid-cols-2">
+                {kit.marketingStatements.benefitStatements.map((benefit) => (
+                  <div
+                    key={benefit.title}
+                    className="rounded-md border border-border bg-card p-5"
+                  >
+                    <h5 className="text-sm font-semibold text-accent">
+                      {benefit.title}
+                    </h5>
+                    <p className="mt-2 text-sm leading-relaxed text-ink/80">
+                      {benefit.body}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
         </div>
       )}
 

@@ -128,9 +128,9 @@ export type ProductKit = {
   positioning: { title: string; body: string }[]
   marketingCopy: (string | { label: string; body: string })[]
   marketingStatements?: {
-    intro: string
+    intro?: string
     powerStatements: string[]
-    benefitStatements: { title: string; body: string }[]
+    benefitStatements?: { title: string; body: string }[]
   }
   systems?: { label: string; name: string; body: string }[]
   systemsTitle?: string
@@ -286,6 +286,18 @@ export const PRODUCT_KITS: ProductKit[] = [
         body: 'CushionX helps facilities deliver a better playing experience with added comfort players can feel. Providing up to 15% force reduction while maintaining consistent playability, CushionX gives clubs and facilities a cushioned court surface designed for extended play and demanding court environments.',
       },
     ],
+    marketingStatements: {
+      powerStatements: [
+        'Comfort Built Into the Court.',
+        'Up to 15% Force Reduction.',
+        'Cushioned for Comfort. Engineered for Play.',
+        'Performance From the Surface Down.',
+        '4mm. 6mm. 8mm. Cushion Your Way.',
+        'Built Around the Way the Court Will Be Used.',
+        'Multiple Systems. One CushionX Platform.',
+        'Court Cushioning Backed by Manufacturing Expertise.',
+      ],
+    },
     systemsTitle: 'CushionX Composition Levels',
     systems: [
       {
