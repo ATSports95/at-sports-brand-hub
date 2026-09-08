@@ -244,24 +244,24 @@ export const PRODUCT_KITS: ProductKit[] = [
     ],
     positioning: [
       {
-        title: 'Player Comfort',
-        body: 'Designed to improve impact absorption while maintaining consistent ball response and playability.',
+        title: 'Enhanced Player Comfort',
+        body: 'Engineered to provide force reduction of up to 15%, helping reduce surface impact and fatigue during extended play.',
       },
       {
-        title: 'Flexible System Options',
-        body: 'Multiple system configurations allow facilities to match cushion performance to project goals, budget, and expected court usage.',
+        title: 'Configurable Cushion Systems',
+        body: 'Available in 4mm, 6mm, and 8mm cushion configurations with multiple composition levels to address different project requirements and use environments.',
       },
       {
-        title: 'Extend Court Life',
-        body: 'Engineered to support renovation strategies that help facilities maximize existing court infrastructure while reducing project disruption.',
+        title: 'Consistent Playability',
+        body: 'Designed to add cushioning beneath the playing surface while maintaining the consistent playing characteristics expected across tennis, pickleball, and multi-sport applications.',
       },
       {
-        title: 'Built for Every Level of Play',
-        body: 'Suitable for residential, commercial, club, municipal, educational, and tournament environments through multiple system configurations.',
+        title: 'Built for the Application',
+        body: 'Three composition levels provide system options for residential, commercial, and high-use environments, allowing system construction to align with anticipated court usage.',
       },
       {
-        title: 'Integrated Court System',
-        body: 'Designed to work with Acrytech acrylic coatings as part of a complete AT Sports sports surfacing system.',
+        title: 'Manufacturer Backed',
+        body: 'Engineered and manufactured by AT Sports, providing system quality control, product expertise, and technical support.',
       },
     ],
     marketingCopy: [
