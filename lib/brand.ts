@@ -548,6 +548,14 @@ export const PRODUCT_KITS: ProductKit[] = [
         body: 'Turn available space into court space without giving up its future flexibility. RollX gives facilities the ability to introduce court programming over a suitable existing surface while preserving the option to use the space differently as needs change.',
       },
     ],
+    marketingStatements: {
+      powerStatements: [
+        'Court Performance Without the Permanent Footprint.',
+        'Put More Possibilities in Play.',
+        'Built for Spaces That Need to Do More.',
+        "Built for What's Next. Ready for What's Now.",
+      ],
+    },
     systemsTitle: 'RollX Key Features',
     systems: [
       {
