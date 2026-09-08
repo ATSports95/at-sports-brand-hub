@@ -373,10 +373,26 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
     ],
     marketingCopy: [
-      "Faultline is AT Sports' complete crack repair product family, providing contractors with engineered solutions for localized repairs, reinforcement, and full-court restoration. Every product is designed to integrate with Acrytech surfacing systems for consistent project results.",
-      'We use Faultline because it provides repair solutions for a wide range of crack conditions while helping reduce installation time and create smoother finished courts.',
-      'Faultline repair systems are designed to restore damaged courts while supporting long-term resurfacing performance. Multiple repair options allow contractors to recommend the right solution based on the condition of each court.',
-      'Faultline products are engineered to integrate with Acrytech surfacing systems, providing flexible repair solutions designed to reduce reflective cracking and improve finished surface consistency.',
+      {
+        label: 'Website / Product Page',
+        body: 'Faultline provides specialized crack repair products and systems developed for athletic surfaces. Designed to address cracks and surface damage as part of the restoration and resurfacing process, Faultline gives contractors targeted solutions for common court repair challenges.',
+      },
+      {
+        label: 'Distributor / Brand Description',
+        body: 'We offer Faultline repair products for contractors working with cracked and deteriorated court surfaces. The product line provides specialized solutions for addressing problem areas as part of repair, restoration, and resurfacing projects.',
+      },
+      {
+        label: 'Short Product Description',
+        body: 'Faultline provides specialized crack repair products and systems designed for court restoration and resurfacing projects.',
+      },
+      {
+        label: 'Sales / Customer Communication',
+        body: 'We supply Faultline products for contractors addressing cracks and surface damage before resurfacing. With solutions for different repair conditions, we can help identify the appropriate Faultline product or system based on the needs of the project.',
+      },
+      {
+        label: 'Facility / End-User Marketing',
+        body: "Visible cracking doesn't always mean starting over. Faultline provides repair solutions for addressing problem areas within an existing court, helping facilities restore playing surfaces and extend their serviceable life before more extensive reconstruction is considered.",
+      },
     ],
     systemsTitle: 'The Faultline Product Line',
     systems: [
