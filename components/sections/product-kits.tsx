@@ -146,32 +146,7 @@ function KitPanel({ kit }: { kit: ProductKit }) {
       {/* Systems / Levels */}
       {kit.systems && (
         <div>
-          <h3 className="text-xl font-semibold text-navy">
-            {kit.systemsTitle}
-          </h3>
-          <div className="mt-5 grid gap-4 md:grid-cols-3">
-            {kit.systems.map((sys) => (
-              <div
-                key={sys.label}
-                className="flex flex-col overflow-hidden rounded-md border border-border bg-card"
-              >
-                <div
-                  className={cn(
-                    'flex items-baseline justify-between gap-2 px-5 py-3 text-white',
-                    'bg-accent',
-                  )}
-                >
-                  <span className="font-mono text-xs tracking-wide text-black uppercase opacity-90">
-                    {sys.label}
-                  </span>
-                  <span className="text-sm font-semibold">{sys.name}</span>
-                </div>
-                <p className="flex-1 p-5 text-sm leading-relaxed text-ink/75">
-                  {sys.body}
-                </p>
-              </div>
-            ))}
-          </div>
+
         </div>
       )}
 
