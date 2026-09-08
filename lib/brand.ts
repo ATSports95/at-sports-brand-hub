@@ -265,10 +265,26 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
     ],
     marketingCopy: [
-      "CushionX is AT Sports' family of cushioned court systems designed to improve player comfort while providing flexible solutions for new construction and court renovation. Multiple system configurations allow facilities to select the composition level that best fits their project and expected court usage.",
-      'We install CushionX because it provides multiple cushioned system options that integrate with AT Sports surfacing products, allowing us to recommend the right solution for each facility and budget.',
-      'CushionX systems are designed to improve player comfort while supporting long-term court performance. Whether serving residential, club, educational, or tournament facilities, multiple cushion levels allow each project to be matched to its intended use.',
-      'CushionX systems are engineered to integrate with Acrytech acrylic coatings as part of a complete AT Sports sports surfacing system. Multiple system configurations provide varying levels of impact absorption and durability based on project requirements.',
+      {
+        label: 'Website / Product Page',
+        body: 'CushionX is a cushioned sports surfacing system engineered to reduce surface impact while maintaining consistent playability. Available in 4mm, 6mm, and 8mm cushion configurations with multiple composition levels, CushionX provides system options for residential, commercial, and high-use court environments.',
+      },
+      {
+        label: 'Distributor / Brand Description',
+        body: 'We offer CushionX cushioned court systems for tennis, pickleball, and multi-sport applications. With multiple cushion thicknesses and composition levels, CushionX allows contractors to select a system based on the performance requirements and anticipated use of each project.',
+      },
+      {
+        label: 'Short Product Description',
+        body: 'CushionX is a configurable cushioned court system providing up to 15% force reduction with 4mm, 6mm, and 8mm cushion options for a range of court environments.',
+      },
+      {
+        label: 'Sales / Customer Communication',
+        body: 'CushionX offers multiple system configurations for projects where player comfort and impact reduction are important considerations. With three composition levels and multiple cushion thicknesses available, we can help identify the appropriate system based on your project and anticipated court usage.',
+      },
+      {
+        label: 'Facility / End User Marketing',
+        body: 'CushionX helps facilities deliver a better playing experience with added comfort players can feel. Providing up to 15% force reduction while maintaining consistent playability, CushionX gives clubs and facilities a cushioned court surface designed for extended play and demanding court environments.',
+      },
     ],
     systemsTitle: 'CushionX Composition Levels',
     systems: [
