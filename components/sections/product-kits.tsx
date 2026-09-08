@@ -175,6 +175,75 @@ function KitPanel({ kit }: { kit: ProductKit }) {
         </div>
       )}
 
+      {/* Featured product */}
+      {kit.featuredProduct && (
+        <div className="overflow-hidden rounded-lg border border-sky/40 bg-black/40 backdrop-blur-sm">
+          <div className="border-b border-border bg-sky/10 px-6 py-4">
+            <span className="text-xs font-semibold tracking-wide text-sky uppercase">
+              Featured Product
+            </span>
+            <h3 className="mt-1 text-xl font-semibold text-navy">
+              {kit.featuredProduct.name}
+            </h3>
+          </div>
+          <div className="flex flex-col gap-8 p-6">
+            <p className="leading-relaxed text-ink/80">
+              {kit.featuredProduct.overview}
+            </p>
+
+            <div>
+              <h4 className="text-xs font-semibold tracking-wide text-sky uppercase">
+                Key Benefits
+              </h4>
+              <div className="mt-3 grid gap-4 sm:grid-cols-2">
+                {kit.featuredProduct.benefits.map((benefit) => (
+                  <div
+                    key={benefit.title}
+                    className="rounded-md border border-border bg-card p-5"
+                  >
+                    <h5 className="text-sm font-semibold text-accent">
+                      {benefit.title}
+                    </h5>
+                    <p className="mt-2 text-sm leading-relaxed text-ink/80">
+                      {benefit.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xs font-semibold tracking-wide text-sky uppercase">
+                Ready-to-Use Marketing Copy
+              </h4>
+              <div className="mt-3">
+                <CopyableCopy
+                  text={kit.featuredProduct.marketingCopy}
+                  index={0}
+                  label="Marketing Copy"
+                />
+              </div>
+            </div>
+
+            <div>
+              <h4 className="text-xs font-semibold tracking-wide text-sky uppercase">
+                Power Statements
+              </h4>
+              <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                {kit.featuredProduct.powerStatements.map((statement) => (
+                  <div
+                    key={statement}
+                    className="rounded-md border-l-2 border-sky bg-card px-4 py-3 text-sm font-medium text-balance text-ink/90"
+                  >
+                    {statement}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Approved marketing copy */}
       <div>
         <div className="flex items-center gap-2">

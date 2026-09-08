@@ -134,6 +134,13 @@ export type ProductKit = {
   }
   systems?: { label: string; name: string; body: string }[]
   systemsTitle?: string
+  featuredProduct?: {
+    name: string
+    overview: string
+    benefits: { title: string; body: string }[]
+    marketingCopy: string
+    powerStatements: string[]
+  }
   logoGuidelines: string[]
 }
 
@@ -450,6 +457,37 @@ export const PRODUCT_KITS: ProductKit[] = [
         body: 'Professional-grade surface repair products and flexible adhesive technologies engineered for efficient, consistent results across both localized repairs and full-court restoration projects.',
       },
     ],
+    featuredProduct: {
+      name: 'Faultline Crack Repair Kit',
+      overview:
+        'A patent-pending, fully adhered crack repair system developed to help reduce reflective cracking while maintaining predictable playability and surface integrity. With a completed thickness of only 1.1mm, Faultline provides reinforced crack repair without excessive buildup beneath the finished surface.',
+      benefits: [
+        {
+          title: 'Only 1.1mm Thick',
+          body: 'Thin-profile construction helps maintain smooth transitions beneath resurfacer and color coatings.',
+        },
+        {
+          title: 'Fully Adhered',
+          body: 'Reinforcement layers improve bonding and help reduce membrane movement at the repaired area.',
+        },
+        {
+          title: 'Reinforced Flexibility',
+          body: 'Polyfiber\u2122 membrane and Faultline tape are designed to flex with the court and help manage movement.',
+        },
+        {
+          title: 'Consistent Ball Response',
+          body: 'Designed to maintain consistent ball bounce across repaired areas without excessive surface buildup.',
+        },
+      ],
+      marketingCopy:
+        'The Faultline Crack Repair Kit is a patent-pending, fully adhered system designed to help reduce reflective cracking. At only 1.1mm completed thickness, its reinforced construction minimizes surface buildup while helping maintain consistent playability across repaired areas.',
+      powerStatements: [
+        'Thin Profile. Reinforced Repair.',
+        'Only 1.1mm. Built to Perform.',
+        'Designed to Reduce Reflective Cracking.',
+        'Fully Adhered. Purpose-Built for Crack Repair.',
+      ],
+    },
     logoGuidelines: [
       'Use only official Faultline logos provided by AT Sports.',
       'When appropriate, reference Faultline as \u201cA Division of AT Sports.\u201d',
