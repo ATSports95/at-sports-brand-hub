@@ -128,12 +128,19 @@ export type ProductKit = {
   positioning: { title: string; body: string }[]
   marketingCopy: (string | { label: string; body: string })[]
   marketingStatements?: {
-    intro: string
+    intro?: string
     powerStatements: string[]
-    benefitStatements: { title: string; body: string }[]
+    benefitStatements?: { title: string; body: string }[]
   }
   systems?: { label: string; name: string; body: string }[]
   systemsTitle?: string
+  featuredProduct?: {
+    name: string
+    overview: string
+    benefits: { title: string; body: string }[]
+    marketingCopy: string
+    powerStatements: string[]
+  }
   logoGuidelines: string[]
 }
 
@@ -221,10 +228,6 @@ export const PRODUCT_KITS: ProductKit[] = [
           body: 'Acrytech products are developed around the demands of sports surfacing professionals, with formulations designed to support efficient application and dependable results in the field.',
         },
         {
-          title: 'Manufacturer-Backed Support',
-          body: 'Acrytech is backed by product knowledge and technical expertise from a manufacturer focused specifically on sports surfacing systems.',
-        },
-        {
           title: 'Proven Performance',
           body: 'As the Official Surface of the PPA and MLP, Acrytech brings the consistency and performance trusted at the professional level to court projects across a wide range of applications.',
         },
@@ -244,53 +247,98 @@ export const PRODUCT_KITS: ProductKit[] = [
     tagline: 'Engineered comfort. Designed for performance. Built to simplify installation.',
     accentClass: 'bg-navy',
     overview: [
-      'CushionX is the Cushion Sport Surface Division of AT Sports, specializing in cushioned overlay systems for tennis, pickleball, basketball, and multi-sport applications. The product line includes multiple system configurations designed to increase force reduction while supporting a wide range of facility types and performance requirements.',
-      'Available in multiple performance levels, CushionX systems allow sports surfaces to be tailored to the intended use, level of play, and project objectives.',
+      'CushionX is the Cushion Sports Surface Division of AT Sports, providing cushioned court systems engineered to reduce surface impact while maintaining consistent playability. Available in 4mm, 6mm, and 8mm configurations with multiple composition levels, CushionX can be specified for residential, commercial, and high-use court environments.',
     ],
     positioning: [
       {
-        title: 'Player Comfort',
-        body: 'Designed to improve impact absorption while maintaining consistent ball response and playability.',
+        title: 'Enhanced Player Comfort',
+        body: 'Engineered to provide force reduction of up to 15%, helping reduce surface impact and fatigue during extended play.',
       },
       {
-        title: 'Flexible System Options',
-        body: 'Multiple system configurations allow facilities to match cushion performance to project goals, budget, and expected court usage.',
+        title: 'Configurable Cushion Systems',
+        body: 'Available in 4mm, 6mm, and 8mm cushion configurations with multiple composition levels to address different project requirements and use environments.',
       },
       {
-        title: 'Extend Court Life',
-        body: 'Engineered to support renovation strategies that help facilities maximize existing court infrastructure while reducing project disruption.',
+        title: 'Consistent Playability',
+        body: 'Designed to add cushioning beneath the playing surface while maintaining the consistent playing characteristics expected across tennis, pickleball, and multi-sport applications.',
       },
       {
-        title: 'Built for Every Level of Play',
-        body: 'Suitable for residential, commercial, club, municipal, educational, and tournament environments through multiple system configurations.',
+        title: 'Built for the Application',
+        body: 'Three composition levels provide system options for residential, commercial, and high-use environments, allowing system construction to align with anticipated court usage.',
       },
       {
-        title: 'Integrated Court System',
-        body: 'Designed to work with Acrytech acrylic coatings as part of a complete AT Sports sports surfacing system.',
+        title: 'Manufacturer Backed',
+        body: 'Engineered and manufactured by AT Sports, providing system quality control, product expertise, and technical support.',
       },
     ],
     marketingCopy: [
-      "CushionX is AT Sports' family of cushioned court systems designed to improve player comfort while providing flexible solutions for new construction and court renovation. Multiple system configurations allow facilities to select the composition level that best fits their project and expected court usage.",
-      'We install CushionX because it provides multiple cushioned system options that integrate with AT Sports surfacing products, allowing us to recommend the right solution for each facility and budget.',
-      'CushionX systems are designed to improve player comfort while supporting long-term court performance. Whether serving residential, club, educational, or tournament facilities, multiple cushion levels allow each project to be matched to its intended use.',
-      'CushionX systems are engineered to integrate with Acrytech acrylic coatings as part of a complete AT Sports sports surfacing system. Multiple system configurations provide varying levels of impact absorption and durability based on project requirements.',
+      {
+        label: 'Website / Product Page',
+        body: 'CushionX is a cushioned sports surfacing system engineered to reduce surface impact while maintaining consistent playability. Available in 4mm, 6mm, and 8mm cushion configurations with multiple composition levels, CushionX provides system options for residential, commercial, and high-use court environments.',
+      },
+      {
+        label: 'Distributor / Brand Description',
+        body: 'We offer CushionX cushioned court systems for tennis, pickleball, and multi-sport applications. With multiple cushion thicknesses and composition levels, CushionX allows contractors to select a system based on the performance requirements and anticipated use of each project.',
+      },
+      {
+        label: 'Short Product Description',
+        body: 'CushionX is a configurable cushioned court system providing up to 15% force reduction with 4mm, 6mm, and 8mm cushion options for a range of court environments.',
+      },
+      {
+        label: 'Sales / Customer Communication',
+        body: 'CushionX offers multiple system configurations for projects where player comfort and impact reduction are important considerations. With three composition levels and multiple cushion thicknesses available, we can help identify the appropriate system based on your project and anticipated court usage.',
+      },
+      {
+        label: 'Facility / End User Marketing',
+        body: 'CushionX helps facilities deliver a better playing experience with added comfort players can feel. Providing up to 15% force reduction while maintaining consistent playability, CushionX gives clubs and facilities a cushioned court surface designed for extended play and demanding court environments.',
+      },
     ],
+    marketingStatements: {
+      powerStatements: [
+        'Comfort Built Into the Court.',
+        'Up to 15% Force Reduction.',
+        'Cushioned for Comfort. Engineered for Play.',
+        'Performance From the Surface Down.',
+        '4mm. 6mm. 8mm. Cushion Your Way.',
+        'Built Around the Way the Court Will Be Used.',
+        'Multiple Systems. One CushionX Platform.',
+        'Court Cushioning Backed by Manufacturing Expertise.',
+      ],
+      benefitStatements: [
+        {
+          title: 'Measurable Force Reduction',
+          body: 'CushionX provides up to 15% force reduction, helping reduce the impact players experience during movement and extended play.',
+        },
+        {
+          title: 'Choice of Cushion Thickness',
+          body: 'Choose from 4mm, 6mm, or 8mm cushion configurations to achieve the appropriate level of cushioning for the project.',
+        },
+        {
+          title: 'Consistent Playability',
+          body: 'CushionX adds impact absorption beneath the surface while maintaining consistent playing characteristics across the court.',
+        },
+        {
+          title: 'Long-Term System Durability',
+          body: 'Composition options allow the system construction to be matched to anticipated usage, with reinforced components available for more demanding commercial and high-use environments.',
+        },
+      ],
+    },
     systemsTitle: 'CushionX Composition Levels',
     systems: [
       {
         label: 'Level 1',
-        name: 'Residential Usage Only',
-        body: 'Ideal for homes and light-use courts, Level 1 includes a 4mm, 6mm, or 8mm cushion mat offering durability and comfort for recreational play.',
+        name: 'Residential',
+        body: 'Designed for residential and light-use courts. Available with 4mm, 6mm, or 8mm cushion and three layers of flexible coatings for added comfort and durability.',
       },
       {
         label: 'Level 2',
-        name: 'Light & Moderate Commercial',
-        body: 'Level 2 improve durability and resilience of Level 1 by incorporating an extra reinforced membrane layer to meet the demands of commercial environments.',
+        name: 'Commercial',
+        body: 'Designed for light to moderate commercial use. Builds on Level 1 with an additional reinforced membrane layer for increased resilience in commercial court environments.',
       },
       {
         label: 'Level 3',
         name: 'High-Use Commercial & Tournament',
-        body: 'Level 3 offers the maximum system configuration with adding three layers of urethane flex coatings for facilities requiring the highest levels of comfort, durability, and long-term performance.',
+        body: 'Designed for demanding commercial and tournament environments. Builds on Level 2 with three layers of urethane flex coatings for increased durability, impact absorption, and comfort under heavier use.',
       },
     ],
     logoGuidelines: [
@@ -307,8 +355,7 @@ export const PRODUCT_KITS: ProductKit[] = [
     tagline: 'Smarter crack repair. Faster installation. Better results.',
     accentClass: 'bg-sky',
     overview: [
-      'Faultline is the Crack Repair Division of AT Sports, specializing in sports surface crack repair systems for tennis, pickleball, basketball, and multi-sport applications. The product line includes repair systems, reinforcement products, and restoration materials designed to address a wide range of surface conditions before resurfacing.',
-      'From isolated cracks to large-scale restoration projects, Faultline provides repair solutions for varying surface conditions and project requirements.',
+      'Faultline is the Crack Repair Division of AT Sports, providing specialized products and systems for addressing cracks and surface damage in sports courts. From targeted crack repair to more comprehensive repair needs, Faultline gives contractors solutions designed specifically for the demands of court restoration and resurfacing projects.',
     ],
     positioning: [
       {
@@ -333,11 +380,65 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
     ],
     marketingCopy: [
-      "Faultline is AT Sports' complete crack repair product family, providing contractors with engineered solutions for localized repairs, reinforcement, and full-court restoration. Every product is designed to integrate with Acrytech surfacing systems for consistent project results.",
-      'We use Faultline because it provides repair solutions for a wide range of crack conditions while helping reduce installation time and create smoother finished courts.',
-      'Faultline repair systems are designed to restore damaged courts while supporting long-term resurfacing performance. Multiple repair options allow contractors to recommend the right solution based on the condition of each court.',
-      'Faultline products are engineered to integrate with Acrytech surfacing systems, providing flexible repair solutions designed to reduce reflective cracking and improve finished surface consistency.',
+      {
+        label: 'Website / Product Page',
+        body: 'Faultline provides specialized crack repair products and systems developed for athletic surfaces. Designed to address cracks and surface damage as part of the restoration and resurfacing process, Faultline gives contractors targeted solutions for common court repair challenges.',
+      },
+      {
+        label: 'Distributor / Brand Description',
+        body: 'We offer Faultline repair products for contractors working with cracked and deteriorated court surfaces. The product line provides specialized solutions for addressing problem areas as part of repair, restoration, and resurfacing projects.',
+      },
+      {
+        label: 'Short Product Description',
+        body: 'Faultline provides specialized crack repair products and systems designed for court restoration and resurfacing projects.',
+      },
+      {
+        label: 'Sales / Customer Communication',
+        body: 'We supply Faultline products for contractors addressing cracks and surface damage before resurfacing. With solutions for different repair conditions, we can help identify the appropriate Faultline product or system based on the needs of the project.',
+      },
+      {
+        label: 'Facility / End-User Marketing',
+        body: "Visible cracking doesn't always mean starting over. Faultline provides repair solutions for addressing problem areas within an existing court, helping facilities restore playing surfaces and extend their serviceable life before more extensive reconstruction is considered.",
+      },
     ],
+    marketingStatements: {
+      powerStatements: [
+        'Court Cracks Require Court-Specific Solutions.',
+        'Repair the Problem. Restore the Surface.',
+        'Built for Cracks. Designed for Courts.',
+        'Target the Damage. Preserve the Surface.',
+        'Specialized Solutions for Court Repair.',
+        'A Smarter Approach to Court Cracks.',
+        'Extend the Potential of the Existing Surface.',
+        'Court Repair Backed by Sports Surfacing Expertise.',
+      ],
+      benefitStatements: [
+        {
+          title: 'Court-Specific Repair',
+          body: 'Faultline products are developed around the unique requirements of athletic surfaces, giving contractors specialized solutions for court repair and resurfacing.',
+        },
+        {
+          title: 'Targeted Problem Solving',
+          body: 'Address cracks and damaged areas where they occur, allowing contractors to focus repair efforts on specific conditions before resurfacing.',
+        },
+        {
+          title: 'Restoration Before Replacement',
+          body: 'Faultline provides repair options that can help extend the serviceable life of an existing surface before more extensive restoration or reconstruction is considered.',
+        },
+        {
+          title: 'Finished-Surface Consideration',
+          body: 'Faultline solutions are designed with the finished playing surface in mind, helping contractors manage repairs while minimizing unnecessary buildup beneath subsequent coatings.',
+        },
+        {
+          title: 'Specialized Product Options',
+          body: 'A range of repair products gives contractors options for different crack conditions, repair requirements, and project scopes.',
+        },
+        {
+          title: 'Manufacturer-Backed Expertise',
+          body: 'Faultline is backed by product knowledge and technical expertise from a manufacturer focused specifically on sports surfacing systems.',
+        },
+      ],
+    },
     systemsTitle: 'The Faultline Product Line',
     systems: [
       {
@@ -356,6 +457,37 @@ export const PRODUCT_KITS: ProductKit[] = [
         body: 'Professional-grade surface repair products and flexible adhesive technologies engineered for efficient, consistent results across both localized repairs and full-court restoration projects.',
       },
     ],
+    featuredProduct: {
+      name: 'Faultline Crack Repair Kit',
+      overview:
+        'A patent-pending, fully adhered crack repair system developed to help reduce reflective cracking while maintaining predictable playability and surface integrity. With a completed thickness of only 1.1mm, Faultline provides reinforced crack repair without excessive buildup beneath the finished surface.',
+      benefits: [
+        {
+          title: 'Only 1.1mm Thick',
+          body: 'Thin-profile construction helps maintain smooth transitions beneath resurfacer and color coatings.',
+        },
+        {
+          title: 'Fully Adhered',
+          body: 'Reinforcement layers improve bonding and help reduce membrane movement at the repaired area.',
+        },
+        {
+          title: 'Reinforced Flexibility',
+          body: 'Polyfiber\u2122 membrane and Faultline tape are designed to flex with the court and help manage movement.',
+        },
+        {
+          title: 'Consistent Ball Response',
+          body: 'Designed to maintain consistent ball bounce across repaired areas without excessive surface buildup.',
+        },
+      ],
+      marketingCopy:
+        'The Faultline Crack Repair Kit is a patent-pending, fully adhered system designed to help reduce reflective cracking. At only 1.1mm completed thickness, its reinforced construction minimizes surface buildup while helping maintain consistent playability across repaired areas.',
+      powerStatements: [
+        'Thin Profile. Reinforced Repair.',
+        'Only 1.1mm. Built to Perform.',
+        'Designed to Reduce Reflective Cracking.',
+        'Fully Adhered. Purpose-Built for Crack Repair.',
+      ],
+    },
     logoGuidelines: [
       'Use only official Faultline logos provided by AT Sports.',
       'When appropriate, reference Faultline as \u201cA Division of AT Sports.\u201d',
@@ -395,11 +527,57 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
     ],
     marketingCopy: [
-      "RollX is AT Sports' portable court system designed to create professional-quality playing surfaces without permanent court construction. Ideal for events, schools, clubs, and multi-purpose facilities, RollX expands where sports can be played.",
-      'RollX helps facilities maximize existing space by creating temporary courts that can be installed, removed, and stored as programming needs change.',
-      'RollX provides event organizers and venue operators with a portable sports surface that delivers consistent playability while supporting rapid deployment and customized branding opportunities.',
-      'Manufactured by AT Sports, RollX combines dependable performance, portable deployment, and flexible venue solutions to help facilities create new opportunities for sports without permanent infrastructure.',
+      {
+        label: 'Website / Product Page',
+        body: 'RollX is a prefabricated court surface designed for facilities, events, and spaces where flexibility matters. Installed over a hard, level underlying surface, RollX creates a dedicated playing surface without requiring the space to be permanently committed to traditional court construction.',
+      },
+      {
+        label: 'Distributor / Brand Description',
+        body: 'We offer RollX prefabricated court surfaces for indoor and outdoor applications where a flexible court solution is needed. RollX provides an alternative to permanent surfacing for facilities, events, and multi-purpose spaces with a suitable hard, level underlying surface.',
+      },
+      {
+        label: 'Short Product Description',
+        body: 'RollX is a prefabricated court surface that installs over a hard, level underlying surface, providing a flexible option for temporary, event-based, and multi-purpose court applications.',
+      },
+      {
+        label: 'Sales / Customer Communication',
+        body: 'RollX provides another option when a project needs a playing surface without permanently dedicating the existing space to a court. Its prefabricated construction makes it well suited for facilities, events, and multi-purpose environments where flexibility is an important part of the project.',
+      },
+      {
+        label: 'Facility / End-User Marketing',
+        body: 'Turn available space into court space without giving up its future flexibility. RollX gives facilities the ability to introduce court programming over a suitable existing surface while preserving the option to use the space differently as needs change.',
+      },
     ],
+    marketingStatements: {
+      powerStatements: [
+        'Court Performance Without the Permanent Footprint.',
+        'Put More Possibilities in Play.',
+        'Built for Spaces That Need to Do More.',
+        "Built for What's Next. Ready for What's Now.",
+      ],
+      benefitStatements: [
+        {
+          title: 'Space Flexibility',
+          body: 'RollX allows facilities to introduce court programming while maintaining greater flexibility in how the underlying space can be used over time.',
+        },
+        {
+          title: 'Reduced Permanent Construction',
+          body: 'The prefabricated surface provides an alternative for projects where traditional permanent court construction may not align with the space, project scope, or long-term plans.',
+        },
+        {
+          title: 'Indoor & Outdoor Options',
+          body: 'RollX can support appropriate indoor and outdoor applications when installed over a suitable hard, level underlying surface.',
+        },
+        {
+          title: 'Event & Temporary Use',
+          body: 'Prefabricated construction makes RollX a strong option for temporary courts, event installations, demonstrations, and other applications where a permanent court is not required.',
+        },
+        {
+          title: 'Manufacturer-Backed Expertise',
+          body: 'RollX is backed by product knowledge and technical expertise from a manufacturer focused specifically on sports surfacing systems.',
+        },
+      ],
+    },
     systemsTitle: 'RollX Key Features',
     systems: [
       {
