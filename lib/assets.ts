@@ -17,7 +17,8 @@ export const ASSET_LINKS = {
   fontsGuide: 'DROPBOX_LINK_HERE',
   templates: 'DROPBOX_LINK_HERE',
   overviewDeck: 'DROPBOX_LINK_HERE',
-  hubPdf: 'DROPBOX_LINK_HERE',
+  hubPdf:
+    'https://www.dropbox.com/scl/fo/tds26nigczrk8wptl777w/AMfo0MyJzhCAgxOdOArhFG0?rlkey=6sety2zjwptugebz93j2z3e8v&dl=0',
 } as const
 
 export type AssetKey = keyof typeof ASSET_LINKS
