@@ -555,6 +555,28 @@ export const PRODUCT_KITS: ProductKit[] = [
         'Built for Spaces That Need to Do More.',
         "Built for What's Next. Ready for What's Now.",
       ],
+      benefitStatements: [
+        {
+          title: 'Space Flexibility',
+          body: 'RollX allows facilities to introduce court programming while maintaining greater flexibility in how the underlying space can be used over time.',
+        },
+        {
+          title: 'Reduced Permanent Construction',
+          body: 'The prefabricated surface provides an alternative for projects where traditional permanent court construction may not align with the space, project scope, or long-term plans.',
+        },
+        {
+          title: 'Indoor & Outdoor Options',
+          body: 'RollX can support appropriate indoor and outdoor applications when installed over a suitable hard, level underlying surface.',
+        },
+        {
+          title: 'Event & Temporary Use',
+          body: 'Prefabricated construction makes RollX a strong option for temporary courts, event installations, demonstrations, and other applications where a permanent court is not required.',
+        },
+        {
+          title: 'Manufacturer-Backed Expertise',
+          body: 'RollX is backed by product knowledge and technical expertise from a manufacturer focused specifically on sports surfacing systems.',
+        },
+      ],
     },
     systemsTitle: 'RollX Key Features',
     systems: [
