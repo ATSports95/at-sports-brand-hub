@@ -297,6 +297,24 @@ export const PRODUCT_KITS: ProductKit[] = [
         'Multiple Systems. One CushionX Platform.',
         'Court Cushioning Backed by Manufacturing Expertise.',
       ],
+      benefitStatements: [
+        {
+          title: 'Measurable Force Reduction',
+          body: 'CushionX provides up to 15% force reduction, helping reduce the impact players experience during movement and extended play.',
+        },
+        {
+          title: 'Choice of Cushion Thickness',
+          body: 'Choose from 4mm, 6mm, or 8mm cushion configurations to achieve the appropriate level of cushioning for the project.',
+        },
+        {
+          title: 'Consistent Playability',
+          body: 'CushionX adds impact absorption beneath the surface while maintaining consistent playing characteristics across the court.',
+        },
+        {
+          title: 'Long-Term System Durability',
+          body: 'Composition options allow the system construction to be matched to anticipated usage, with reinforced components available for more demanding commercial and high-use environments.',
+        },
+      ],
     },
     systemsTitle: 'CushionX Composition Levels',
     systems: [
