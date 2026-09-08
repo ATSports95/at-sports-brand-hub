@@ -405,6 +405,32 @@ export const PRODUCT_KITS: ProductKit[] = [
         'Extend the Potential of the Existing Surface.',
         'Court Repair Backed by Sports Surfacing Expertise.',
       ],
+      benefitStatements: [
+        {
+          title: 'Court-Specific Repair',
+          body: 'Faultline products are developed around the unique requirements of athletic surfaces, giving contractors specialized solutions for court repair and resurfacing.',
+        },
+        {
+          title: 'Targeted Problem Solving',
+          body: 'Address cracks and damaged areas where they occur, allowing contractors to focus repair efforts on specific conditions before resurfacing.',
+        },
+        {
+          title: 'Restoration Before Replacement',
+          body: 'Faultline provides repair options that can help extend the serviceable life of an existing surface before more extensive restoration or reconstruction is considered.',
+        },
+        {
+          title: 'Finished-Surface Consideration',
+          body: 'Faultline solutions are designed with the finished playing surface in mind, helping contractors manage repairs while minimizing unnecessary buildup beneath subsequent coatings.',
+        },
+        {
+          title: 'Specialized Product Options',
+          body: 'A range of repair products gives contractors options for different crack conditions, repair requirements, and project scopes.',
+        },
+        {
+          title: 'Manufacturer-Backed Expertise',
+          body: 'Faultline is backed by product knowledge and technical expertise from a manufacturer focused specifically on sports surfacing systems.',
+        },
+      ],
     },
     systemsTitle: 'The Faultline Product Line',
     systems: [
