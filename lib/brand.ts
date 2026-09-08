@@ -320,18 +320,18 @@ export const PRODUCT_KITS: ProductKit[] = [
     systems: [
       {
         label: 'Level 1',
-        name: 'Residential Usage Only',
-        body: 'Ideal for homes and light-use courts, Level 1 includes a 4mm, 6mm, or 8mm cushion mat offering durability and comfort for recreational play.',
+        name: 'Residential',
+        body: 'Designed for residential and light-use courts. Available with 4mm, 6mm, or 8mm cushion and three layers of flexible coatings for added comfort and durability.',
       },
       {
         label: 'Level 2',
-        name: 'Light & Moderate Commercial',
-        body: 'Level 2 improve durability and resilience of Level 1 by incorporating an extra reinforced membrane layer to meet the demands of commercial environments.',
+        name: 'Commercial',
+        body: 'Designed for light to moderate commercial use. Builds on Level 1 with an additional reinforced membrane layer for increased resilience in commercial court environments.',
       },
       {
         label: 'Level 3',
         name: 'High-Use Commercial & Tournament',
-        body: 'Level 3 offers the maximum system configuration with adding three layers of urethane flex coatings for facilities requiring the highest levels of comfort, durability, and long-term performance.',
+        body: 'Designed for demanding commercial and tournament environments. Builds on Level 2 with three layers of urethane flex coatings for increased durability, impact absorption, and comfort under heavier use.',
       },
     ],
     logoGuidelines: [
