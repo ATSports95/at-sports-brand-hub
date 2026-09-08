@@ -221,10 +221,6 @@ export const PRODUCT_KITS: ProductKit[] = [
           body: 'Acrytech products are developed around the demands of sports surfacing professionals, with formulations designed to support efficient application and dependable results in the field.',
         },
         {
-          title: 'Manufacturer-Backed Support',
-          body: 'Acrytech is backed by product knowledge and technical expertise from a manufacturer focused specifically on sports surfacing systems.',
-        },
-        {
           title: 'Proven Performance',
           body: 'As the Official Surface of the PPA and MLP, Acrytech brings the consistency and performance trusted at the professional level to court projects across a wide range of applications.',
         },
