@@ -527,10 +527,26 @@ export const PRODUCT_KITS: ProductKit[] = [
       },
     ],
     marketingCopy: [
-      "RollX is AT Sports' portable court system designed to create professional-quality playing surfaces without permanent court construction. Ideal for events, schools, clubs, and multi-purpose facilities, RollX expands where sports can be played.",
-      'RollX helps facilities maximize existing space by creating temporary courts that can be installed, removed, and stored as programming needs change.',
-      'RollX provides event organizers and venue operators with a portable sports surface that delivers consistent playability while supporting rapid deployment and customized branding opportunities.',
-      'Manufactured by AT Sports, RollX combines dependable performance, portable deployment, and flexible venue solutions to help facilities create new opportunities for sports without permanent infrastructure.',
+      {
+        label: 'Website / Product Page',
+        body: 'RollX is a prefabricated court surface designed for facilities, events, and spaces where flexibility matters. Installed over a hard, level underlying surface, RollX creates a dedicated playing surface without requiring the space to be permanently committed to traditional court construction.',
+      },
+      {
+        label: 'Distributor / Brand Description',
+        body: 'We offer RollX prefabricated court surfaces for indoor and outdoor applications where a flexible court solution is needed. RollX provides an alternative to permanent surfacing for facilities, events, and multi-purpose spaces with a suitable hard, level underlying surface.',
+      },
+      {
+        label: 'Short Product Description',
+        body: 'RollX is a prefabricated court surface that installs over a hard, level underlying surface, providing a flexible option for temporary, event-based, and multi-purpose court applications.',
+      },
+      {
+        label: 'Sales / Customer Communication',
+        body: 'RollX provides another option when a project needs a playing surface without permanently dedicating the existing space to a court. Its prefabricated construction makes it well suited for facilities, events, and multi-purpose environments where flexibility is an important part of the project.',
+      },
+      {
+        label: 'Facility / End-User Marketing',
+        body: 'Turn available space into court space without giving up its future flexibility. RollX gives facilities the ability to introduce court programming over a suitable existing surface while preserving the option to use the space differently as needs change.',
+      },
     ],
     systemsTitle: 'RollX Key Features',
     systems: [
