@@ -61,7 +61,14 @@ function CopyableCopy({
   )
 }
 
-function KitPanel({ kit }: { kit: ProductKit }) {
+function KitPanel({
+  kit,
+  audience = 'partner',
+}: {
+  kit: ProductKit
+  audience?: 'partner' | 'public'
+}) {
+  const isPublic = audience === 'public'
   return (
     <div className="flex flex-col gap-10">
       {/* Header band */}
@@ -114,34 +121,38 @@ function KitPanel({ kit }: { kit: ProductKit }) {
         </div>
       </div>
 
-      {/* Positioning */}
-      <div>
-        <h3 className="text-xl font-semibold text-navy">Brand Positioning</h3>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
-          Approved {kit.name} messaging for use in your website, proposals,
-          social media, and customer-facing marketing materials.
-        </p>
-        <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {kit.positioning.map((item) => (
-            <div
-              key={item.title}
-              className="flex flex-col gap-2 rounded-md border border-border bg-black/40 p-5 backdrop-blur-sm"
-            >
-              <div className="flex items-center gap-2">
-                <span
-                  className={cn(
-                    'flex size-6 shrink-0 items-center justify-center rounded-full bg-[var(--slate)] text-white',
-                  )}
-                >
-                  <Check className="size-3.5" />
-                </span>
-                <h4 className="font-semibold text-navy">{item.title}</h4>
+      {/* Positioning — partner-only detailed brand positioning */}
+      {!isPublic && (
+        <div>
+          <h3 className="text-xl font-semibold text-navy">Brand Positioning</h3>
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
+            Approved {kit.name} messaging for use in your website, proposals,
+            social media, and customer-facing marketing materials.
+          </p>
+          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {kit.positioning.map((item) => (
+              <div
+                key={item.title}
+                className="flex flex-col gap-2 rounded-md border border-border bg-black/40 p-5 backdrop-blur-sm"
+              >
+                <div className="flex items-center gap-2">
+                  <span
+                    className={cn(
+                      'flex size-6 shrink-0 items-center justify-center rounded-full bg-[var(--slate)] text-white',
+                    )}
+                  >
+                    <Check className="size-3.5" />
+                  </span>
+                  <h4 className="font-semibold text-navy">{item.title}</h4>
+                </div>
+                <p className="text-sm leading-relaxed text-ink/70">
+                  {item.body}
+                </p>
               </div>
-              <p className="text-sm leading-relaxed text-ink/70">{item.body}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Systems / Levels */}
       {kit.systems && (
@@ -150,31 +161,34 @@ function KitPanel({ kit }: { kit: ProductKit }) {
         </div>
       )}
 
-      {/* Approved marketing copy */}
-      <div>
-        <div className="flex items-center gap-2">
-          <FileText className="size-5 text-sky" />
-          <h3 className="text-xl font-semibold text-navy">
-            Marketing Copy Library
-          </h3>
+      {/* Approved marketing copy — partner-only full copy library */}
+      {!isPublic && (
+        <div>
+          <div className="flex items-center gap-2">
+            <FileText className="size-5 text-sky" />
+            <h3 className="text-xl font-semibold text-navy">
+              Marketing Copy Library
+            </h3>
+          </div>
+          <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
+            Core positioning points that define how {kit.name} should be
+            represented in the market.
+          </p>
+          <div className="mt-5 grid gap-4 lg:grid-cols-2">
+            {kit.marketingCopy.map((copy, i) => (
+              <CopyableCopy
+                key={i}
+                text={typeof copy === 'string' ? copy : copy.body}
+                label={typeof copy === 'string' ? undefined : copy.label}
+                index={i}
+              />
+            ))}
+          </div>
         </div>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
-          Core positioning points that define how Acrytech should be represented in the market.
-        </p>
-        <div className="mt-5 grid gap-4 lg:grid-cols-2">
-          {kit.marketingCopy.map((copy, i) => (
-            <CopyableCopy
-              key={i}
-              text={typeof copy === 'string' ? copy : copy.body}
-              label={typeof copy === 'string' ? undefined : copy.label}
-              index={i}
-            />
-          ))}
-        </div>
-      </div>
+      )}
 
-      {/* Marketing statements */}
-      {kit.marketingStatements && (
+      {/* Marketing statements — partner-only */}
+      {!isPublic && kit.marketingStatements && (
         <div>
           <div className="flex items-center gap-2">
             <Megaphone className="size-5 text-sky" />
@@ -258,34 +272,38 @@ function KitPanel({ kit }: { kit: ProductKit }) {
               </div>
             </div>
 
-            <div>
-              <h4 className="text-xs font-semibold tracking-wide text-sky uppercase">
-                Ready-to-Use Marketing Copy
-              </h4>
-              <div className="mt-3">
-                <CopyableCopy
-                  text={kit.featuredProduct.marketingCopy}
-                  index={0}
-                  label="Marketing Copy"
-                />
-              </div>
-            </div>
-
-            <div>
-              <h4 className="text-xs font-semibold tracking-wide text-sky uppercase">
-                Power Statements
-              </h4>
-              <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                {kit.featuredProduct.powerStatements.map((statement) => (
-                  <div
-                    key={statement}
-                    className="rounded-md border-l-2 border-sky bg-card px-4 py-3 text-sm font-medium text-balance text-ink/90"
-                  >
-                    {statement}
+            {!isPublic && (
+              <>
+                <div>
+                  <h4 className="text-xs font-semibold tracking-wide text-sky uppercase">
+                    Ready-to-Use Marketing Copy
+                  </h4>
+                  <div className="mt-3">
+                    <CopyableCopy
+                      text={kit.featuredProduct.marketingCopy}
+                      index={0}
+                      label="Marketing Copy"
+                    />
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
+
+                <div>
+                  <h4 className="text-xs font-semibold tracking-wide text-sky uppercase">
+                    Power Statements
+                  </h4>
+                  <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                    {kit.featuredProduct.powerStatements.map((statement) => (
+                      <div
+                        key={statement}
+                        className="rounded-md border-l-2 border-sky bg-card px-4 py-3 text-sm font-medium text-balance text-ink/90"
+                      >
+                        {statement}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </>
+            )}
           </div>
         </div>
       )}
@@ -294,7 +312,12 @@ function KitPanel({ kit }: { kit: ProductKit }) {
   )
 }
 
-export function ProductKits() {
+export function ProductKits({
+  audience = 'partner',
+}: {
+  audience?: 'partner' | 'public'
+}) {
+  const isPublic = audience === 'public'
   const [activeId, setActiveId] = useState<ProductKit['id']>(
     PRODUCT_KITS[0].id,
   )
@@ -304,9 +327,17 @@ export function ProductKits() {
   return (
     <Section id="kits">
       <SectionHeading
-        eyebrow="Product Brand Kits"
-        title="Approved Positioning by Product"
-        intro="Each AT Sports product line has its own approved overview, benefit messaging, and marketing copy. Select a product to view its brand kit — everything here is cleared for partner use across websites, proposals, and marketing materials."
+        eyebrow={isPublic ? 'Product Brands' : 'Product Brand Kits'}
+        title={
+          isPublic
+            ? 'AT Sports Product Brands'
+            : 'Approved Positioning by Product'
+        }
+        intro={
+          isPublic
+            ? 'AT Sports manufactures a family of professional sports surfacing product lines. Select a product to view its overview and system options.'
+            : 'Each AT Sports product line has its own approved overview, benefit messaging, and marketing copy. Select a product to view its brand kit — everything here is cleared for partner use across websites, proposals, and marketing materials.'
+        }
       />
 
       {/* Product tabs */}
@@ -341,23 +372,25 @@ export function ProductKits() {
       </div>
 
       <div className="mt-8">
-        <KitPanel kit={activeKit} />
+        <KitPanel kit={activeKit} audience={audience} />
       </div>
 
-      {/* Approval note */}
-      <div className="mt-10 rounded-md border-l-4 border-sky bg-card px-5 py-4">
-        <p className="text-sm leading-relaxed text-ink/80">
-          Any newly created marketing content, product claims, or messaging
-          outside of the approved language above should be reviewed and approved
-          by the AT Sports Marketing Department prior to publication.{' '}
-          <a
-            href="mailto:malory@atsports.com"
-            className="font-medium text-sky underline underline-offset-2"
-          >
-            malory@atsports.com
-          </a>
-        </p>
-      </div>
+      {/* Approval note — partner-only */}
+      {!isPublic && (
+        <div className="mt-10 rounded-md border-l-4 border-sky bg-card px-5 py-4">
+          <p className="text-sm leading-relaxed text-ink/80">
+            Any newly created marketing content, product claims, or messaging
+            outside of the approved language above should be reviewed and
+            approved by the AT Sports Marketing Department prior to publication.{' '}
+            <a
+              href="mailto:malory@atsports.com"
+              className="font-medium text-sky underline underline-offset-2"
+            >
+              malory@atsports.com
+            </a>
+          </p>
+        </div>
+      )}
     </Section>
   )
 }

@@ -1,15 +1,15 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { NAV_ITEMS } from '@/lib/brand'
+import { NAV_ITEMS, type NavItem } from '@/lib/brand'
 import { LogoTile } from '@/components/logo-tile'
 import { SiteSearch } from '@/components/site-search'
 import { PARTNER_EDITION, type Edition } from '@/lib/editions'
 
-function useScrollSpy() {
-  const [active, setActive] = useState(NAV_ITEMS[0].id)
+function useScrollSpy(items: NavItem[]) {
+  const [active, setActive] = useState(items[0]?.id ?? NAV_ITEMS[0].id)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,26 +22,28 @@ function useScrollSpy() {
       { rootMargin: '-45% 0px -50% 0px', threshold: [0, 0.25, 0.5, 1] },
     )
 
-    NAV_ITEMS.forEach(({ id }) => {
+    items.forEach(({ id }) => {
       const el = document.getElementById(id)
       if (el) observer.observe(el)
     })
     return () => observer.disconnect()
-  }, [])
+  }, [items])
 
   return active
 }
 
 function NavLinks({
+  items,
   active,
   onNavigate,
 }: {
+  items: NavItem[]
   active: string
   onNavigate?: () => void
 }) {
   return (
     <nav aria-label="Brand hub sections" className="flex flex-col gap-0.5">
-      {NAV_ITEMS.map(({ id, label }, i) => {
+      {items.map(({ id, label }, i) => {
         const isActive = active === id
         return (
           <a
@@ -79,10 +81,17 @@ export function SidebarNav({
 }: {
   edition?: Edition
 }) {
-  const active = useScrollSpy()
+  const navItems = useMemo(
+    () =>
+      NAV_ITEMS.filter((n) =>
+        (edition.sections as string[]).includes(n.id),
+      ),
+    [edition],
+  )
+  const active = useScrollSpy(navItems)
   const [mobileOpen, setMobileOpen] = useState(false)
   const activeLabel =
-    NAV_ITEMS.find((n) => n.id === active)?.label ?? NAV_ITEMS[0].label
+    navItems.find((n) => n.id === active)?.label ?? navItems[0]?.label
 
   return (
     <>
@@ -101,10 +110,10 @@ export function SidebarNav({
           </div>
         </div>
         <div className="px-3 pt-4">
-          <SiteSearch />
+          <SiteSearch visibleSections={edition.sections} />
         </div>
         <div className="flex-1 overflow-y-auto px-3 py-4">
-          <NavLinks active={active} />
+          <NavLinks items={navItems} active={active} />
         </div>
       </aside>
 
@@ -147,9 +156,16 @@ export function SidebarNav({
           />
           <div className="absolute top-[57px] right-0 left-0 max-h-[70vh] overflow-y-auto border-b border-border bg-sidebar p-4 shadow-lg">
             <div className="mb-3">
-              <SiteSearch onNavigate={() => setMobileOpen(false)} />
+              <SiteSearch
+                visibleSections={edition.sections}
+                onNavigate={() => setMobileOpen(false)}
+              />
             </div>
-            <NavLinks active={active} onNavigate={() => setMobileOpen(false)} />
+            <NavLinks
+              items={navItems}
+              active={active}
+              onNavigate={() => setMobileOpen(false)}
+            />
           </div>
         </div>
       )}
