@@ -101,8 +101,8 @@ export type NavItem = { id: string; label: string }
 export const NAV_ITEMS: NavItem[] = [
   { id: 'hero', label: 'Overview' },
   { id: 'welcome', label: 'Start Here' },
-  { id: 'foundation', label: 'Brand Foundation' },
-  { id: 'kits', label: 'Product Brand Kits' },
+  { id: 'foundation', label: 'About AT Sports' },
+  { id: 'kits', label: 'Product Brands' },
   { id: 'logo', label: 'Logo & Identity' },
   { id: 'color', label: 'Color System' },
   { id: 'typography', label: 'Typography' },
