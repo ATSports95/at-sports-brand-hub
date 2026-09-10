@@ -85,7 +85,10 @@ export function SidebarNav({
     () =>
       NAV_ITEMS.filter((n) =>
         (edition.sections as string[]).includes(n.id),
-      ),
+      ).map((n) => ({
+        ...n,
+        label: edition.navLabels?.[n.id as keyof typeof edition.navLabels] ?? n.label,
+      })),
     [edition],
   )
   const active = useScrollSpy(navItems)
@@ -110,7 +113,10 @@ export function SidebarNav({
           </div>
         </div>
         <div className="px-3 pt-4">
-          <SiteSearch visibleSections={edition.sections} />
+          <SiteSearch
+            visibleSections={edition.sections}
+            sectionLabels={edition.navLabels}
+          />
         </div>
         <div className="flex-1 overflow-y-auto px-3 py-4">
           <NavLinks items={navItems} active={active} />
@@ -158,6 +164,7 @@ export function SidebarNav({
             <div className="mb-3">
               <SiteSearch
                 visibleSections={edition.sections}
+                sectionLabels={edition.navLabels}
                 onNavigate={() => setMobileOpen(false)}
               />
             </div>

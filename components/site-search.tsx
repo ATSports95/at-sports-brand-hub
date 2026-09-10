@@ -36,6 +36,7 @@ export function SiteSearch({
   className,
   onNavigate,
   visibleSections,
+  sectionLabels,
 }: {
   className?: string
   onNavigate?: () => void
@@ -45,6 +46,12 @@ export function SiteSearch({
    * section that is not present (e.g. partner-only sections on the public hub).
    */
   visibleSections?: string[]
+  /**
+   * Per-section label overrides for the current edition. When a Section entry's
+   * id is present, its label is shown instead of the shared `NAV_ITEMS` label so
+   * search results match the sidebar naming.
+   */
+  sectionLabels?: Record<string, string | undefined>
 }) {
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState(false)
@@ -52,10 +59,20 @@ export function SiteSearch({
   const rootRef = useRef<HTMLDivElement>(null)
 
   const index = useMemo(() => {
-    if (!visibleSections) return INDEX
-    const allowed = new Set(visibleSections)
-    return INDEX.filter((i) => allowed.has(i.id))
-  }, [visibleSections])
+    let items = INDEX
+    if (visibleSections) {
+      const allowed = new Set(visibleSections)
+      items = items.filter((i) => allowed.has(i.id))
+    }
+    if (sectionLabels) {
+      items = items.map((i) =>
+        i.kind === 'Section' && sectionLabels[i.id]
+          ? { ...i, label: sectionLabels[i.id] as string }
+          : i,
+      )
+    }
+    return items
+  }, [visibleSections, sectionLabels])
 
   const results = useMemo(() => {
     const q = query.trim().toLowerCase()

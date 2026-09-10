@@ -114,6 +114,13 @@ export type Edition = {
   passwordEnvVar?: string
   /** Ordered allow-list of sections this edition renders. */
   sections: SectionId[]
+  /**
+   * Per-edition navigation label overrides. Only the sections listed here are
+   * renamed for this edition; every other section keeps its shared label from
+   * `NAV_ITEMS`. Used so the public hub can present friendlier, audience-fit
+   * names without touching the partner editions.
+   */
+  navLabels?: Partial<Record<SectionId, string>>
 
   /** Pill above the hero headline. */
   heroEyebrow: LocalizedText
@@ -248,6 +255,11 @@ export const PUBLIC_EDITION: Edition = {
   audience: 'public',
   // No password: this is the default, open, public-facing hub.
   sections: PUBLIC_SECTIONS,
+  // Public-facing names. Partner editions keep the shared NAV_ITEMS labels.
+  navLabels: {
+    foundation: 'About AT Sports',
+    kits: 'Product Brands',
+  },
   bilingual: false,
   secondaryLocale: 'ja',
 
