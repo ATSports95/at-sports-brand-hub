@@ -264,7 +264,7 @@ export const PUBLIC_EDITION: Edition = {
 
   heroEyebrow: { en: 'Official Brand Portal' },
   heroTitle: { en: 'AT Sports Brand Hub' },
-  heroSubtitle: { en: 'Overview' }
+  heroSubtitle: { en: 'Overview' },
   heroLead: [
     {
       emphasis: true,
