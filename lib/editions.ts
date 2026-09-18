@@ -85,7 +85,6 @@ export const PUBLIC_SECTIONS: SectionId[] = [
   'color',
   'typography',
   'assets',
-  'faq',
 ]
 
 export type Edition = {
