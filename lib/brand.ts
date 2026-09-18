@@ -85,7 +85,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     name: 'Faultline',
     descriptor: 'The Crack Repair System',
     whatFor:
-      'Engineered crack-repair solutions designed to simplify installation, reduce repair profile, and support smoother finished surfaces.',
+      'A complete line of crack-repair solutions designed to simplify installation, reduce repair profile, and support smoother finished surfaces.',
   },
   {
     id: 'rollx',
