@@ -50,9 +50,11 @@ export function AssetLibrary({
 }) {
   const isPublic = audience === 'public'
   // The public library is curated: partner/contractor tools (estimators,
-  // project support) are omitted. Shared brand assets remain available.
+  // project support) and the Marketing Media library are omitted. Shared brand
+  // assets remain available.
+  const publicOmit = new Set(['hubPdf', 'productLineAssets'])
   const cards = isPublic
-    ? CARDS.filter((card) => card.key !== 'hubPdf')
+    ? CARDS.filter((card) => !publicOmit.has(card.key))
     : CARDS
 
   return (
