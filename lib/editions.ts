@@ -84,7 +84,6 @@ export const PUBLIC_SECTIONS: SectionId[] = [
   'logo',
   'color',
   'typography',
-  'photography',
   'assets',
   'faq',
 ]
