@@ -35,24 +35,56 @@ const INDEX: SearchItem[] = [
 export function SiteSearch({
   className,
   onNavigate,
+  visibleSections,
+  sectionLabels,
 }: {
   className?: string
   onNavigate?: () => void
+  /**
+   * Ids of the sections rendered in the current edition. When provided, the
+   * index is limited to these so the search never surfaces or links to a
+   * section that is not present (e.g. partner-only sections on the public hub).
+   */
+  visibleSections?: string[]
+  /**
+   * Per-section label overrides for the current edition. When a Section entry's
+   * id is present, its label is shown instead of the shared `NAV_ITEMS` label so
+   * search results match the sidebar naming.
+   */
+  sectionLabels?: Record<string, string | undefined>
 }) {
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState(false)
   const [active, setActive] = useState(0)
   const rootRef = useRef<HTMLDivElement>(null)
 
+  const index = useMemo(() => {
+    let items = INDEX
+    if (visibleSections) {
+      const allowed = new Set(visibleSections)
+      items = items.filter((i) => allowed.has(i.id))
+    }
+    if (sectionLabels) {
+      items = items.map((i) =>
+        i.kind === 'Section' && sectionLabels[i.id]
+          ? { ...i, label: sectionLabels[i.id] as string }
+          : i,
+      )
+    }
+    return items
+  }, [visibleSections, sectionLabels])
+
   const results = useMemo(() => {
     const q = query.trim().toLowerCase()
     if (!q) return []
-    return INDEX.filter(
-      (i) =>
-        i.label.toLowerCase().includes(q) ||
-        i.hint?.toLowerCase().includes(q),
-    ).slice(0, 7)
-  }, [query])
+    return index
+      .filter(
+        (i) =>
+          i.label.toLowerCase().includes(q) ||
+          i.hint?.toLowerCase().includes(q),
+      )
+      .slice(0, 7)
+  }, [query, index])
 
   useEffect(() => setActive(0), [query])
 

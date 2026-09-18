@@ -43,17 +43,32 @@ const CARDS: {
   },
 ]
 
-export function AssetLibrary() {
+export function AssetLibrary({
+  audience = 'partner',
+}: {
+  audience?: 'partner' | 'public'
+}) {
+  const isPublic = audience === 'public'
+  // The public library is curated: partner/contractor tools (estimators,
+  // project support) are omitted. Shared brand assets remain available.
+  const cards = isPublic
+    ? CARDS.filter((card) => card.key !== 'hubPdf')
+    : CARDS
+
   return (
     <Section id="assets">
       <SectionHeading
         eyebrow="Asset Library"
-        title="Asset Library"
-        intro="The download hub. Every button opens the current file in a new tab — always download fresh rather than reusing old copies."
+        title={isPublic ? 'Brand Asset Library' : 'Asset Library'}
+        intro={
+          isPublic
+            ? 'Download core AT Sports brand assets. Every button opens the current file in a new tab — always download fresh rather than reusing old copies.'
+            : 'The download hub. Every button opens the current file in a new tab — always download fresh rather than reusing old copies.'
+        }
       />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {CARDS.map((card) => {
+        {cards.map((card) => {
           const Icon = card.icon
           return (
             <div
