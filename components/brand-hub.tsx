@@ -28,7 +28,7 @@ export function BrandHub({ edition }: { edition: Edition }) {
       <main className="min-w-0 flex-1">
         {show('hero') && <Hero edition={edition} />}
         {show('welcome') && <Welcome edition={edition} />}
-        {show('foundation') && <Foundation />}
+        {show('foundation') && <Foundation audience={edition.audience} />}
         {show('kits') && <ProductKits audience={edition.audience} />}
         {show('logo') && <LogoIdentity />}
         {show('color') && <ColorSystem />}
