@@ -84,9 +84,7 @@ export const PUBLIC_SECTIONS: SectionId[] = [
   'logo',
   'color',
   'typography',
-  'photography',
   'assets',
-  'faq',
 ]
 
 export type Edition = {
@@ -265,7 +263,7 @@ export const PUBLIC_EDITION: Edition = {
 
   heroEyebrow: { en: 'Official Brand Portal' },
   heroTitle: { en: 'AT Sports Brand Hub' },
-  heroSubtitle: { en: 'Brand Overview' },
+  heroSubtitle: { en: 'Overview' },
   heroLead: [
     {
       emphasis: true,

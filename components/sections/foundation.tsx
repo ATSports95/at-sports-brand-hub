@@ -16,7 +16,12 @@ const WE_DONT_SAY = [
   'Promises we can\u2019t stand behind.',
 ]
 
-export function Foundation() {
+export function Foundation({
+  audience = 'partner',
+}: {
+  audience?: 'partner' | 'public'
+}) {
+  const isPublic = audience === 'public'
   return (
     <Section id="foundation">
       <SectionHeading
@@ -82,7 +87,9 @@ export function Foundation() {
         </div>
       </div>
 
-      {/* Product lines */}
+      {/* Product lines — omitted on the public hub; the standalone Product
+          Brands section already covers the product lines for that audience. */}
+      {!isPublic && (
       <div className="mt-12">
         <h3 className="text-xl font-semibold text-navy">The Product Lines</h3>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">
@@ -128,6 +135,7 @@ export function Foundation() {
           ))}
         </div>
       </div>
+      )}
     </Section>
   )
 }
