@@ -101,7 +101,9 @@ export function SidebarNav({
       {/* Desktop sidebar */}
       {/* No background: the fixed site-wide gradient shows through here too */}
       <aside className="sticky top-0 hidden h-screen w-72 shrink-0 flex-col border-r border-border lg:flex">
-        <div className="border-b border-border px-6 py-6">
+        {/* pt-28 lines the logo up with the hero content, which starts at
+            md:pt-28 in components/sections/hero.tsx. Keep the two in step. */}
+        <div className="border-b border-border px-6 pt-28 pb-6">
           <div className="flex items-center justify-center">
             {/* Reversed white mark: the sidebar is a dark charcoal surface, and
                 the brand rule is white-on-dark, never full-color-on-dark. */}
