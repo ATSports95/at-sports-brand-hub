@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   title: "AT Sports Brand Hub — Partner Edition",
   description:
     "Everything partners need to represent AT Sports and our product lines correctly.",
+  // Keep every edition out of search results. Partners reach the hub through
+  // direct links and the atsports.com embed.
+  robots: { index: false, follow: false },
 };
 
 export const viewport: Viewport = {
