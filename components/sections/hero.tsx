@@ -15,7 +15,7 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
   return (
     <section
       id="hero"
-      className="relative isolate scroll-mt-20 overflow-hidden pb-16 md:pb-20 lg:scroll-mt-0"
+      className="relative isolate scroll-mt-20 overflow-hidden pb-4 md:pb-6 lg:scroll-mt-0"
     >
       {/* No background of its own: the site-wide gradient on <body> shows
           through so the hero is continuous with the rest of the page. */}
@@ -25,7 +25,7 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
           reaches the copy. Embossed blueprint feel, not a visible logo. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 -right-[6%] hidden w-[84%] md:block"
+        className="pointer-events-none absolute inset-y-0 right-6 hidden w-[76%] md:right-16 md:block lg:right-24"
         style={{
           maskImage:
             'linear-gradient(to left, #000 0%, #000 30%, transparent 80%)',
@@ -45,8 +45,10 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
           gone: the court-surface texture on <body> now carries the whole page,
           so local pattern overlays would only fight it. */}
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-4xl px-6 pt-20 pb-4 md:px-12 md:pt-28">
+      {/* Content — same padding and max width as <Section>, so the hero copy
+          lines up with every section below it. */}
+      <div className="relative z-10 px-6 pt-20 md:px-16 md:pt-28 lg:px-24">
+      <div className="mx-auto w-full max-w-4xl">
         <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 font-mono text-xs font-medium tracking-widest text-sky uppercase">
           <span className="size-1.5 rounded-full bg-sky" aria-hidden />
           <LocalizedInline text={edition.heroEyebrow} edition={edition} />
@@ -102,6 +104,7 @@ export function Hero({ edition = PARTNER_EDITION }: { edition?: Edition }) {
             </Fragment>
           ))}
         </nav>
+      </div>
       </div>
     </section>
   )

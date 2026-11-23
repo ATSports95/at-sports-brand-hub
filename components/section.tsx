@@ -8,7 +8,7 @@ function SectionDivider() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-center px-6 md:px-12"
+      className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-center px-6 md:px-16 lg:px-24"
     >
       <div
         className="h-1.5 w-full text-steel"
@@ -41,7 +41,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        'relative scroll-mt-20 px-6 py-16 md:px-12 md:py-20 lg:scroll-mt-8',
+        'relative scroll-mt-20 px-6 py-16 md:px-16 md:py-20 lg:px-24 lg:scroll-mt-8',
         className,
       )}
     >

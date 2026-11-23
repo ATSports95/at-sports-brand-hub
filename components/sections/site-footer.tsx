@@ -9,7 +9,7 @@ export function SiteFooter({
 }) {
   const year = new Date().getFullYear()
   return (
-    <footer className="relative isolate overflow-hidden px-6 pt-20 pb-12 md:px-12">
+    <footer className="relative isolate overflow-hidden px-6 pt-20 pb-12 md:px-16 lg:px-24">
       {/* No background of its own — the site-wide gradient on <body> carries
           through here too (see hero). */}
 
@@ -17,7 +17,7 @@ export function SiteFooter({
           white at low opacity and softly masked (matches hero) */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-y-0 -right-[6%] hidden w-[84%] md:block"
+        className="pointer-events-none absolute inset-y-0 right-6 hidden w-[76%] md:right-16 md:block lg:right-24"
         style={{
           maskImage:
             'linear-gradient(to left, #000 0%, #000 30%, transparent 80%)',
